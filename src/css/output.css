@@ -1751,3 +1751,18 @@ video {
 .pr-10 {
   padding-right: 2.5rem /* 40px */;
 }
+@media (min-width: 640px) {
+  .sm\:w-auto {
+    width: auto;
+  }
+}
+.py-14 {
+  padding-top: 3.5rem /* 56px */;
+  padding-bottom: 3.5rem /* 56px */;
+}
+.p-8 {
+  padding: 2rem /* 32px */;
+}
+.-z-10 {
+  z-index: -10;
+}
