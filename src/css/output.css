@@ -1702,3 +1702,52 @@ video {
 .mb-5 {
   margin-bottom: 1.25rem /* 20px */;
 }
+.mr-10 {
+  margin-right: 2.5rem /* 40px */;
+}
+.-z-10 {
+  z-index: -10;
+}
+
+.hover\:shadow-xl:hover {
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color),
+    0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.rounded-lg {
+  border-radius: 0.5rem /* 8px */;
+}
+.hover\:bg-blue-500:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+}
+.py-10 {
+  padding-top: 2.5rem /* 40px */;
+  padding-bottom: 2.5rem /* 40px */;
+}
+.hover\:scale-125:hover {
+  --tw-scale-x: 1.25;
+  --tw-scale-y: 1.25;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.ml-5 {
+  margin-left: 1.25rem /* 20px */;
+}
+.py-1 {
+  padding-top: 0.25rem /* 4px */;
+  padding-bottom: 0.25rem /* 4px */;
+}
+.ml-96 {
+  margin-left: 24rem /* 384px */;
+}
+.right-3 {
+  right: 0.75rem /* 12px */;
+}
+.pr-10 {
+  padding-right: 2.5rem /* 40px */;
+}
