@@ -8,12 +8,12 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/output.css" />
+    <link rel="stylesheet" href="../css/output.css" />
     <script
       src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
       defer
     ></script>
-    <script src="./js/init-alpine.js"></script>
+    <script src="../js/init-alpine.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css"
@@ -22,7 +22,7 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
       defer
     ></script>
-    <script src="./js/charts-bars.js" defer></script>
+    <script src="../js/charts-bars.js" defer></script>
   </head>
   <body>
     <div
@@ -162,7 +162,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="login.html"
+                href="../luaran/firstscreen.html"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -333,7 +333,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="signin.html"
+                href="../luaran/firstscreen.html"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -392,7 +392,7 @@
                 >
                   <img
                     class="object-cover w-8 h-8 rounded-full"
-                    src="img/profil.jpg"
+                    src="../img/profil.jpg"
                     alt=""
                     aria-hidden="true"
                   />
@@ -412,7 +412,7 @@
                         class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800"
                         href="profil.html"
                       >
-                        <img src="./img/profil.svg" class="w-4 h-4 mr-3" />
+                        <img src="../img/profil.svg" class="w-4 h-4 mr-3" />
 
                         <span>Profil</span>
                       </a>
@@ -421,9 +421,9 @@
                     <li class="flex">
                       <a
                         class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800"
-                        href="signin.html"
+                        href="../luaran/firstscreen.html"
                       >
-                        <img src="./img/logout.svg" class="w-4 h-4 mr-3" />
+                        <img src="../img/logout.svg" class="w-4 h-4 mr-3" />
 
                         <span>Sign out</span>
                       </a>
@@ -437,383 +437,457 @@
         <main class="h-full overflow-y-auto">
           <div class="container px-6 mx-auto grid">
             <h2 class="my-6 text-2xl font-semibold text-gray-700">
-              Tambah Prestasi
+              Prestasi Mahasiswa
             </h2>
+
+            <!-- Tombol tambah -->
+            <div class="flex justify-between">
+              <!-- Tombol search -->
+              <form class="mb-2 pl-8 w-full pr-10">
+                <div class="relative">
+                  <div
+                    class="absolute inset-y-0 right-3 flex items-center pl-3 pointer-events-none"
+                  >
+                    <svg
+                      class="w-4 h-4 text-gray-500"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                      />
+                    </svg>
+                  </div>
+                  <input
+                    type="search"
+                    id="default-search"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5"
+                    placeholder="Cari Prestasi"
+                    required
+                  />
+                  <button
+                    type="submit"
+                    class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-1"
+                  >
+                    Search
+                  </button>
+                </div>
+              </form>
+              <div class="flex justify-end mb-5 mr-10">
+                <a
+                  href="tambahprestasi.html"
+                  class="text-white bg-blue-950 hover:bg-blue-500 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40"
+                >
+                  Tambah Prestasi
+                </a>
+              </div>
+            </div>
+            <main class="h-full overflow-y-auto">
+              <div class="container px-6 mx-auto grid">
+                <div class="w-full mb-8 overflow-hidden rounded-lg shadow-xs">
+                  <div class="w-full overflow-x-auto">
+                    <table class="w-full whitespace-no-wrap">
+                      <thead>
+                        <tr
+                          class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800"
+                        >
+                          <th class="px-4 py-3 text-center">No</th>
+                          <th class="px-4 py-3 text-center">Nama</th>
+                          <th class="px-4 py-3 text-center">Nama Prestasi</th>
+                          <th class="px-4 py-3 text-center">Tahun Perolehan</th>
+                          <th class="px-4 py-3 text-center">Juara</th>
+                          <th class="px-4 py-3 text-center">Jenis Prestasi</th>
+                        </tr>
+                      </thead>
+                      <tbody class="bg-white divide-y">
+                        <tr class="text-gray-700 dark:text-gray-400">
+                          <!-- Nomer -->
+                          <td class="px-4 py-3 text-sm text-center">1</td>
+                          <!-- Nama & Prodi -->
+                          <td class="px-4 py-3">
+                            <div class="flex items-center text-sm">
+                              <div>
+                                <p class="font-semibold">Nasywa Bieber</p>
+                                <p class="text-xs text-gray-600">
+                                  Teknologi Informasi
+                                </p>
+                              </div>
+                            </div>
+                          </td>
+                          <!-- Nama Prestasi -->
+                          <td class="px-4 py-3 text-sm text-center">
+                            Debat Anak Bangsa
+                          </td>
+                          <!-- Tahun -->
+                          <td class="px-4 py-3 text-sm text-center">2023</td>
+                          <!-- Juara -->
+                          <td class="px-4 py-3 text-sm text-center">Juara 1</td>
+                          <!-- Jenis Prestasi -->
+                          <td class="px-4 py-3 text-sm text-center">
+                            Internasional
+                          </td>
+                        </tr>
+
+                        <tr class="text-gray-700 dark:text-gray-400">
+                          <!-- Nomer -->
+                          <td class="px-4 py-3 text-sm text-center">2</td>
+                          <!-- Nama & Prodi -->
+                          <td class="px-4 py-3">
+                            <div class="flex items-center text-sm">
+                              <div>
+                                <p class="font-semibold">Anggi Gwenchana</p>
+                                <p class="text-xs text-gray-600">
+                                  Teknologi Informasi
+                                </p>
+                              </div>
+                            </div>
+                          </td>
+                          <!-- Nama Prestasi -->
+                          <td class="px-4 py-3 text-sm text-center">
+                            International Conference
+                          </td>
+                          <!-- Tahun -->
+                          <td class="px-4 py-3 text-sm text-center">2023</td>
+                          <!-- Juara -->
+                          <td class="px-4 py-3 text-sm text-center">Juara 1</td>
+                          <!-- Jenis Prestasi -->
+                          <td class="px-4 py-3 text-sm text-center">
+                            Internasional
+                          </td>
+                        </tr>
+                        <tr class="text-gray-700 dark:text-gray-400">
+                          <!-- Nomer -->
+                          <td class="px-4 py-3 text-sm text-center">3</td>
+                          <!-- Nama & Prodi -->
+                          <td class="px-4 py-3">
+                            <div class="flex items-center text-sm">
+                              <div>
+                                <p class="font-semibold">Tya Badrul</p>
+                                <p class="text-xs text-gray-600">
+                                  Manajemen Perhotelan
+                                </p>
+                              </div>
+                            </div>
+                          </td>
+                          <!-- Nama Prestasi -->
+                          <td class="px-4 py-3 text-sm text-center">
+                            Lomba Memasak Cepat
+                          </td>
+                          <!-- Tahun -->
+                          <td class="px-4 py-3 text-sm text-center">2023</td>
+                          <!-- Juara -->
+                          <td class="px-4 py-3 text-sm text-center">Juara 1</td>
+                          <!-- Jenis Prestasi -->
+                          <td class="px-4 py-3 text-sm text-center">
+                            Nasional
+                          </td>
+                        </tr>
+                        <tr class="text-gray-700 dark:text-gray-400">
+                          <!-- Nomer -->
+                          <td class="px-4 py-3 text-sm text-center">4</td>
+                          <!-- Nama & Prodi -->
+                          <td class="px-4 py-3">
+                            <div class="flex items-center text-sm">
+                              <div>
+                                <p class="font-semibold">Sidky Subianto</p>
+                                <p class="text-xs text-gray-600">
+                                  Administrasi Bisnis
+                                </p>
+                              </div>
+                            </div>
+                          </td>
+                          <!-- Nama Prestasi -->
+                          <td class="px-4 py-3 text-sm text-center">
+                            Karya Tulis Ilmiah
+                          </td>
+                          <!-- Tahun -->
+                          <td class="px-4 py-3 text-sm text-center">2023</td>
+                          <!-- Juara -->
+                          <td class="px-4 py-3 text-sm text-center">Juara 1</td>
+                          <!-- Jenis Prestasi -->
+                          <td class="px-4 py-3 text-sm text-center">
+                            Regional
+                          </td>
+                        </tr>
+                        <tr class="text-gray-700 dark:text-gray-400">
+                          <!-- Nomer -->
+                          <td class="px-4 py-3 text-sm text-center">5</td>
+                          <!-- Nama & Prodi -->
+                          <td class="px-4 py-3">
+                            <div class="flex items-center text-sm">
+                              <div>
+                                <p class="font-semibold">Abid Doremi</p>
+                                <p class="text-xs text-gray-600">
+                                  Desain Grafis
+                                </p>
+                              </div>
+                            </div>
+                          </td>
+                          <!-- Nama Prestasi -->
+                          <td class="px-4 py-3 text-sm text-center">
+                            Lomba Poster Kemerdekaan
+                          </td>
+                          <!-- Tahun -->
+                          <td class="px-4 py-3 text-sm text-center">2023</td>
+                          <!-- Juara -->
+                          <td class="px-4 py-3 text-sm text-center">Juara 1</td>
+                          <!-- Jenis Prestasi -->
+                          <td class="px-4 py-3 text-sm text-center">
+                            Nasional
+                          </td>
+                        </tr>
+                        <tr class="text-gray-700 dark:text-gray-400">
+                          <!-- Nomer -->
+                          <td class="px-4 py-3 text-sm text-center">6</td>
+                          <!-- Nama & Prodi -->
+                          <td class="px-4 py-3">
+                            <div class="flex items-center text-sm">
+                              <div>
+                                <p class="font-semibold">Zahra Prabowo</p>
+                                <p class="text-xs text-gray-600">
+                                  Teknologi Informasi
+                                </p>
+                              </div>
+                            </div>
+                          </td>
+                          <!-- Nama Prestasi -->
+                          <td class="px-4 py-3 text-sm text-center">
+                            International UI/UX
+                          </td>
+                          <!-- Tahun -->
+                          <td class="px-4 py-3 text-sm text-center">2023</td>
+                          <!-- Juara -->
+                          <td class="px-4 py-3 text-sm text-center">Juara 1</td>
+                          <!-- Jenis Prestasi -->
+                          <td class="px-4 py-3 text-sm text-center">
+                            Internasional
+                          </td>
+                        </tr>
+                        <tr class="text-gray-700 dark:text-gray-400">
+                          <!-- Nomer -->
+                          <td class="px-4 py-3 text-sm text-center">7</td>
+                          <!-- Nama & Prodi -->
+                          <td class="px-4 py-3">
+                            <div class="flex items-center text-sm">
+                              <div>
+                                <p class="font-semibold">Karin Widodo</p>
+                                <p class="text-xs text-gray-600">
+                                  Keuangan Perbankan
+                                </p>
+                              </div>
+                            </div>
+                          </td>
+                          <!-- Nama Prestasi -->
+                          <td class="px-4 py-3 text-sm text-center">
+                            National Accounting
+                          </td>
+                          <!-- Tahun -->
+                          <td class="px-4 py-3 text-sm text-center">2023</td>
+                          <!-- Juara -->
+                          <td class="px-4 py-3 text-sm text-center">Juara 1</td>
+                          <!-- Jenis Prestasi -->
+                          <td class="px-4 py-3 text-sm text-center">
+                            Nasional
+                          </td>
+                        </tr>
+                        <tr class="text-gray-700 dark:text-gray-400">
+                          <!-- Nomer -->
+                          <td class="px-4 py-3 text-sm text-center">8</td>
+                          <!-- Nama & Prodi -->
+                          <td class="px-4 py-3">
+                            <div class="flex items-center text-sm">
+                              <div>
+                                <p class="font-semibold">Risma Jokowi</p>
+                                <p class="text-xs text-gray-600">
+                                  Teknologi Informasi
+                                </p>
+                              </div>
+                            </div>
+                          </td>
+                          <!-- Nama Prestasi -->
+                          <td class="px-4 py-3 text-sm text-center">
+                            Short Video Competition
+                          </td>
+                          <!-- Tahun -->
+                          <td class="px-4 py-3 text-sm text-center">2023</td>
+                          <!-- Juara -->
+                          <td class="px-4 py-3 text-sm text-center">Juara 1</td>
+                          <!-- Jenis Prestasi -->
+                          <td class="px-4 py-3 text-sm text-center">
+                            Internasional
+                          </td>
+                        </tr>
+                        <tr class="text-gray-700 dark:text-gray-400">
+                          <!-- Nomer -->
+                          <td class="px-4 py-3 text-sm text-center">9</td>
+                          <!-- Nama & Prodi -->
+                          <td class="px-4 py-3">
+                            <div class="flex items-center text-sm">
+                              <div>
+                                <p class="font-semibold">Renita Bambang</p>
+                                <p class="text-xs text-gray-600">
+                                  Administrasi Bisnis
+                                </p>
+                              </div>
+                            </div>
+                          </td>
+                          <!-- Nama Prestasi -->
+                          <td class="px-4 py-3 text-sm text-center">
+                            Lomba Karya Tulis Ilmiah Tingkat Remaja
+                          </td>
+                          <!-- Tahun -->
+                          <td class="px-4 py-3 text-sm text-center">2023</td>
+                          <!-- Juara -->
+                          <td class="px-4 py-3 text-sm text-center">Juara 1</td>
+                          <!-- Jenis Prestasi -->
+                          <td class="px-4 py-3 text-sm text-center">
+                            Nasional
+                          </td>
+                        </tr>
+                        <tr class="text-gray-700 dark:text-gray-400">
+                          <!-- Nomer -->
+                          <td class="px-4 py-3 text-sm text-center">10</td>
+                          <!-- Nama & Prodi -->
+                          <td class="px-4 py-3">
+                            <div class="flex items-center text-sm">
+                              <div>
+                                <p class="font-semibold">Haechan Ganteng</p>
+                                <p class="text-xs text-gray-600">
+                                  Teknologi Informasi
+                                </p>
+                              </div>
+                            </div>
+                          </td>
+                          <!-- Nama Prestasi -->
+                          <td class="px-4 py-3 text-sm text-center">
+                            Internaational Dance
+                          </td>
+                          <!-- Tahun -->
+                          <td class="px-4 py-3 text-sm text-center">2023</td>
+                          <!-- Juara -->
+                          <td class="px-4 py-3 text-sm text-center">Juara 1</td>
+                          <!-- Jenis Prestasi -->
+                          <td class="px-4 py-3 text-sm text-center">
+                            Internasional
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div
+                    class="grid px-4 py-3 text-xs font-semibold tracking-wide text-gray-500 uppercase border-t dark:border-gray-700 bg-gray-50 sm:grid-cols-9 dark:text-gray-400 dark:bg-gray-800"
+                  >
+                    <span class="flex items-center col-span-3">
+                      Showing 1-10 of 2
+                    </span>
+                    <span class="col-span-2"></span>
+                    <!-- Pagination -->
+                    <span
+                      class="flex col-span-4 mt-2 sm:mt-auto sm:justify-end"
+                    >
+                      <nav aria-label="Table navigation">
+                        <ul class="inline-flex items-center">
+                          <li>
+                            <button
+                              class="px-3 py-1 rounded-md rounded-l-lg focus:outline-none focus:shadow-outline-blue"
+                              aria-label="Previous"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="w-4 h-4 fill-current"
+                                viewBox="0 0 20 20"
+                              >
+                                <path
+                                  d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                                  clip-rule="evenodd"
+                                  fill-rule="evenodd"
+                                ></path>
+                              </svg>
+                            </button>
+                          </li>
+                          <li>
+                            <button
+                              class="px-3 py-1 text-white transition-colors duration-150 bg-blue-950 border border-r-0 border-blue-400 rounded-md focus:outline-none focus:shadow-outline-blue"
+                            >
+                              1
+                            </button>
+                          </li>
+                          <li>
+                            <button
+                              class="px-3 py-1 rounded-md focus:outline-none focus:shadow-outline-blue"
+                            >
+                              2
+                            </button>
+                          </li>
+                          <li>
+                            <button
+                              class="px-3 py-1 rounded-md focus:outline-none focus:shadow-outline-blue"
+                            >
+                              3
+                            </button>
+                          </li>
+                          <li>
+                            <button
+                              class="px-3 py-1 rounded-md focus:outline-none focus:shadow-outline-blue"
+                            >
+                              4
+                            </button>
+                          </li>
+                          <li>
+                            <span class="px-3 py-1">...</span>
+                          </li>
+                          <li>
+                            <button
+                              class="px-3 py-1 rounded-md focus:outline-none focus:shadow-outline-blue"
+                            >
+                              8
+                            </button>
+                          </li>
+                          <li>
+                            <button
+                              class="px-3 py-1 rounded-md focus:outline-none focus:shadow-outline-blue"
+                            >
+                              9
+                            </button>
+                          </li>
+                          <li>
+                            <button
+                              class="px-3 py-1 rounded-md rounded-r-lg focus:outline-none focus:shadow-outline-blue"
+                              aria-label="Next"
+                            >
+                              <svg
+                                class="w-4 h-4 fill-current"
+                                aria-hidden="true"
+                                viewBox="0 0 20 20"
+                              >
+                                <path
+                                  d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                  clip-rule="evenodd"
+                                  fill-rule="evenodd"
+                                ></path>
+                              </svg>
+                            </button>
+                          </li>
+                        </ul>
+                      </nav>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <footer>
+                <hr />
+                <div class="p-8 text-center">
+                  <h1>Copyright © 2023 Vokasi UB. All rights reserved.</h1>
+                </div>
+              </footer>
+            </main>
           </div>
-
-          <form class="px-6 mx-auto">
-            <!-- Bidang -->
-            <div class="mb-6">
-              <label
-                for="bidang"
-                class="block mb-2 text-sm font-medium text-gray-900"
-                >Bidang</label
-              >
-              <select
-                id="bidang"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-              >
-                <option selected>Pilih Bidang</option>
-                <option value="PK">Penalaran dan Kreativitas</option>
-                <option value="SMB">Seni, Minat dan Bakat</option>
-                <option value="KWU">Kewirausahaan</option>
-              </select>
-            </div>
-            <!-- Jenis Prestasi -->
-            <div class="mb-6">
-              <label
-                for="jenis_prestasi"
-                class="block mb-2 text-sm font-medium text-gray-900"
-                >Jenis Prestasi</label
-              >
-              <select
-                id="jenis_prestasi"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-              >
-                <option selected>Pilih Jenis Prestasi</option>
-                <option value="RE">Regional</option>
-                <option value="NA">Nasional</option>
-                <option value="INT">Internasional</option>
-              </select>
-            </div>
-
-            <!-- Nama Perlombaan -->
-            <div class="mb-6">
-              <label
-                for="nama_perlombaan"
-                class="block mb-2 text-sm font-medium text-gray-900"
-                >Nama Perlombaan</label
-              >
-              <input
-                type="text"
-                id="nama_perlombaan"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5"
-                placeholder="Nama Perlombaan"
-                required
-              />
-            </div>
-
-            <!-- Kategori / Kelas Perlombaan -->
-            <div class="mb-6">
-              <label
-                for="kategori_perlombaan"
-                class="block mb-2 text-sm font-medium text-gray-900"
-                >Kategori / Kelas Perlombaan</label
-              >
-              <input
-                type="text"
-                id="kategori_perlombaan"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5"
-                placeholder="Kategori / Kelas Perlombaan"
-                required
-              />
-            </div>
-
-            <!-- Judul Karya -->
-            <div class="mb-6">
-              <label
-                for="judul_karya"
-                class="block mb-2 text-sm font-medium text-gray-900"
-                >Judul Karya</label
-              >
-              <input
-                type="text"
-                id="judul_karya"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5"
-                placeholder="Judul Karya"
-                required
-              />
-            </div>
-            <!-- Tanggal Pelaksanaan -->
-            <!-- Link Informasi Lomba -->
-            <div class="mb-6">
-              <label
-                for="link_lomba"
-                class="block mb-2 text-sm font-medium text-gray-900"
-                >Link Informasi Lomba</label
-              >
-              <input
-                type="text"
-                id="link_lomba"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5"
-                placeholder="Link Informasi Lomba"
-                required
-              />
-            </div>
-            <!-- Lokasi -->
-            <div class="mb-6">
-              <label
-                for="lokasi"
-                class="block mb-2 text-sm font-medium text-gray-900"
-                >Lokasi</label
-              >
-              <input
-                type="text"
-                id="lokasi"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5"
-                placeholder="Lokasi"
-                required
-              />
-            </div>
-            <!-- Tahun Penyelenggaraan -->
-            <div class="mb-6">
-              <label
-                for="tahun_penyelenggaraan"
-                class="block mb-2 text-sm font-medium text-gray-900"
-                >Tahun Penyelenggaraan</label
-              >
-              <select
-                id="tahun_penyelenggaraan"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-              >
-                <option selected>Pilih tahun</option>
-                <option value="RE">2023</option>
-                <option value="NA">2022</option>
-              </select>
-            </div>
-            <!-- Jumlah Anggota -->
-            <div class="mb-6">
-              <label
-                for="jumlah_anggota"
-                class="block mb-2 text-sm font-medium text-gray-900"
-                >Jumlah Anggota</label
-              >
-              <input
-                type="number"
-                id="jumlah_anggota"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5"
-                placeholder="Jumlah Anggota"
-                required
-              />
-            </div>
-
-            <!-- Nama Lembaga Ormawa -->
-            <div class="mb-6">
-              <label
-                for="ormawa"
-                class="block mb-2 text-sm font-medium text-gray-900"
-                >Nama Lembaga Ormawa</label
-              >
-              <input
-                type="text"
-                id="ormawa"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5"
-                placeholder="Nama Lembaga Ormawa"
-                required
-              />
-            </div>
-
-            <!-- Program -->
-            <div class="mb-6">
-              <label
-                for="program"
-                class="block mb-2 text-sm font-medium text-gray-900"
-                >Program</label
-              >
-              <select
-                id="program"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-              >
-                <option selected>Pilih program</option>
-                <option value="DI">Dikti</option>
-                <option value="ND">Non Dikti</option>
-              </select>
-            </div>
-            <!-- Tingkat -->
-            <div class="mb-6">
-              <label
-                for="tingkat"
-                class="block mb-2 text-sm font-medium text-gray-900"
-                >Tingkat</label
-              >
-              <select
-                id="tingkat"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-              >
-                <option selected>Pilih Tingkat</option>
-                <option value="INT">Internasional</option>
-                <option value="NA">Nasional</option>
-                <option value="WIL">Wilayah</option>
-                <option value="PRO">Provinsi</option>
-                <option value="LO">Lokal</option>
-              </select>
-            </div>
-
-            <!-- Jenis Kepesertaan -->
-            <div class="mb-6">
-              <label
-                for="jenis_kepesertaan"
-                class="block mb-2 text-sm font-medium text-gray-900"
-                >Jenis Kepesertaan</label
-              >
-              <select
-                id="jenis_kepesertaan"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-              >
-                <option selected>Pilih Jenis Kepesertaan</option>
-                <option value="1">Individu</option>
-                <option value="2">Kelompok</option>
-              </select>
-            </div>
-            <!-- Capaian -->
-            <div class="mb-6">
-              <label
-                for="capaian"
-                class="block mb-2 text-sm font-medium text-gray-900"
-                >Capaian</label
-              >
-              <select
-                id="capaian"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-              >
-                <option selected>Pilih Capaian</option>
-                <option value="1">Juara 1</option>
-                <option value="2">Juara 2</option>
-                <option value="3">Juara 3</option>
-                <option value="4">Finalis</option>
-              </select>
-            </div>
-            <!-- Jumlah Peserta -->
-            <div class="mb-6">
-              <label
-                for="jumlah_peserta"
-                class="block mb-2 text-sm font-medium text-gray-900"
-                >Jumlah Peserta</label
-              >
-              <input
-                type="text"
-                id="jumlah_peserta"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5"
-                placeholder="Jumlah Peserta"
-                required
-              />
-            </div>
-            <!-- Jumlah PT -->
-            <div class="mb-6">
-              <label
-                for="jumlah_pt"
-                class="block mb-2 text-sm font-medium text-gray-900"
-                >Jumlah PT</label
-              >
-              <select
-                id="jumlah_pt"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-              >
-                <option selected>Pilih Jumlah PT</option>
-                <option value="1">Kurang dari 10</option>
-                <option value="2">10 - 20</option>
-                <option value="3">Lebih dari 20</option>
-              </select>
-            </div>
-            <!-- Jumlah Propinsi -->
-            <div class="mb-6">
-              <label
-                for="jumlah_propinsi"
-                class="block mb-2 text-sm font-medium text-gray-900"
-                >Jumlah Propinsi</label
-              >
-              <select
-                id="jumlah_propinsi"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-              >
-                <option selected>Pilih Jumlah Propinsi</option>
-                <option value="1">1 Propinsi</option>
-                <option value="2">2-4 Propinsi</option>
-                <option value="3">Lebih dari 4</option>
-              </select>
-            </div>
-            <!-- Jumlah Negara -->
-            <div class="mb-6">
-              <label
-                for="jumlah_negara"
-                class="block mb-2 text-sm font-medium text-gray-900"
-                >Jumlah Negara</label
-              >
-              <select
-                id="jumlah_negara"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-              >
-                <option selected>Pilih Jumlah Negara</option>
-                <option value="1">1 Negara</option>
-                <option value="2">2-5 Negara</option>
-                <option value="3">6-10 Negara</option>
-                <option value="4">Lebih dari 10</option>
-              </select>
-            </div>
-            <!-- Nama Dosen Pembimbing -->
-            <div class="mb-6">
-              <label
-                for="nama_dosbim"
-                class="block mb-2 text-sm font-medium text-gray-900"
-                >Nama Dosen Pembimbing</label
-              >
-              <input
-                type="text"
-                id="nama_dosbim"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5"
-                placeholder="Nama Dosen Pembimbing "
-                required
-              />
-            </div>
-            <!-- No WA Mahasiswa -->
-            <div class="mb-6">
-              <label
-                for="no_wa"
-                class="block mb-2 text-sm font-medium text-gray-900"
-                >No WA Mahasiswa</label
-              >
-              <input
-                type="text"
-                id="no_wa"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5"
-                placeholder="No WA Mahasiswa"
-                required
-              />
-            </div>
-
-            <div class="mb-6">
-              <label
-                for="file_input"
-                class="block mb-2 text-sm font-medium text-gray-900"
-                >Surat Tugas Pembimbing</label
-              >
-              <input
-                type="file"
-                id="file_input"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1"
-                placeholder="Nama Prestasi"
-                required
-              />
-            </div>
-            <div class="mb-6">
-              <label
-                for="file_input"
-                class="block mb-2 text-sm font-medium text-gray-900"
-                >Bukti Prestasi</label
-              >
-              <input
-                type="file"
-                id="file_input"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1"
-                placeholder="Bukti Prestasi"
-                required
-              />
-            </div>
-            <div class="flex justify-end">
-              <button
-                type="submit"
-                class="text-white bg-blue-950 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-8 py-2 text-center mb-16"
-              >
-                Submit
-              </button>
-            </div>
-          </form>
-          <footer>
-            <hr />
-            <div class="p-8 text-center">
-              <h1>Copyright © 2023 Vokasi UB. All rights reserved.</h1>
-            </div>
-          </footer>
         </main>
       </div>
     </div>
