@@ -260,10 +260,6 @@
               </a>
             </li>
             <li class="relative px-6 py-3">
-              <span
-                class="absolute inset-y-0 left-0 w-full bg-yellow-500 rounded-tr-lg rounded-br-lg -z-10"
-                aria-hidden="true"
-              ></span>
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-white hover:text-blue-900"
                 href="prestasi.html"
@@ -801,16 +797,44 @@
             </div>
             <!-- SUBMIT -->
             <div class="flex justify-end">
-              <a href="#">
-                <button
-                  type="submit"
-                  class="text-white bg-blue-950 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-8 py-2 text-center mb-16"
-                >
-                  Submit
-                </button>
-              </a>
+              <button
+                type="submit"
+                onclick="openModal()"
+                class="text-white bg-blue-950 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-8 py-2 text-center mb-16"
+              >
+                Submit
+              </button>
             </div>
           </form>
+
+          <!-- Modal -->
+          <div
+            id="successModal"
+            class="fixed hidden items-center justify-center m-10"
+          >
+            <div
+              class="bg-white p-8 rounded-lg shadow-lg text-center fixed top-1/4 left-1/3 right-1/3 bottom-1/3 transform"
+            >
+              <!-- Konten modal -->
+              <img
+                src="../img/checklist.png"
+                alt="Checkmark"
+                class="mx-auto mb-4 mt-10"
+                style="width: 50px"
+              />
+              <p class="text-sm font-medium text-gray-900 mb-4">
+                Dokumen berhasil dikirimkan! <br />
+                Tunggu proses verifikasi.
+              </p>
+              <button
+                onclick="closeModal()"
+                class="text-white bg-blue-950 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+
           <footer>
             <hr />
             <div class="p-8 text-center">
@@ -820,5 +844,16 @@
         </main>
       </div>
     </div>
+
+    <!-- Script -->
+    <script>
+      function openModal() {
+        document.getElementById("successModal").classList.remove("hidden");
+      }
+
+      function closeModal() {
+        document.getElementById("successModal").classList.add("hidden");
+      }
+    </script>
   </body>
 </html>
