@@ -31,7 +31,7 @@
     />
     <script
       type="text/javascript"
-      src="https://cdn.datatables.net/v/bs4/dt-1.10.25/datatables.min.js"
+      src="https://cdn.datatables.net/v/bs4/dt-1.10.25/datatables.js"
     ></script>
   </head>
   <body>
@@ -452,7 +452,7 @@
             <h2 class="my-6 text-2xl font-semibold text-gray-700">
               Riwayat Prestasi
             </h2>
-            <!-- Tombol search -->
+            <!-- Tombol search
             <form class="mb-4 w-full">
               <div class="relative">
                 <div
@@ -482,7 +482,7 @@
                   required
                 />
               </div>
-            </form>
+            </form> -->
             <div class="w-full mb-8 overflow-hidden rounded-lg shadow-xs">
               <div class="w-full overflow-x-auto">
                 <table class="w-full whitespace-no-wrap" id="myTable">
@@ -490,7 +490,7 @@
                     <tr
                       class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800"
                     >
-                      <th class="px-4 py-3 text-center">No</th>
+                      <th class="px-4 py-3 text-center">ID Prestasi</th>
                       <th class="px-4 py-3 text-center">Nama</th>
                       <th class="px-4 py-3 text-center">Nama Prestasi</th>
                       <th class="px-4 py-3 text-center">Tahun Perolehan</th>
@@ -501,7 +501,7 @@
                   <tbody class="bg-white divide-y">
                     <tr class="text-gray-700 dark:text-gray-400">
                       <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">1</td>
+                      <td class="px-4 py-3 text-sm text-center">001</td>
                       <!-- Nama & Prodi -->
                       <td class="px-4 py-3">
                         <div class="flex items-center text-sm">
@@ -527,7 +527,7 @@
 
                     <tr class="text-gray-700 dark:text-gray-400">
                       <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">2</td>
+                      <td class="px-4 py-3 text-sm text-center">002</td>
                       <!-- Nama & Prodi -->
                       <td class="px-4 py-3">
                         <div class="flex items-center text-sm">
@@ -552,7 +552,7 @@
                     </tr>
                     <tr class="text-gray-700 dark:text-gray-400">
                       <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">3</td>
+                      <td class="px-4 py-3 text-sm text-center">003</td>
                       <!-- Nama & Prodi -->
                       <td class="px-4 py-3">
                         <div class="flex items-center text-sm">
@@ -577,7 +577,7 @@
                     </tr>
                     <tr class="text-gray-700 dark:text-gray-400">
                       <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">4</td>
+                      <td class="px-4 py-3 text-sm text-center">004</td>
                       <!-- Nama & Prodi -->
                       <td class="px-4 py-3">
                         <div class="flex items-center text-sm">
@@ -604,7 +604,7 @@
                     </tr>
                     <tr class="text-gray-700 dark:text-gray-400">
                       <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">5</td>
+                      <td class="px-4 py-3 text-sm text-center">005</td>
                       <!-- Nama & Prodi -->
                       <td class="px-4 py-3">
                         <div class="flex items-center text-sm">
@@ -629,7 +629,7 @@
                     </tr>
                     <tr class="text-gray-700 dark:text-gray-400">
                       <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">6</td>
+                      <td class="px-4 py-3 text-sm text-center">006</td>
                       <!-- Nama & Prodi -->
                       <td class="px-4 py-3">
                         <div class="flex items-center text-sm">
@@ -654,7 +654,7 @@
                     </tr>
                     <tr class="text-gray-700 dark:text-gray-400">
                       <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">6</td>
+                      <td class="px-4 py-3 text-sm text-center">006</td>
                       <!-- Nama & Prodi -->
                       <td class="px-4 py-3">
                         <div class="flex items-center text-sm">
@@ -704,7 +704,7 @@
             paginate: {
               next: '<div class="flex justify-end"><button class="px-3 py-1 bg-blue-950 text-white rounded-md focus:outline-none active:bg-blue-500">Next</button></div>',
               previous:
-                '<div class="flex justify-end"><button class="px-3 py-1 bg-blue-500 text-white rounded-md focus:outline-none focus:shadow-outline-blue active:bg-blue-950 mr-2">Previous</button></div>',
+                '<div class="flex justify-end"><button class="px-3 py-1 bg-blue-950 text-white rounded-md focus:outline-none active:bg-blue-500">Previous</button></div>',
             },
           },
         });
