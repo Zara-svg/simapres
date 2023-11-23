@@ -797,30 +797,32 @@
 
             <div class="mb-6">
               <label
-                for="file_input"
+                for="file_input1"
                 class="block mb-2 text-sm font-medium text-gray-900"
                 >Surat Tugas Pembimbing</label
               >
               <input
                 type="file"
-                id="file_input"
+                id="file_input1"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1"
-                placeholder="Lihat Surat Tugas Pembimbing"
+                src="../img/pooo.pdf"
                 required
-                readonly
+                disabled
               />
             </div>
+
             <div class="mb-6">
               <label
-                for="file_input"
+                for="file_input2"
                 class="block mb-2 text-sm font-medium text-gray-900"
                 >Bukti Prestasi</label
               >
               <input
                 type="file"
-                id="file_input"
+                id="file_input2"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1"
                 required
+                disabled
               />
               <a
                 id="view_file_link"
@@ -834,22 +836,19 @@
 
             <!-- VERIFIKASI -->
             <div class="flex justify-end">
-              <a href="../admin/admindashboard.html">
-                <button
-                  type="submit"
-                  class="text-white bg-red-600 hover:bg-red-300 hover:text-red-600 font-medium rounded-lg text-sm w-full sm:w-auto px-8 py-2 text-center mb-16 m-2"
-                >
-                  Tolak
-                </button>
-              </a>
-              <a href="../admin/admindashboard.html">
-                <button
-                  type="submit"
-                  class="text-white bg-blue-950 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-8 py-2 text-center mb-16 m-2"
-                >
-                  Verifikasi
-                </button>
-              </a>
+              <button
+                type="submit"
+                class="text-white bg-red-600 hover:bg-red-300 hover:text-red-600 font-medium rounded-lg text-sm w-full sm:w-auto px-8 py-2 text-center mb-16 m-2"
+              >
+                <a href="../admin/adminprestasi.html">Tolak</a>
+              </button>
+
+              <button
+                type="submit"
+                class="text-white bg-blue-950 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-8 py-2 text-center mb-16 m-2"
+              >
+                <a href="../admin/adminriwayat.html">Verifikasi</a>
+              </button>
             </div>
           </form>
           <footer>
@@ -863,6 +862,31 @@
     </div>
 
     <!-- SCRIPT -->
+    <script>
+      function handleFileInputChange(inputIndex) {
+        const fileInput = document.getElementById(`file_input${inputIndex}`);
+        const viewFileLink = document.getElementById("view_file_link");
+
+        if (fileInput.files.length > 0) {
+          viewFileLink.style.display = "inline";
+        } else {
+          viewFileLink.style.display = "none";
+        }
+      }
+
+      document
+        .getElementById("file_input1")
+        .addEventListener("change", function () {
+          handleFileInputChange(1);
+        });
+
+      document
+        .getElementById("file_input2")
+        .addEventListener("change", function () {
+          handleFileInputChange(2);
+        });
+    </script>
+
     <script>
       const fileInput = document.getElementById("file_input");
       const viewFileLink = document.getElementById("view_file_link");
