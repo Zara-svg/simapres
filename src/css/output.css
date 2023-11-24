@@ -1982,3 +1982,7 @@ video {
 
   /* ... other print styles ... */
 }
+.px-3 {
+  padding-left: 0.75rem /* 12px */;
+  padding-right: 0.75rem /* 12px */;
+}
