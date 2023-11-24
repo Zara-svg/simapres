@@ -502,20 +502,20 @@
                       <!-- Status Verifikasi -->
                       <td class="px-4 py-3 text-xs text-center">
                         <button
-                          id="verifikasiButton"
+                          id="verifikasiButton1"
                           class="text-white bg-green-700 hover:bg-green-300 hover:text-green-700 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-24"
                         >
                           Terverifikasi
                         </button>
 
                         <div
-                          id="verifikasiPopup"
+                          id="verifikasiPopup1"
                           class="hidden fixed top-0 left-0 w-full h-full bg-black flex bg-opacity-50 items-center justify-center"
                         >
                           <div class="bg-white px-24 py-16 rounded-lg">
                             <p>Berkas telah terverifikasi</p>
                             <button
-                              id="tutupPopup"
+                              id="tutupPopup1"
                               class="text-white bg-blue-950 hover:bg-blue-500 font-medium rounded-lg text-sm px-5 py-2 text-center mt-4"
                             >
                               Tutup
@@ -552,20 +552,20 @@
                       <!-- Status Verifikasi -->
                       <td class="px-4 py-3 text-xs text-center">
                         <button
-                          id="verifikasiButton"
+                          id="verifikasiButton2"
                           class="text-white bg-green-700 hover:bg-green-300 hover:text-green-700 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-24"
                         >
                           Terverifikasi
                         </button>
 
                         <div
-                          id="verifikasiPopup"
+                          id="verifikasiPopup2"
                           class="hidden fixed top-0 left-0 w-full h-full bg-black flex bg-opacity-50 items-center justify-center"
                         >
                           <div class="bg-white px-24 py-16 rounded-lg">
                             <p>Berkas telah terverifikasi</p>
                             <button
-                              id="tutupPopup"
+                              id="tutupPopup2"
                               class="text-white bg-blue-950 hover:bg-blue-500 font-medium rounded-lg text-sm px-5 py-2 text-center mt-4"
                             >
                               Tutup
@@ -602,20 +602,20 @@
                       <!-- Status Verifikasi -->
                       <td class="px-4 py-3 text-xs text-center">
                         <button
-                          id="verifikasiButton"
+                          id="verifikasiButton3"
                           class="text-white bg-green-700 hover:bg-green-300 hover:text-green-700 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-24"
                         >
                           Terverifikasi
                         </button>
 
                         <div
-                          id="verifikasiPopup"
+                          id="verifikasiPopup3"
                           class="hidden fixed top-0 left-0 w-full h-full bg-black flex bg-opacity-50 items-center justify-center"
                         >
                           <div class="bg-white px-24 py-16 rounded-lg">
                             <p>Berkas telah terverifikasi</p>
                             <button
-                              id="tutupPopup"
+                              id="tutupPopup3"
                               class="text-white bg-blue-950 hover:bg-blue-500 font-medium rounded-lg text-sm px-5 py-2 text-center mt-4"
                             >
                               Tutup
@@ -651,20 +651,20 @@
                       <!-- Status Verifikasi -->
                       <td class="px-4 py-3 text-xs text-center">
                         <button
-                          id="verifikasiButton"
+                          id="verifikasiButton4"
                           class="text-white bg-red-600 hover:bg-red-300 hover:text-red-600 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-24"
                         >
                           Gagal Terverifikasi
                         </button>
 
                         <div
-                          id="verifikasiPopup"
+                          id="verifikasiPopup4"
                           class="hidden fixed top-0 left-0 w-full h-full bg-black flex bg-opacity-50 items-center justify-center"
                         >
                           <div class="bg-white px-24 py-16 rounded-lg">
                             <p>Sertifikat anda tidak valid</p>
                             <button
-                              id="tutupPopup"
+                              id="tutupPopup4"
                               class="text-white bg-blue-950 hover:bg-blue-500 font-medium rounded-lg text-sm px-5 py-2 text-center mt-4"
                             >
                               Tutup
@@ -700,20 +700,22 @@
                       <!-- Status Verifikasi -->
                       <td class="px-4 py-3 text-xs text-center">
                         <button
-                          id="verifikasiButton"
+                          id="verifikasiButton5"
                           class="text-white bg-yellow-500 hover:bg-yellow-200 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-24"
                         >
                           Belum Terverifikasi
                         </button>
 
                         <div
-                          id="verifikasiPopup"
+                          id="verifikasiPopup5"
                           class="hidden fixed top-0 left-0 w-full h-full bg-black flex bg-opacity-50 items-center justify-center"
                         >
                           <div class="bg-white px-24 py-16 rounded-lg">
-                            <p>Berkas anda sedang dalam antrean</p>
+                            <p class="text-sm">
+                              Berkas anda sedang dalam antrean
+                            </p>
                             <button
-                              id="tutupPopup"
+                              id="tutupPopup5"
                               class="text-white bg-blue-950 hover:bg-blue-500 font-medium rounded-lg text-sm px-5 py-2 text-center mt-4"
                             >
                               Tutup
@@ -750,16 +752,64 @@
     </script>
 
     <script>
-      const verifikasiButton = document.getElementById("verifikasiButton");
-      const verifikasiPopup = document.getElementById("verifikasiPopup");
-      const tutupPopup = document.getElementById("tutupPopup");
+      const verifikasiButton1 = document.getElementById("verifikasiButton1");
+      const verifikasiPopup1 = document.getElementById("verifikasiPopup1");
+      const tutupPopup1 = document.getElementById("tutupPopup1");
 
-      verifikasiButton.addEventListener("click", function () {
-        verifikasiPopup.classList.remove("hidden");
+      verifikasiButton1.addEventListener("click", function () {
+        verifikasiPopup1.classList.remove("hidden");
       });
 
-      tutupPopup.addEventListener("click", function () {
-        verifikasiPopup.classList.add("hidden");
+      tutupPopup1.addEventListener("click", function () {
+        verifikasiPopup1.classList.add("hidden");
+      });
+
+      const verifikasiButton2 = document.getElementById("verifikasiButton2");
+      const verifikasiPopup2 = document.getElementById("verifikasiPopup2");
+      const tutupPopup2 = document.getElementById("tutupPopup2");
+
+      verifikasiButton2.addEventListener("click", function () {
+        verifikasiPopup2.classList.remove("hidden");
+      });
+
+      tutupPopup2.addEventListener("click", function () {
+        verifikasiPopup2.classList.add("hidden");
+      });
+
+      const verifikasiButton3 = document.getElementById("verifikasiButton3");
+      const verifikasiPopup3 = document.getElementById("verifikasiPopup3");
+      const tutupPopup3 = document.getElementById("tutupPopup3");
+
+      verifikasiButton3.addEventListener("click", function () {
+        verifikasiPopup3.classList.remove("hidden");
+      });
+
+      tutupPopup3.addEventListener("click", function () {
+        verifikasiPopup3.classList.add("hidden");
+      });
+
+      const verifikasiButton4 = document.getElementById("verifikasiButton4");
+      const verifikasiPopup4 = document.getElementById("verifikasiPopup4");
+      const tutupPopup4 = document.getElementById("tutupPopup4");
+
+      verifikasiButton4.addEventListener("click", function () {
+        verifikasiPopup4.classList.remove("hidden");
+      });
+
+      tutupPopup4.addEventListener("click", function () {
+        verifikasiPopup4.classList.add("hidden");
+      });
+
+      const verifikasiButton5 = document.getElementById("verifikasiButton5");
+      const verifikasiPopup5 = document.getElementById("verifikasiPopup5");
+      const tutupPopup5 = document.getElementById("tutupPopup5");
+
+      verifikasiButton5.addEventListener("click", function () {
+        verifikasiPopup5.classList.remove("hidden");
+      });
+
+      tutupPopup5.addEventListener("click", function () {
+        verifikasiPopup5.classList.add("hidden");
       });
     </script>
   </body>
