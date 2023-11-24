@@ -898,21 +898,8 @@
 
     <!-- JavaScript -->
     <script>
-      function editFunction() {
-        console.log("Tombol Edit Diklik");
-        //edit
-        window.location.href = "adminedit.html";
-      }
-
-      function hapusFunction() {
-        console.log("Tombol Hapus Diklik");
-        // Hapus
-        var confirmDelete = confirm("Apakah Anda yakin ingin menghapus?");
-        if (confirmDelete) {
-          // Hapus baris tabel saat konfirmasi diterima
-          var row = document.getElementById("myTable").deleteRow(-1);
-          console.log("Data dihapus dari tabel.");
-        }
+      function printDocument() {
+        window.print();
       }
     </script>
     <script>
