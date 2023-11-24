@@ -1986,3 +1986,14 @@ video {
   padding-left: 0.75rem /* 12px */;
   padding-right: 0.75rem /* 12px */;
 }
+.p-24 {
+  padding: 6rem /* 96px */;
+}
+.py-16 {
+  padding-top: 4rem /* 64px */;
+  padding-bottom: 4rem /* 64px */;
+}
+.px-24 {
+  padding-left: 6rem /* 96px */;
+  padding-right: 6rem /* 96px */;
+}
