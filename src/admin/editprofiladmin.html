@@ -23,23 +23,6 @@
       defer
     ></script>
     <script src="../js/charts-bars.js" defer></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css"
-    />
-    <script
-      type="text/javascript"
-      charset="utf8"
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      charset="utf8"
-      src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"
-    ></script>
   </head>
   <body>
     <div
@@ -51,7 +34,7 @@
         class="z-20 hidden w-64 overflow-y-auto bg-gray-200 md:block flex-shrink-0"
       >
         <div class="py-5 bg-blue-950">
-          <a class="ml-6 text-lg font-bold text-white bg-blue-950" href="#">
+          <a class="ml-6 text-lg font-medium text-white bg-blue-950" href="#">
             SIMAPRES
           </a>
         </div>
@@ -84,8 +67,12 @@
           </ul>
           <ul>
             <li class="relative px-6 py-3">
+              <span
+                class="absolute inset-y-0 left-0 w-full bg-yellow-500 rounded-tr-lg rounded-br-lg -z-10"
+                aria-hidden="true"
+              ></span>
               <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
+                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-white hover:text-blue-900"
                 href="adminprofil.html"
               >
                 <svg
@@ -106,12 +93,8 @@
               </a>
             </li>
             <li class="relative px-6 py-3">
-              <span
-                class="absolute inset-y-0 left-0 w-full bg-yellow-500 rounded-tr-lg rounded-br-lg -z-10"
-                aria-hidden="true"
-              ></span>
               <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-white hover:text-blue-900"
+                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
                 href="adminprestasi.html"
               >
                 <svg
@@ -226,7 +209,7 @@
         @keydown.escape="closeSideMenu"
       >
         <div class="py-4 text-gray-500">
-          <a class="ml-6 text-lg font-bold text-gray-800" href="#">
+          <a class="ml-6 text-lg font-medium text-gray-800" href="#">
             SIMAPRES
           </a>
           <ul class="mt-6">
@@ -257,8 +240,12 @@
           </ul>
           <ul>
             <li class="relative px-6 py-3">
+              <span
+                class="absolute inset-y-0 left-0 w-full bg-yellow-500 rounded-tr-lg rounded-br-lg -z-10"
+                aria-hidden="true"
+              ></span>
               <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
+                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-white hover:text-blue-900"
                 href="adminprofil.html"
               >
                 <svg
@@ -279,12 +266,8 @@
               </a>
             </li>
             <li class="relative px-6 py-3">
-              <span
-                class="absolute inset-y-0 left-0 w-full bg-yellow-500 rounded-tr-lg rounded-br-lg -z-10"
-                aria-hidden="true"
-              ></span>
               <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-white hover:text-blue-900"
+                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
                 href="adminprestasi.html"
               >
                 <svg
@@ -433,10 +416,7 @@
                         class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800"
                         href="adminprofil.html"
                       >
-                        <img
-                          src="../img/profiladmin.png"
-                          class="w-4 h-4 mr-3"
-                        />
+                        <img src="../img/profil.svg" class="w-4 h-4 mr-3" />
 
                         <span>Profil</span>
                       </a>
@@ -458,417 +438,80 @@
             </ul>
           </div>
         </header>
-        <main class="h-full overflow-y-auto mb-10">
+        <main class="h-full overflow-y-auto">
           <div class="container px-6 mx-auto grid">
-            <h2 class="my-6 text-2xl font-semibold text-gray-700">
-              Verifikasi Prestasi
-            </h2>
-
-            <div class="w-full rounded-lg shadow-xs">
-              <div class="w-full">
-                <table class="w-full min-w-full stripe hover" id="example">
-                  <thead>
-                    <tr
-                      class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800"
-                    >
-                      <th class="px-4 py-3 text-center">ID Prestasi</th>
-                      <th class="px-4 py-3 text-center">Nama</th>
-                      <th class="px-4 py-3 text-center">Nama Prestasi</th>
-                      <th class="px-4 py-3 text-center">Tahun Perolehan</th>
-                      <th class="px-4 py-3 text-center">Aksi</th>
-                    </tr>
-                  </thead>
-                  <tbody class="bg-white divide-y">
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">001</td>
-                      <!-- Nama & Prodi -->
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <div>
-                            <p class="font-semibold">Nasywa Bieber</p>
-                            <p class="text-xs text-gray-600">
-                              Teknologi Informasi
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <!-- Nama Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        Debat Anak Bangsa
-                      </td>
-                      <!-- Tahun -->
-                      <td class="px-4 py-3 text-sm text-center">2023</td>
-                      <!-- Aksi -->
-                      <td class="px-4 py-3 text-xs text-center">
-                        <a
-                          href="adminverifikasi.html"
-                          class="text-white bg-green-700 hover:bg-green-300 hover:text-green-700 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40 m-2"
-                        >
-                          Verifikasi
-                        </a>
-                        <button
-                          class="text-white bg-yellow-500 hover:bg-yellow-200 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-24"
-                          onclick="printDocument()"
-                        >
-                          Print
-                        </button>
-                      </td>
-                    </tr>
-
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">002</td>
-                      <!-- Nama & Prodi -->
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <div>
-                            <p class="font-semibold">Anggi Gwenchana</p>
-                            <p class="text-xs text-gray-600">
-                              Teknologi Informasi
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <!-- Nama Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        International Conference
-                      </td>
-                      <!-- Tahun -->
-                      <td class="px-4 py-3 text-sm text-center">2023</td>
-                      <!-- Aksi -->
-                      <td class="px-4 py-3 text-xs text-center">
-                        <a
-                          href="adminverifikasi.html"
-                          class="text-white bg-green-700 hover:bg-green-300 hover:text-green-700 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40 m-2"
-                        >
-                          Verifikasi
-                        </a>
-                        <button
-                          class="text-white bg-yellow-500 hover:bg-yellow-200 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-24"
-                          onclick="printDocument()"
-                        >
-                          Print
-                        </button>
-                      </td>
-                    </tr>
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">003</td>
-                      <!-- Nama & Prodi -->
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <div>
-                            <p class="font-semibold">Tya Badrul</p>
-                            <p class="text-xs text-gray-600">
-                              Manajemen Perhotelan
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <!-- Nama Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        Lomba Memasak Cepat
-                      </td>
-                      <!-- Tahun -->
-                      <td class="px-4 py-3 text-sm text-center">2023</td>
-                      <!-- Aksi -->
-                      <td class="px-4 py-3 text-xs text-center">
-                        <a
-                          href="adminverifikasi.html"
-                          class="text-white bg-green-700 hover:bg-green-300 hover:text-green-700 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40 m-2"
-                        >
-                          Verifikasi
-                        </a>
-                        <button
-                          class="text-white bg-yellow-500 hover:bg-yellow-200 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-24"
-                          onclick="printDocument()"
-                        >
-                          Print
-                        </button>
-                      </td>
-                    </tr>
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">004</td>
-                      <!-- Nama & Prodi -->
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <div>
-                            <p class="font-semibold">Sidky Subianto</p>
-                            <p class="text-xs text-gray-600">
-                              Administrasi Bisnis
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <!-- Nama Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        Karya Tulis Ilmiah
-                      </td>
-                      <!-- Tahun -->
-                      <td class="px-4 py-3 text-sm text-center">2023</td>
-                      <!-- Aksi -->
-                      <td class="px-4 py-3 text-xs text-center">
-                        <a
-                          href="adminverifikasi.html"
-                          class="text-white bg-green-700 hover:bg-green-300 hover:text-green-700 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40 m-2"
-                        >
-                          Verifikasi
-                        </a>
-                        <button
-                          class="text-white bg-yellow-500 hover:bg-yellow-200 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-24"
-                          onclick="printDocument()"
-                        >
-                          Print
-                        </button>
-                      </td>
-                    </tr>
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">005</td>
-                      <!-- Nama & Prodi -->
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <div>
-                            <p class="font-semibold">Abid Doremi</p>
-                            <p class="text-xs text-gray-600">Desain Grafis</p>
-                          </div>
-                        </div>
-                      </td>
-                      <!-- Nama Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        Lomba Poster Kemerdekaan
-                      </td>
-                      <!-- Tahun -->
-                      <td class="px-4 py-3 text-sm text-center">2023</td>
-                      <!-- Aksi -->
-                      <td class="px-4 py-3 text-xs text-center">
-                        <a
-                          href="adminverifikasi.html"
-                          class="text-white bg-green-700 hover:bg-green-300 hover:text-green-700 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40 m-2"
-                        >
-                          Verifikasi
-                        </a>
-                        <button
-                          class="text-white bg-yellow-500 hover:bg-yellow-200 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-24"
-                          onclick="printDocument()"
-                        >
-                          Print
-                        </button>
-                      </td>
-                    </tr>
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">006</td>
-                      <!-- Nama & Prodi -->
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <div>
-                            <p class="font-semibold">Zahra Prabowo</p>
-                            <p class="text-xs text-gray-600">
-                              Teknologi Informasi
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <!-- Nama Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        International UI/UX
-                      </td>
-                      <!-- Tahun -->
-                      <td class="px-4 py-3 text-sm text-center">2023</td>
-                      <!-- Aksi -->
-                      <td class="px-4 py-3 text-xs text-center">
-                        <a
-                          href="adminverifikasi.html"
-                          class="text-white bg-green-700 hover:bg-green-300 hover:text-green-700 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40 m-2"
-                        >
-                          Verifikasi
-                        </a>
-                        <button
-                          class="text-white bg-yellow-500 hover:bg-yellow-200 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-24"
-                          onclick="printDocument()"
-                        >
-                          Print
-                        </button>
-                      </td>
-                    </tr>
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">007</td>
-                      <!-- Nama & Prodi -->
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <div>
-                            <p class="font-semibold">Karin Widodo</p>
-                            <p class="text-xs text-gray-600">
-                              Keuangan Perbankan
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <!-- Nama Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        National Accounting
-                      </td>
-                      <!-- Tahun -->
-                      <td class="px-4 py-3 text-sm text-center">2023</td>
-                      <!-- Aksi -->
-                      <td class="px-4 py-3 text-xs text-center">
-                        <a
-                          href="adminverifikasi.html"
-                          class="text-white bg-green-700 hover:bg-green-300 hover:text-green-700 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40 m-2"
-                        >
-                          Verifikasi
-                        </a>
-                        <button
-                          class="text-white bg-yellow-500 hover:bg-yellow-200 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-24"
-                          onclick="printDocument()"
-                        >
-                          Print
-                        </button>
-                      </td>
-                    </tr>
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">008</td>
-                      <!-- Nama & Prodi -->
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <div>
-                            <p class="font-semibold">Risma Jokowi</p>
-                            <p class="text-xs text-gray-600">
-                              Teknologi Informasi
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <!-- Nama Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        Short Video Competition
-                      </td>
-                      <!-- Tahun -->
-                      <td class="px-4 py-3 text-sm text-center">2023</td>
-                      <!-- Aksi -->
-                      <td class="px-4 py-3 text-xs text-center">
-                        <a
-                          href="adminverifikasi.html"
-                          class="text-white bg-green-700 hover:bg-green-300 hover:text-green-700 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40 m-2"
-                        >
-                          Verifikasi
-                        </a>
-                        <button
-                          class="text-white bg-yellow-500 hover:bg-yellow-200 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-24"
-                          onclick="printDocument()"
-                        >
-                          Print
-                        </button>
-                      </td>
-                    </tr>
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">009</td>
-                      <!-- Nama & Prodi -->
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <div>
-                            <p class="font-semibold">Renita Bambang</p>
-                            <p class="text-xs text-gray-600">
-                              Administrasi Bisnis
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <!-- Nama Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        Lomba Karya Tulis Ilmiah Tingkat Remaja
-                      </td>
-                      <!-- Tahun -->
-                      <td class="px-4 py-3 text-sm text-center">2023</td>
-                      <!-- Aksi -->
-                      <td class="px-4 py-3 text-xs text-center">
-                        <a
-                          href="adminverifikasi.html"
-                          class="text-white bg-green-700 hover:bg-green-300 hover:text-green-700 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40 m-2"
-                        >
-                          Verifikasi
-                        </a>
-                        <button
-                          class="text-white bg-yellow-500 hover:bg-yellow-200 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-24"
-                          onclick="printDocument()"
-                        >
-                          Print
-                        </button>
-                      </td>
-                    </tr>
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">010</td>
-                      <!-- Nama & Prodi -->
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <div>
-                            <p class="font-semibold">Haechan Ganteng</p>
-                            <p class="text-xs text-gray-600">
-                              Teknologi Informasi
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <!-- Nama Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        Internaational Dance
-                      </td>
-                      <!-- Tahun -->
-                      <td class="px-4 py-3 text-sm text-center">2023</td>
-                      <!-- Aksi -->
-                      <td class="px-4 py-3 text-xs text-center">
-                        <a
-                          href="adminverifikasi.html"
-                          class="text-white bg-green-700 hover:bg-green-300 hover:text-green-700 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40 m-2"
-                        >
-                          Verifikasi
-                        </a>
-                        <button
-                          class="text-white bg-yellow-500 hover:bg-yellow-200 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-24"
-                          onclick="printDocument()"
-                        >
-                          Print
-                        </button>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+            <h2 class="my-6 text-2xl font-medium text-gray-700">Edit Profil</h2>
+          </div>
+          <div class="max-w-md mx-auto p-6 bg-white shadow-lg rounded-lg">
+            <form>
+              <!-- Nama -->
+              <div class="mb-4">
+                <label for="nama" class="block text-gray-600 font-medium mb-2"
+                  >Nama</label
+                >
+                <input
+                  type="text"
+                  id="nama"
+                  name="nama"
+                  placeholder="Masukkan nama"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2"
+                />
               </div>
-            </div>
+              <!-- Email -->
+              <div class="mb-4">
+                <label for="email" class="block text-gray-600 font-medium mb-2"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Masukkan email"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2"
+                />
+              </div>
+              <!-- Foto Profil -->
+              <div class="mb-4">
+                <label for="foto" class="block text-gray-600 font-medium mb-2"
+                  >Foto Profil</label
+                >
+                <input
+                  type="file"
+                  id="foto"
+                  name="foto"
+                  accept="image/*"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1"
+                />
+                <p class="text-sm text-gray-500 mt-2">
+                  Pilih foto profil (format: JPEG, PNG, atau GIF)
+                </p>
+              </div>
+              <!-- Tombol Simpan -->
+              <div class="flex justify-end">
+                <div class="justify-end">
+                  <a
+                    href="adminprofil.html"
+                    class="block mx-auto max-w-full sm:w-auto"
+                  >
+                    <button
+                      type="button"
+                      class="text-white bg-blue-950 hover:bg-blue-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-8 py-2 text-center"
+                    >
+                      Simpan
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </form>
           </div>
         </main>
         <footer>
           <hr />
-          <div class="p-8 text-center -z-10">
+          <div class="p-8 text-center">
             <h1>Copyright © 2023 Vokasi UB. All rights reserved.</h1>
           </div>
         </footer>
       </div>
     </div>
-
-    <!-- JavaScript -->
-    <script>
-      function printDocument() {
-        window.location.href = "print.html";
-      }
-    </script>
-
-    <script>
-      $(document).ready(function () {
-        var table = $("#example")
-          .DataTable({
-            responsive: true,
-          })
-          .columns.adjust()
-          .responsive.recalc();
-      });
-    </script>
   </body>
 </html>
