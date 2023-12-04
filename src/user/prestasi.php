@@ -23,6 +23,66 @@
       defer
     ></script>
     <script src="../js/charts-bars.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css"
+    />
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"
+    ></script>
+
+    <!-- CSS -->
+    <style>
+      /* Overrides for Tailwind CSS */
+      .dataTables_wrapper select,
+      .dataTables_wrapper .dataTables_filter input {
+        /* ... (unchanged styles) ... */
+      }
+
+      table.dataTable.hover tbody tr:hover,
+      table.dataTable.display tbody tr:hover {
+        /* ... (unchanged styles) ... */
+      }
+
+      .dataTables_wrapper .dataTables_paginate .paginate_button {
+        /* ... (unchanged styles) ... */
+      }
+
+      .dataTables_wrapper .dataTables_paginate .paginate_button.current {
+        /* ... (unchanged styles) ... */
+      }
+
+      .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+        /* ... (unchanged styles) ... */
+      }
+
+      table.dataTable.no-footer {
+        /* ... (unchanged styles) ... */
+      }
+
+      table.dataTable.dtr-inline.collapsed > tbody > tr > td:first-child:before,
+      table.dataTable.dtr-inline.collapsed
+        > tbody
+        > tr
+        > th:first-child:before {
+        /* ... (unchanged styles) ... */
+      }
+
+      /* New styles for action buttons */
+      .table-actions button {
+        margin-right: 0.5rem;
+      }
+    </style>
   </head>
   <body>
     <div
@@ -43,7 +103,8 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold text-black hover:text-blue-900 transition-colors duration-150"
-                href="admindashboard.html"
+                href="index.php
+                "
               >
                 <svg
                   width="24"
@@ -69,7 +130,8 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="adminprofil.html"
+                href="profil.php
+                "
               >
                 <svg
                   width="25"
@@ -89,9 +151,13 @@
               </a>
             </li>
             <li class="relative px-6 py-3">
+              <span
+                class="absolute inset-y-0 left-0 w-full bg-yellow-500 rounded-tr-lg rounded-br-lg -z-10"
+                aria-hidden="true"
+              ></span>
               <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="adminprestasi.html"
+                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-white hover:text-blue-900"
+                href="prestasi.php"
               >
                 <svg
                   width="25"
@@ -111,7 +177,27 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="adminriwayat.html"
+                href="verifikasi.php"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 -960 960 960"
+                  width="24"
+                >
+                  <path
+                    d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H160v400Zm278-58L296-440l58-58 84 84 168-168 58 58-226 226Zm-278 58v-480 480Z"
+                    class="w-5 h-5"
+                    fill="currentColor"
+                  />
+                </svg>
+                <span class="ml-4">Status Verifikasi</span>
+              </a>
+            </li>
+            <li class="relative px-6 py-3">
+              <a
+                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
+                href="riwayat.php"
               >
                 <svg
                   width="24"
@@ -135,34 +221,11 @@
                 <span class="ml-4">Riwayat Prestasi</span>
               </a>
             </li>
-            <li class="relative px-6 py-3">
-              <span
-                class="absolute inset-y-0 left-0 w-full bg-yellow-500 rounded-tr-lg rounded-br-lg -z-10"
-                aria-hidden="true"
-              ></span>
-              <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-white hover:text-blue-900"
-                href="adminakses.html"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="24"
-                  viewBox="0 -960 960 960"
-                  width="24"
-                >
-                  <path
-                    d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H160v400Zm278-58L296-440l58-58 84 84 168-168 58 58-226 226Zm-278 58v-480 480Z"
-                    class="w-5 h-5"
-                    fill="currentColor"
-                  />
-                </svg>
-                <span class="ml-4">Manajemen Akses</span>
-              </a>
-            </li>
+
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="../luaran/signin.html"
+                href="../luaran/signin.php"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -214,7 +277,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="admindashboard.html"
+                href="index.php"
               >
                 <svg
                   width="24"
@@ -240,7 +303,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="adminprofil.html"
+                href="profil.php"
               >
                 <svg
                   width="25"
@@ -260,9 +323,13 @@
               </a>
             </li>
             <li class="relative px-6 py-3">
+              <span
+                class="absolute inset-y-0 left-0 w-full bg-yellow-500 rounded-tr-lg rounded-br-lg -z-10"
+                aria-hidden="true"
+              ></span>
               <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="adminprestasi.html"
+                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-white hover:text-blue-900"
+                href="prestasi.php"
               >
                 <svg
                   width="25"
@@ -282,7 +349,27 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="adminriwayat.html"
+                href="verifikasi.php"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 -960 960 960"
+                  width="24"
+                >
+                  <path
+                    d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H160v400Zm278-58L296-440l58-58 84 84 168-168 58 58-226 226Zm-278 58v-480 480Z"
+                    class="w-5 h-5"
+                    fill="currentColor"
+                  />
+                </svg>
+                <span class="ml-4">Status Verifikasi</span>
+              </a>
+            </li>
+            <li class="relative px-6 py-3">
+              <a
+                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
+                href="riwayat.php"
               >
                 <svg
                   width="24"
@@ -306,34 +393,11 @@
                 <span class="ml-4">Riwayat Prestasi</span>
               </a>
             </li>
-            <li class="relative px-6 py-3">
-              <span
-                class="absolute inset-y-0 left-0 w-full bg-yellow-500 rounded-tr-lg rounded-br-lg -z-10"
-                aria-hidden="true"
-              ></span>
-              <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-white hover:text-blue-900"
-                href="adminakses.html"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="24"
-                  viewBox="0 -960 960 960"
-                  width="24"
-                >
-                  <path
-                    d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H160v400Zm278-58L296-440l58-58 84 84 168-168 58 58-226 226Zm-278 58v-480 480Z"
-                    class="w-5 h-5"
-                    fill="currentColor"
-                  />
-                </svg>
-                <span class="ml-4">Manajemen Akses</span>
-              </a>
-            </li>
+
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="../luaran/signin.html"
+                href="../luaran/signin.php"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -392,7 +456,7 @@
                 >
                   <img
                     class="object-cover w-8 h-8 rounded-full"
-                    src="../img/profiladmin.png"
+                    src="../img/profil.jpg"
                     alt=""
                     aria-hidden="true"
                   />
@@ -410,12 +474,9 @@
                     <li class="flex">
                       <a
                         class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800"
-                        href="adminprofil.html"
+                        href="profil.php"
                       >
-                        <img
-                          src="../img/profiladmin.png"
-                          class="w-4 h-4 mr-3"
-                        />
+                        <img src="../img/profil.svg" class="w-4 h-4 mr-3" />
 
                         <span>Profil</span>
                       </a>
@@ -424,7 +485,7 @@
                     <li class="flex">
                       <a
                         class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800"
-                        href="../luaran/signin.html"
+                        href="../luaran/signin.php"
                       >
                         <img src="../img/logout.svg" class="w-4 h-4 mr-3" />
 
@@ -437,115 +498,125 @@
             </ul>
           </div>
         </header>
-        <main class="h-full overflow-y-auto">
+        <main class="h-full overflow-y-auto mb-10">
           <div class="container px-6 mx-auto grid">
-            <h2 class="my-6 text-2xl font-semibold text-gray-700">
-              Tambah Admin
-            </h2>
-          </div>
+            <h2 class="mt-6 text-2xl font-semibold text-gray-700">Prestasi</h2>
 
-          <form class="px-6 mx-auto">
-            <!-- Foto Profil -->
-            <div class="mb-3">
-              <label
-                for="image_input"
-                class="block mb-2 text-sm font-medium text-gray-900"
-                >Foto Profil</label
+            <div class="flex justify-end mb-2">
+              <a
+                href="../user/tambahprestasi.php"
+                class="text-white bg-blue-950 hover:bg-blue-500 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40"
               >
-              <input
-                type="file"
-                id="image_input"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1"
-                placeholder="Foto Profil"
-                required
-              />
-            </div>
-
-            <!-- Nama -->
-            <div class="mb-3">
-              <label
-                for="nama"
-                class="block mb-2 text-sm font-medium text-gray-900"
-                >Nama</label
-              >
-              <input
-                type="text"
-                id="nama"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5"
-                placeholder="Nama"
-                required
-              />
-            </div>
-            <!-- Email -->
-            <div class="mb-3">
-              <label
-                for="emai"
-                class="block mb-2 text-sm font-medium text-gray-900"
-                >Email</label
-              >
-              <input
-                type="email"
-                id="email"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5"
-                placeholder="Email"
-                required
-              />
-            </div>
-            <!-- Password -->
-            <div class="mb-3">
-              <label
-                for="password"
-                class="block mb-2 text-sm font-medium text-gray-900"
-                >Password</label
-              >
-              <input
-                type="password"
-                id="password"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5"
-                placeholder="Password"
-                required
-              />
-            </div>
-
-            <!-- LEVEL -->
-            <div class="mb-3">
-              <label
-                for="level"
-                class="block mb-2 text-sm font-medium text-gray-900"
-                >Level</label
-              >
-              <select
-                id="level"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-              >
-                <option selected>Level</option>
-                <option value="A">Administrator</option>
-                <option value="U">User</option>
-              </select>
-            </div>
-
-            <!-- END FORM -->
-
-            <!-- VERIFIKASI -->
-            <div class="flex justify-end mt-10 mb-10">
-              <a href="adminakses.html">
-                <button
-                  type="button"
-                  class="text-white bg-blue-950 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-8 py-2 text-center mb-16 m-2"
-                >
-                  Tambah
-                </button>
+                Tambah Prestasi
               </a>
             </div>
-          </form>
-          <footer>
-            <hr />
-            <div class="p-8 text-center">
-              <h1>Copyright © 2023 Vokasi UB. All rights reserved.</h1>
+
+            <div class="w-full rounded-lg shadow-xs">
+              <div class="w-full">
+                <table class="w-full min-w-full stripe hover" id="example">
+                  <thead>
+                    <tr
+                      class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800"
+                    >
+                      <th class="px-4 py-3 text-center">ID Prestasi</th>
+                      <th class="px-4 py-3 text-center">Nama</th>
+                      <th class="px-4 py-3 text-center">Nama Prestasi</th>
+                      <th class="px-4 py-3 text-center">Tahun Perolehan</th>
+                      <th class="px-4 py-3 text-center">Juara</th>
+                      <th class="px-4 py-3 text-center">Jenis Prestasi</th>
+                    </tr>
+                  </thead>
+                  <?php 
+                      
+                      include('../luaran/koneksi.php');
+                       
+                       $sql_k = "SELECT  nama, nama_perlombaan, tahun, capaian, jenis_prestasi FROM prestasi Order By nama";
+                       $query_k = mysqli_query($koneksi, $sql_k);
+                       $no = 1;
+                       ?>
+                       <tr>
+                       <tbody class="bg-white divide-y">  <?php
+                       while ($data_k = mysqli_fetch_row($query_k)) {
+                        $nama = $data_k[0];
+                       $nama_perlombaan = $data_k[1];
+                       $tahun = $data_k[2];
+                       $capaian = $data_k[3];
+                       $jenis_prestasi = $data_k[4];
+                       
+                       }
+                       
+                       ?>
+                       
+                       <?php 
+                       include('../luaran/koneksi.php');
+                       
+                       $sql_k = "SELECT id_user, jurusan, level FROM aktor WHERE level='user'";
+                       $query_k = mysqli_query($koneksi, $sql_k);
+                       ?>
+                       
+                       <tr>
+                       <tbody class="bg-white divide-y">
+                     <?php
+                      while ($data_k = mysqli_fetch_row($query_k)) {
+
+                        $jurusan = $data_k[1];
+                        ?>
+                     
+                    
+                    <tr class="text-gray-700 dark:text-gray-400">
+                      <!-- Nomer -->
+                      <td class="px-4 py-3 text-sm text-center"><?php echo $no; ?></td>
+                      <!-- Nama & Prodi -->
+                      <td class="px-4 py-3">
+                        <div class="flex items-center text-sm">
+                          <div>
+                            <p class="font-semibold"><?php echo $nama; ?>
+                            <p class="text-xs text-gray-600"><?php echo $jurusan; ?></td>
+                            </p>
+                          </div>
+                        </div>
+                        
+                      <!-- Nama Prestasi -->
+                      <td class="px-4 py-3 text-sm text-center"><?php echo $nama_perlombaan; ?></td>
+                      
+                      </td>
+                      <!-- Tahun -->
+                      <td class="px-4 py-3 text-sm text-center"><?php echo $tahun; ?></td>
+                      <!-- Juara -->
+                      <td class="px-4 py-3 text-sm text-center"><?php echo $capaian; ?></td>
+                      <!-- Jenis Prestasi -->
+                      <td class="px-4 py-3 text-sm text-center"><?php echo $jenis_prestasi; ?></td>
+                      </td>
+                    </tr><?php $no++;} ?>
+                  <tbody class="bg-white divide-y">
+                    <tr class="text-gray-700 dark:text-gray-400">
+                     
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
-          </footer>
+          </div>
         </main>
+        <footer>
+          <hr />
+          <div class="p-8 text-center -z-10">
+            <h1>Copyright © 2023 Vokasi UB. All rights reserved.</h1>
+          </div>
+        </footer>
       </div>
     </div>
+
+    <!-- JavaScript -->
+    <script>
+      $(document).ready(function () {
+        var table = $("#example")
+          .DataTable({
+            responsive: true,
+          })
+          .columns.adjust()
+          .responsive.recalc();
+      });
+    </script>
   </body>
 </html>

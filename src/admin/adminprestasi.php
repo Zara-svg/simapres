@@ -60,7 +60,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold text-black hover:text-blue-900 transition-colors duration-150"
-                href="admindashboard.html"
+                href="admindashboard.php"
               >
                 <svg
                   width="24"
@@ -86,7 +86,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="adminprofil.html"
+                href="adminprofil.php"
               >
                 <svg
                   width="25"
@@ -112,7 +112,7 @@
               ></span>
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-white hover:text-blue-900"
-                href="adminprestasi.html"
+                href="adminprestasi.php"
               >
                 <svg
                   width="25"
@@ -132,7 +132,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="adminriwayat.html"
+                href="adminriwayat.php"
               >
                 <svg
                   width="24"
@@ -159,7 +159,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="adminakses.html"
+                href="adminakses.php"
               >
                 <svg
                   width="24"
@@ -181,7 +181,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="../luaran/signin.html"
+                href="../luaran/signin.php"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -233,7 +233,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="admindashboard.html"
+                href="admindashboard.php"
               >
                 <svg
                   width="24"
@@ -259,7 +259,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="adminprofil.html"
+                href="adminprofil.php"
               >
                 <svg
                   width="25"
@@ -285,7 +285,7 @@
               ></span>
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-white hover:text-blue-900"
-                href="adminprestasi.html"
+                href="adminprestasi.php"
               >
                 <svg
                   width="25"
@@ -305,7 +305,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="adminriwayat.html"
+                href="adminriwayat.php"
               >
                 <svg
                   width="24"
@@ -332,7 +332,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="adminakses.html"
+                href="adminakses.php"
               >
                 <svg
                   width="24"
@@ -354,7 +354,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="../luaran/signin.html"
+                href="../luaran/signin.php"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -431,7 +431,7 @@
                     <li class="flex">
                       <a
                         class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800"
-                        href="adminprofil.html"
+                        href="adminprofil.php"
                       >
                         <img
                           src="../img/profiladmin.png"
@@ -445,7 +445,7 @@
                     <li class="flex">
                       <a
                         class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800"
-                        href="../luaran/signin.html"
+                        href="../luaran/signin.php"
                       >
                         <img src="../img/logout.svg" class="w-4 h-4 mr-3" />
 
@@ -502,7 +502,7 @@
                       <!-- Aksi -->
                       <td class="px-4 py-3 text-xs text-center">
                         <a
-                          href="adminverifikasi.html"
+                          href="adminverifikasi.php"
                           class="text-white bg-green-700 hover:bg-green-300 hover:text-green-700 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40 m-2"
                         >
                           Verifikasi
@@ -539,7 +539,7 @@
                       <!-- Aksi -->
                       <td class="px-4 py-3 text-xs text-center">
                         <a
-                          href="adminverifikasi.html"
+                          href="adminverifikasi.php"
                           class="text-white bg-green-700 hover:bg-green-300 hover:text-green-700 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40 m-2"
                         >
                           Verifikasi
@@ -575,7 +575,7 @@
                       <!-- Aksi -->
                       <td class="px-4 py-3 text-xs text-center">
                         <a
-                          href="adminverifikasi.html"
+                          href="adminverifikasi.php"
                           class="text-white bg-green-700 hover:bg-green-300 hover:text-green-700 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40 m-2"
                         >
                           Verifikasi
@@ -611,7 +611,7 @@
                       <!-- Aksi -->
                       <td class="px-4 py-3 text-xs text-center">
                         <a
-                          href="adminverifikasi.html"
+                          href="adminverifikasi.php"
                           class="text-white bg-green-700 hover:bg-green-300 hover:text-green-700 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40 m-2"
                         >
                           Verifikasi
@@ -645,7 +645,7 @@
                       <!-- Aksi -->
                       <td class="px-4 py-3 text-xs text-center">
                         <a
-                          href="adminverifikasi.html"
+                          href="adminverifikasi.php"
                           class="text-white bg-green-700 hover:bg-green-300 hover:text-green-700 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40 m-2"
                         >
                           Verifikasi
@@ -681,7 +681,7 @@
                       <!-- Aksi -->
                       <td class="px-4 py-3 text-xs text-center">
                         <a
-                          href="adminverifikasi.html"
+                          href="adminverifikasi.php"
                           class="text-white bg-green-700 hover:bg-green-300 hover:text-green-700 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40 m-2"
                         >
                           Verifikasi
@@ -717,7 +717,7 @@
                       <!-- Aksi -->
                       <td class="px-4 py-3 text-xs text-center">
                         <a
-                          href="adminverifikasi.html"
+                          href="adminverifikasi.php"
                           class="text-white bg-green-700 hover:bg-green-300 hover:text-green-700 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40 m-2"
                         >
                           Verifikasi
@@ -753,7 +753,7 @@
                       <!-- Aksi -->
                       <td class="px-4 py-3 text-xs text-center">
                         <a
-                          href="adminverifikasi.html"
+                          href="adminverifikasi.php"
                           class="text-white bg-green-700 hover:bg-green-300 hover:text-green-700 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40 m-2"
                         >
                           Verifikasi
@@ -789,7 +789,7 @@
                       <!-- Aksi -->
                       <td class="px-4 py-3 text-xs text-center">
                         <a
-                          href="adminverifikasi.html"
+                          href="adminverifikasi.php"
                           class="text-white bg-green-700 hover:bg-green-300 hover:text-green-700 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40 m-2"
                         >
                           Verifikasi
@@ -825,7 +825,7 @@
                       <!-- Aksi -->
                       <td class="px-4 py-3 text-xs text-center">
                         <a
-                          href="adminverifikasi.html"
+                          href="adminverifikasi.php"
                           class="text-white bg-green-700 hover:bg-green-300 hover:text-green-700 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40 m-2"
                         >
                           Verifikasi
@@ -856,7 +856,7 @@
     <!-- JavaScript -->
     <script>
       function printDocument() {
-        window.location.href = "print.html";
+        window.location.href = "print.php";
       }
     </script>
 

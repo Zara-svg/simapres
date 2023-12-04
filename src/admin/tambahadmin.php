@@ -43,7 +43,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold text-black hover:text-blue-900 transition-colors duration-150"
-                href="admindashboard.html"
+                href="admindashboard.php"
               >
                 <svg
                   width="24"
@@ -69,7 +69,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="adminprofil.html"
+                href="adminprofil.php"
               >
                 <svg
                   width="25"
@@ -91,7 +91,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="adminprestasi.html"
+                href="adminprestasi.php"
               >
                 <svg
                   width="25"
@@ -111,7 +111,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="adminriwayat.html"
+                href="adminriwayat.php"
               >
                 <svg
                   width="24"
@@ -142,7 +142,7 @@
               ></span>
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-white hover:text-blue-900"
-                href="adminakses.html"
+                href="adminakses.php"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -162,7 +162,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="../luaran/signin.html"
+                href="../luaran/signin.php"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -214,7 +214,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="admindashboard.html"
+                href="admindashboard.php"
               >
                 <svg
                   width="24"
@@ -240,7 +240,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="adminprofil.html"
+                href="adminprofil.php"
               >
                 <svg
                   width="25"
@@ -262,7 +262,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="adminprestasi.html"
+                href="adminprestasi.php"
               >
                 <svg
                   width="25"
@@ -282,7 +282,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="adminriwayat.html"
+                href="adminriwayat.php"
               >
                 <svg
                   width="24"
@@ -313,7 +313,7 @@
               ></span>
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-white hover:text-blue-900"
-                href="adminakses.html"
+                href="adminakses.php"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -333,7 +333,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="../luaran/signin.html"
+                href="../luaran/signin.php"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -410,7 +410,7 @@
                     <li class="flex">
                       <a
                         class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800"
-                        href="adminprofil.html"
+                        href="adminprofil.php"
                       >
                         <img
                           src="../img/profiladmin.png"
@@ -424,7 +424,7 @@
                     <li class="flex">
                       <a
                         class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800"
-                        href="../luaran/signin.html"
+                        href="../luaran/signin.php"
                       >
                         <img src="../img/logout.svg" class="w-4 h-4 mr-3" />
 
@@ -439,7 +439,9 @@
         </header>
         <main class="h-full overflow-y-auto">
           <div class="container px-6 mx-auto grid">
-            <h2 class="my-6 text-2xl font-semibold text-gray-700">Edit User</h2>
+            <h2 class="my-6 text-2xl font-semibold text-gray-700">
+              Tambah Admin
+            </h2>
           </div>
 
           <form class="px-6 mx-auto">
@@ -526,12 +528,12 @@
 
             <!-- VERIFIKASI -->
             <div class="flex justify-end mt-10 mb-10">
-              <a href="tambahadmin.html">
+              <a href="adminakses.php">
                 <button
                   type="button"
                   class="text-white bg-blue-950 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-8 py-2 text-center mb-16 m-2"
                 >
-                  Edit
+                  Tambah
                 </button>
               </a>
             </div>

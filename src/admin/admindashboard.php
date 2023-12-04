@@ -47,7 +47,7 @@
               ></span>
               <a
                 class="inline-flex items-center w-full text-sm font-semibold text-white hover:text-blue-900 transition-colors duration-150"
-                href="index.html"
+                href="admindashboard.php"
               >
                 <svg
                   width="24"
@@ -73,7 +73,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="profil.html"
+                href="adminprofil.php"
               >
                 <svg
                   width="25"
@@ -95,7 +95,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="prestasi.html"
+                href="adminprestasi.php"
               >
                 <svg
                   width="25"
@@ -115,27 +115,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="verifikasi.html"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="24"
-                  viewBox="0 -960 960 960"
-                  width="24"
-                >
-                  <path
-                    d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H160v400Zm278-58L296-440l58-58 84 84 168-168 58 58-226 226Zm-278 58v-480 480Z"
-                    class="w-5 h-5"
-                    fill="currentColor"
-                  />
-                </svg>
-                <span class="ml-4">Status Verifikasi</span>
-              </a>
-            </li>
-            <li class="relative px-6 py-3">
-              <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="riwayat.html"
+                href="adminriwayat.php"
               >
                 <svg
                   width="24"
@@ -159,11 +139,33 @@
                 <span class="ml-4">Riwayat Prestasi</span>
               </a>
             </li>
-
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="../luaran/signin.html"
+                href="adminakses.php"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M22 8.293C22 11.769 19.17 14.587 15.68 14.587C15.044 14.587 13.594 14.441 12.889 13.855L12.007 14.733C11.488 15.25 11.628 15.402 11.859 15.652C11.955 15.757 12.067 15.878 12.154 16.051C12.154 16.051 12.889 17.075 12.154 18.1C11.713 18.685 10.478 19.504 9.06796 18.1L8.77396 18.392C8.77396 18.392 9.65496 19.417 8.92096 20.442C8.47996 21.027 7.30396 21.612 6.27496 20.588L5.24696 21.612C4.54096 22.315 3.67896 21.905 3.33696 21.612L2.45396 20.734C1.63096 19.914 2.11096 19.026 2.45396 18.684L10.096 11.074C10.096 11.074 9.36096 9.904 9.36096 8.294C9.36096 4.818 12.191 2 15.681 2C19.171 2 22 4.818 22 8.293ZM15.681 10.489C16.2643 10.4901 16.8241 10.2594 17.2374 9.84782C17.6507 9.4362 17.8836 8.8773 17.885 8.294C17.8844 8.00509 17.827 7.71912 17.716 7.4524C17.6049 7.18568 17.4424 6.94345 17.2378 6.73954C17.0331 6.53562 16.7903 6.37401 16.5232 6.26393C16.256 6.15386 15.9699 6.09747 15.681 6.098C15.392 6.09747 15.1059 6.15386 14.8387 6.26393C14.5716 6.37401 14.3288 6.53562 14.1241 6.73954C13.9195 6.94345 13.757 7.18568 13.646 7.4524C13.5349 7.71912 13.4775 8.00509 13.477 8.294C13.4783 8.8773 13.7112 9.4362 14.1245 9.84782C14.5378 10.2594 15.0977 10.4901 15.681 10.489Z"
+                    fill="currentColor"
+                  />
+                </svg>
+
+                <span class="ml-4">Manajemen Akses</span>
+              </a>
+            </li>
+            <li class="relative px-6 py-3">
+              <a
+                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
+                href="../luaran/signin.php"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -219,7 +221,7 @@
               ></span>
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-white hover:text-blue-900"
-                href="index.html"
+                href="admindashboard.php"
               >
                 <svg
                   width="24"
@@ -245,7 +247,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="profil.html"
+                href="adminprofil.php"
               >
                 <svg
                   width="25"
@@ -267,7 +269,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="prestasi.html"
+                href="adminprestasi.php"
               >
                 <svg
                   width="25"
@@ -287,27 +289,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="verifikasi.html"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="24"
-                  viewBox="0 -960 960 960"
-                  width="24"
-                >
-                  <path
-                    d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H160v400Zm278-58L296-440l58-58 84 84 168-168 58 58-226 226Zm-278 58v-480 480Z"
-                    class="w-5 h-5"
-                    fill="currentColor"
-                  />
-                </svg>
-                <span class="ml-4">Status Verifikasi</span>
-              </a>
-            </li>
-            <li class="relative px-6 py-3">
-              <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="riwayat.html"
+                href="adminriwayat.php"
               >
                 <svg
                   width="24"
@@ -331,11 +313,32 @@
                 <span class="ml-4">Riwayat Prestasi</span>
               </a>
             </li>
-
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="../luaran/signin.html"
+                href="adminakses.php"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M22 8.293C22 11.769 19.17 14.587 15.68 14.587C15.044 14.587 13.594 14.441 12.889 13.855L12.007 14.733C11.488 15.25 11.628 15.402 11.859 15.652C11.955 15.757 12.067 15.878 12.154 16.051C12.154 16.051 12.889 17.075 12.154 18.1C11.713 18.685 10.478 19.504 9.06796 18.1L8.77396 18.392C8.77396 18.392 9.65496 19.417 8.92096 20.442C8.47996 21.027 7.30396 21.612 6.27496 20.588L5.24696 21.612C4.54096 22.315 3.67896 21.905 3.33696 21.612L2.45396 20.734C1.63096 19.914 2.11096 19.026 2.45396 18.684L10.096 11.074C10.096 11.074 9.36096 9.904 9.36096 8.294C9.36096 4.818 12.191 2 15.681 2C19.171 2 22 4.818 22 8.293ZM15.681 10.489C16.2643 10.4901 16.8241 10.2594 17.2374 9.84782C17.6507 9.4362 17.8836 8.8773 17.885 8.294C17.8844 8.00509 17.827 7.71912 17.716 7.4524C17.6049 7.18568 17.4424 6.94345 17.2378 6.73954C17.0331 6.53562 16.7903 6.37401 16.5232 6.26393C16.256 6.15386 15.9699 6.09747 15.681 6.098C15.392 6.09747 15.1059 6.15386 14.8387 6.26393C14.5716 6.37401 14.3288 6.53562 14.1241 6.73954C13.9195 6.94345 13.757 7.18568 13.646 7.4524C13.5349 7.71912 13.4775 8.00509 13.477 8.294C13.4783 8.8773 13.7112 9.4362 14.1245 9.84782C14.5378 10.2594 15.0977 10.4901 15.681 10.489Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <span class="ml-4">Manajemen Akses</span>
+              </a>
+            </li>
+            <li class="relative px-6 py-3">
+              <a
+                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
+                href="../luaran/signin.php"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -394,7 +397,7 @@
                 >
                   <img
                     class="object-cover w-8 h-8 rounded-full"
-                    src="../img/profil.jpg"
+                    src="../img/profiladmin.png"
                     alt=""
                     aria-hidden="true"
                   />
@@ -412,9 +415,12 @@
                     <li class="flex">
                       <a
                         class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800"
-                        href="profil.html"
+                        href="adminprofil.php"
                       >
-                        <img src="../img/profil.svg" class="w-4 h-4 mr-3" />
+                        <img
+                          src="../img/profiladmin.png"
+                          class="w-4 h-4 mr-3"
+                        />
 
                         <span>Profil</span>
                       </a>
@@ -423,7 +429,7 @@
                     <li class="flex">
                       <a
                         class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800"
-                        href="../luaran/signin.html"
+                        href="../luaran/signin.php"
                       >
                         <img src="../img/logout.svg" class="w-4 h-4 mr-3" />
 

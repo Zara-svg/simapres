@@ -23,66 +23,6 @@
       defer
     ></script>
     <script src="../js/charts-bars.js" defer></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css"
-    />
-    <script
-      type="text/javascript"
-      charset="utf8"
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      charset="utf8"
-      src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"
-    ></script>
-
-    <!-- CSS -->
-    <style>
-      /* Overrides for Tailwind CSS */
-      .dataTables_wrapper select,
-      .dataTables_wrapper .dataTables_filter input {
-        /* ... (unchanged styles) ... */
-      }
-
-      table.dataTable.hover tbody tr:hover,
-      table.dataTable.display tbody tr:hover {
-        /* ... (unchanged styles) ... */
-      }
-
-      .dataTables_wrapper .dataTables_paginate .paginate_button {
-        /* ... (unchanged styles) ... */
-      }
-
-      .dataTables_wrapper .dataTables_paginate .paginate_button.current {
-        /* ... (unchanged styles) ... */
-      }
-
-      .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
-        /* ... (unchanged styles) ... */
-      }
-
-      table.dataTable.no-footer {
-        /* ... (unchanged styles) ... */
-      }
-
-      table.dataTable.dtr-inline.collapsed > tbody > tr > td:first-child:before,
-      table.dataTable.dtr-inline.collapsed
-        > tbody
-        > tr
-        > th:first-child:before {
-        /* ... (unchanged styles) ... */
-      }
-
-      /* New styles for action buttons */
-      .table-actions button {
-        margin-right: 0.5rem;
-      }
-    </style>
   </head>
   <body>
     <div
@@ -103,7 +43,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold text-black hover:text-blue-900 transition-colors duration-150"
-                href="index.html"
+                href="index.php"
               >
                 <svg
                   width="24"
@@ -121,7 +61,6 @@
                     fill="currentColor"
                   />
                 </svg>
-
                 <span class="ml-4">Dashboard</span>
               </a>
             </li>
@@ -130,7 +69,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="profil.html"
+                href="profil.php"
               >
                 <svg
                   width="25"
@@ -152,7 +91,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="prestasi.html"
+                href="prestasi.php"
               >
                 <svg
                   width="25"
@@ -172,31 +111,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="verifikasi.html"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="24"
-                  viewBox="0 -960 960 960"
-                  width="24"
-                >
-                  <path
-                    d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H160v400Zm278-58L296-440l58-58 84 84 168-168 58 58-226 226Zm-278 58v-480 480Z"
-                    class="w-5 h-5"
-                    fill="currentColor"
-                  />
-                </svg>
-                <span class="ml-4">Status Verifikasi</span>
-              </a>
-            </li>
-            <li class="relative px-6 py-3">
-              <span
-                class="absolute inset-y-0 left-0 w-full bg-yellow-500 rounded-tr-lg rounded-br-lg -z-10"
-                aria-hidden="true"
-              ></span>
-              <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-white hover:text-blue-900"
-                href="riwayat.html"
+                href="riwayat.php"
               >
                 <svg
                   width="24"
@@ -217,15 +132,37 @@
                     </clipPath>
                   </defs>
                 </svg>
-
                 <span class="ml-4">Riwayat Prestasi</span>
               </a>
             </li>
-
+            <li class="relative px-6 py-3">
+              <span
+                class="absolute inset-y-0 left-0 w-full bg-yellow-500 rounded-tr-lg rounded-br-lg -z-10"
+                aria-hidden="true"
+              ></span>
+              <a
+                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-white hover:text-blue-900"
+                href="verifikasi.php"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 -960 960 960"
+                  width="24"
+                >
+                  <path
+                    d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H160v400Zm278-58L296-440l58-58 84 84 168-168 58 58-226 226Zm-278 58v-480 480Z"
+                    class="w-5 h-5"
+                    fill="currentColor"
+                  />
+                </svg>
+                <span class="ml-4">Status Verifikasi</span>
+              </a>
+            </li>
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="../luaran/signin.html"
+                href="../luaran/firstscreen.php"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -277,7 +214,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="index.html"
+                href="index.php"
               >
                 <svg
                   width="24"
@@ -303,7 +240,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="profil.html"
+                href="profil.php"
               >
                 <svg
                   width="25"
@@ -325,7 +262,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="prestasi.html"
+                href="prestasi.php"
               >
                 <svg
                   width="25"
@@ -345,31 +282,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="verifikasi.html"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="24"
-                  viewBox="0 -960 960 960"
-                  width="24"
-                >
-                  <path
-                    d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H160v400Zm278-58L296-440l58-58 84 84 168-168 58 58-226 226Zm-278 58v-480 480Z"
-                    class="w-5 h-5"
-                    fill="currentColor"
-                  />
-                </svg>
-                <span class="ml-4">Status Verifikasi</span>
-              </a>
-            </li>
-            <li class="relative px-6 py-3">
-              <span
-                class="absolute inset-y-0 left-0 w-full bg-yellow-500 rounded-tr-lg rounded-br-lg -z-10"
-                aria-hidden="true"
-              ></span>
-              <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-white hover:text-blue-900"
-                href="riwayat.html"
+                href="riwayat.php"
               >
                 <svg
                   width="24"
@@ -390,15 +303,37 @@
                     </clipPath>
                   </defs>
                 </svg>
-
                 <span class="ml-4">Riwayat Prestasi</span>
               </a>
             </li>
-
+            <li class="relative px-6 py-3">
+              <span
+                class="absolute inset-y-0 left-0 w-full bg-yellow-500 rounded-tr-lg rounded-br-lg -z-10"
+                aria-hidden="true"
+              ></span>
+              <a
+                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-white hover:text-blue-900"
+                href="verifikasi.php"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 -960 960 960"
+                  width="24"
+                >
+                  <path
+                    d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H160v400Zm278-58L296-440l58-58 84 84 168-168 58 58-226 226Zm-278 58v-480 480Z"
+                    class="w-5 h-5"
+                    fill="currentColor"
+                  />
+                </svg>
+                <span class="ml-4">Status Verifikasi</span>
+              </a>
+            </li>
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="../luaran/signin.html"
+                href="../luaran/firstscreen.php"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -475,7 +410,7 @@
                     <li class="flex">
                       <a
                         class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800"
-                        href="profil.html"
+                        href="profil.php"
                       >
                         <img src="../img/profil.svg" class="w-4 h-4 mr-3" />
 
@@ -486,7 +421,7 @@
                     <li class="flex">
                       <a
                         class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800"
-                        href="../luaran/signin.html"
+                        href="../luaran/firstscreen.php"
                       >
                         <img src="../img/logout.svg" class="w-4 h-4 mr-3" />
 
@@ -499,57 +434,128 @@
             </ul>
           </div>
         </header>
-        <main class="h-full overflow-y-auto mb-10">
+        <main class="h-full overflow-y-auto">
           <div class="container px-6 mx-auto grid">
             <h2 class="my-6 text-2xl font-semibold text-gray-700">
-              Riwayat Prestasi
+              Status Verifikasi
             </h2>
-
-            <div class="w-full rounded-lg shadow-xs">
-              <div class="w-full">
-                <table class="w-full min-w-full stripe hover" id="example">
+            <!-- Tombol search -->
+            <form class="mb-4 w-full">
+              <div class="relative">
+                <div
+                  class="absolute inset-y-0 right-3 flex items-center pl-3 pointer-events-none"
+                >
+                  <svg
+                    class="w-4 h-4 text-gray-500"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                    />
+                  </svg>
+                </div>
+                <input
+                  type="search"
+                  id="default-search"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5"
+                  placeholder="Cari Prestasi"
+                  required
+                />
+                <button
+                  type="submit"
+                  class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-1"
+                >
+                  Search
+                </button>
+              </div>
+            </form>
+            <div class="w-full mb-8 overflow-hidden rounded-lg shadow-xs">
+              <div class="w-full overflow-x-auto">
+                <table class="w-full whitespace-no-wrap">
                   <thead>
                     <tr
                       class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800"
                     >
-                      <th class="px-4 py-3 text-center">ID Prestasi</th>
+                      <th class="px-4 py-3 text-center">No</th>
                       <th class="px-4 py-3 text-center">Nama</th>
                       <th class="px-4 py-3 text-center">Nama Prestasi</th>
                       <th class="px-4 py-3 text-center">Tahun Perolehan</th>
-                      <th class="px-4 py-3 text-center">Juara</th>
                       <th class="px-4 py-3 text-center">Jenis Prestasi</th>
+                      <th class="px-4 py-3 text-center">Status</th>
                     </tr>
                   </thead>
-                  <tbody class="bg-white divide-y">
+                  <?php 
+                      include('../luaran/koneksi.php');
+                       
+                       $sql_k = "SELECT id_prestasi, nama_perlombaan, tahun, jenis_prestasi FROM prestasi ORDER BY id_prestasi";
+                       $query_k = mysqli_query($koneksi, $sql_k);
+                       $no = 1;
+                       while ($data_k = mysqli_fetch_row($query_k)) {
+                       $no = $data_k[0];
+                       $nama_perlombaan = $data_k[1];
+                       $tahun = $data_k[2];
+                       $jenis_prestasi = $data_k[3];
+
+                       }
+                       ?>
+                       <?php 
+                       include('../luaran/koneksi.php');
+                       
+                       $sql_k = "SELECT id_user, nama, jurusan, level FROM aktor WHERE level='user'";
+                       $query_k = mysqli_query($koneksi, $sql_k);
+                       ?>
+                       <tr>
+                  <tbody class="bg-white divide-y">  <?php
+                      while ($data_k = mysqli_fetch_row($query_k)) {
+                       
+                        $nama = $data_k[1];
+                        $jurusan = $data_k[2];
+                        ?>
+                 
                     <tr class="text-gray-700 dark:text-gray-400">
                       <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">001</td>
+                      <td class="px-4 py-3 text-sm text-center"><?php echo $no; ?></td>
                       <!-- Nama & Prodi -->
                       <td class="px-4 py-3">
                         <div class="flex items-center text-sm">
                           <div>
-                            <p class="font-semibold">Anggi Bieber</p>
-                            <p class="text-xs text-gray-600">
-                              Teknologi Informasi
+                            <p class="font-semibold"><?php echo $nama; ?>
+                            <p class="text-xs text-gray-600"><?php echo $jurusan; ?></td>
+                             
                             </p>
                           </div>
                         </div>
                       </td>
                       <!-- Nama Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        Desain UI/UX
+                      <td class="px-4 py-3 text-sm text-center"><?php echo $nama_perlombaan; ?></td>
+                        
                       </td>
-                      <!-- Tahun -->
-                      <td class="px-4 py-3 text-sm text-center">2023</td>
-                      <!-- Juara -->
-                      <td class="px-4 py-3 text-sm text-center">Juara 1</td>
+                      <!-- Tahun Perolehan -->
+                      <td class="px-4 py-3 text-sm text-center"><?php echo $tahun; ?></td>
                       <!-- Jenis Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">Nasional</td>
-                    </tr>
+                      <td class="px-4 py-3 text-sm text-center"><?php echo $jenis_prestasi; ?></td>
+                      
+                      </td>
+                      <!-- Status Verifikasi -->
+                      <td class="px-4 py-3 text-xs text-center">
+                        <span
+                          class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-full text-center"
+                        >
+                          Terverifikasi
+                        </span>
+                      </td>
+                      </tr><?php $no++;} ?>
 
                     <tr class="text-gray-700 dark:text-gray-400">
                       <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">002</td>
+                      <td class="px-4 py-3 text-sm text-center">2</td>
                       <!-- Nama & Prodi -->
                       <td class="px-4 py-3">
                         <div class="flex items-center text-sm">
@@ -565,68 +571,25 @@
                       <td class="px-4 py-3 text-sm text-center">
                         Debat Anak Bangsa
                       </td>
-                      <!-- Tahun -->
-                      <td class="px-4 py-3 text-sm text-center">2023</td>
-                      <!-- Juara -->
-                      <td class="px-4 py-3 text-sm text-center">Juara 1</td>
-                      <!-- Jenis Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">Nasional</td>
-                    </tr>
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">003</td>
-                      <!-- Nama & Prodi -->
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <div>
-                            <p class="font-semibold">Anggi Bieber</p>
-                            <p class="text-xs text-gray-600">
-                              Teknologi Informasi
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <!-- Nama Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        Lomba Mewarnai
-                      </td>
-                      <!-- Tahun -->
-                      <td class="px-4 py-3 text-sm text-center">2023</td>
-                      <!-- Juara -->
-                      <td class="px-4 py-3 text-sm text-center">Juara 1</td>
-                      <!-- Jenis Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">Nasional</td>
-                    </tr>
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">004</td>
-                      <!-- Nama & Prodi -->
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <div>
-                            <p class="font-semibold">Anggi Bieber</p>
-                            <p class="text-xs text-gray-600">
-                              Teknologi Informasi
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <!-- Nama Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        International Dance Of Symphony
-                      </td>
-                      <!-- Tahun -->
+                      <!-- Tahun Perolehan -->
                       <td class="px-4 py-3 text-sm text-center">2022</td>
-                      <!-- Juara -->
-                      <td class="px-4 py-3 text-sm text-center">Juara 2</td>
                       <!-- Jenis Prestasi -->
                       <td class="px-4 py-3 text-sm text-center">
                         Internasional
                       </td>
+                      <!-- Status Verifikasi -->
+                      <td class="px-4 py-3 text-xs text-center">
+                        <span
+                          class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-full text-center"
+                        >
+                          Terverifikasi
+                        </span>
+                      </td>
                     </tr>
+
                     <tr class="text-gray-700 dark:text-gray-400">
                       <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">005</td>
+                      <td class="px-4 py-3 text-sm text-center">3</td>
                       <!-- Nama & Prodi -->
                       <td class="px-4 py-3">
                         <div class="flex items-center text-sm">
@@ -640,18 +603,26 @@
                       </td>
                       <!-- Nama Prestasi -->
                       <td class="px-4 py-3 text-sm text-center">
-                        Lomba Kreasi Poster Digital
+                        Debat Anak Bangsa
                       </td>
-                      <!-- Tahun -->
-                      <td class="px-4 py-3 text-sm text-center">2021</td>
-                      <!-- Juara -->
-                      <td class="px-4 py-3 text-sm text-center">Juara 1</td>
+                      <!-- Tahun Perolehan -->
+                      <td class="px-4 py-3 text-sm text-center">2022</td>
                       <!-- Jenis Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">Regional</td>
+                      <td class="px-4 py-3 text-sm text-center">
+                        Internasional
+                      </td>
+                      <!-- Status Verifikasi -->
+                      <td class="px-4 py-3 text-xs text-center">
+                        <span
+                          class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-full text-center"
+                        >
+                          Terverifikasi
+                        </span>
+                      </td>
                     </tr>
                     <tr class="text-gray-700 dark:text-gray-400">
                       <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">006</td>
+                      <td class="px-4 py-3 text-sm text-center">4</td>
                       <!-- Nama & Prodi -->
                       <td class="px-4 py-3">
                         <div class="flex items-center text-sm">
@@ -665,18 +636,26 @@
                       </td>
                       <!-- Nama Prestasi -->
                       <td class="px-4 py-3 text-sm text-center">
-                        Lomba Kreasi Poster Digital
+                        Debat Anak Bangsa
                       </td>
-                      <!-- Tahun -->
-                      <td class="px-4 py-3 text-sm text-center">2021</td>
-                      <!-- Juara -->
-                      <td class="px-4 py-3 text-sm text-center">Juara 1</td>
+                      <!-- Tahun Perolehan -->
+                      <td class="px-4 py-3 text-sm text-center">2022</td>
                       <!-- Jenis Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">Regional</td>
+                      <td class="px-4 py-3 text-sm text-center">
+                        Internasional
+                      </td>
+                      <!-- Status Verifikasi -->
+                      <td class="px-4 py-3 text-xs text-center">
+                        <span
+                          class="px-2 py-1 font-semibold leading-tight text-red-700 bg-red-100 rounded-full text-center"
+                        >
+                          Tidak Terverifikasi
+                        </span>
+                      </td>
                     </tr>
                     <tr class="text-gray-700 dark:text-gray-400">
                       <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">007</td>
+                      <td class="px-4 py-3 text-sm text-center">5</td>
                       <!-- Nama & Prodi -->
                       <td class="px-4 py-3">
                         <div class="flex items-center text-sm">
@@ -690,140 +669,132 @@
                       </td>
                       <!-- Nama Prestasi -->
                       <td class="px-4 py-3 text-sm text-center">
-                        Lomba Kreasi Poster Digital
+                        Debat Anak Bangsa
                       </td>
-                      <!-- Tahun -->
-                      <td class="px-4 py-3 text-sm text-center">2021</td>
-                      <!-- Juara -->
-                      <td class="px-4 py-3 text-sm text-center">Juara 1</td>
+                      <!-- Tahun Perolehan -->
+                      <td class="px-4 py-3 text-sm text-center">2022</td>
                       <!-- Jenis Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">Regional</td>
-                    </tr>
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">008</td>
-                      <!-- Nama & Prodi -->
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <div>
-                            <p class="font-semibold">Anggi Bieber</p>
-                            <p class="text-xs text-gray-600">
-                              Teknologi Informasi
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <!-- Nama Prestasi -->
                       <td class="px-4 py-3 text-sm text-center">
-                        Lomba Kreasi Poster Digital
+                        Internasional
                       </td>
-                      <!-- Tahun -->
-                      <td class="px-4 py-3 text-sm text-center">2021</td>
-                      <!-- Juara -->
-                      <td class="px-4 py-3 text-sm text-center">Juara 1</td>
-                      <!-- Jenis Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">Regional</td>
-                    </tr>
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">009</td>
-                      <!-- Nama & Prodi -->
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <div>
-                            <p class="font-semibold">Anggi Bieber</p>
-                            <p class="text-xs text-gray-600">
-                              Teknologi Informasi
-                            </p>
-                          </div>
-                        </div>
+                      <!-- Status Verifikasi -->
+                      <td class="px-4 py-3 text-xs text-center">
+                        <span
+                          class="px-2 py-1 font-semibold leading-tight text-orange-700 bg-orange-100 rounded-full text-center"
+                        >
+                          Belum Terverifikasi
+                        </span>
                       </td>
-                      <!-- Nama Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        Lomba Kreasi Poster Digital
-                      </td>
-                      <!-- Tahun -->
-                      <td class="px-4 py-3 text-sm text-center">2021</td>
-                      <!-- Juara -->
-                      <td class="px-4 py-3 text-sm text-center">Juara 1</td>
-                      <!-- Jenis Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">Regional</td>
-                    </tr>
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">010</td>
-                      <!-- Nama & Prodi -->
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <div>
-                            <p class="font-semibold">Anggi Bieber</p>
-                            <p class="text-xs text-gray-600">
-                              Teknologi Informasi
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <!-- Nama Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        Lomba Kreasi Poster Digital
-                      </td>
-                      <!-- Tahun -->
-                      <td class="px-4 py-3 text-sm text-center">2021</td>
-                      <!-- Juara -->
-                      <td class="px-4 py-3 text-sm text-center">Juara 1</td>
-                      <!-- Jenis Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">Regional</td>
-                    </tr>
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">011</td>
-                      <!-- Nama & Prodi -->
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <div>
-                            <p class="font-semibold">Anggi Bieber</p>
-                            <p class="text-xs text-gray-600">
-                              Teknologi Informasi
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <!-- Nama Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        Lomba Kreasi Poster Digital
-                      </td>
-                      <!-- Tahun -->
-                      <td class="px-4 py-3 text-sm text-center">2021</td>
-                      <!-- Juara -->
-                      <td class="px-4 py-3 text-sm text-center">Juara 1</td>
-                      <!-- Jenis Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">Regional</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
+              <div
+                class="grid px-4 py-3 text-xs font-semibold tracking-wide text-gray-500 uppercase border-t dark:border-gray-700 bg-gray-50 sm:grid-cols-9 dark:text-gray-400 dark:bg-gray-800"
+              >
+                <span class="flex items-center col-span-3">
+                  Showing 1-5 of 2
+                </span>
+                <span class="col-span-2"></span>
+                <!-- Pagination -->
+                <span class="flex col-span-4 mt-2 sm:mt-auto sm:justify-end">
+                  <nav aria-label="Table navigation">
+                    <ul class="inline-flex items-center">
+                      <li>
+                        <button
+                          class="px-3 py-1 rounded-md rounded-l-lg focus:outline-none focus:shadow-outline-blue"
+                          aria-label="Previous"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            class="w-4 h-4 fill-current"
+                            viewBox="0 0 20 20"
+                          >
+                            <path
+                              d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                              clip-rule="evenodd"
+                              fill-rule="evenodd"
+                            ></path>
+                          </svg>
+                        </button>
+                      </li>
+                      <li>
+                        <button
+                          class="px-3 py-1 rounded-md focus:outline-none focus:shadow-outline-blue"
+                        >
+                          1
+                        </button>
+                      </li>
+                      <li>
+                        <button
+                          class="px-3 py-1 rounded-md focus:outline-none focus:shadow-outline-blue"
+                        >
+                          2
+                        </button>
+                      </li>
+                      <li>
+                        <button
+                          class="px-3 py-1 text-white transition-colors duration-150 bg-blue-950 border border-r-0 border-blue-400 rounded-md focus:outline-none focus:shadow-outline-blue"
+                        >
+                          3
+                        </button>
+                      </li>
+                      <li>
+                        <button
+                          class="px-3 py-1 rounded-md focus:outline-none focus:shadow-outline-blue"
+                        >
+                          4
+                        </button>
+                      </li>
+                      <li>
+                        <span class="px-3 py-1">...</span>
+                      </li>
+                      <li>
+                        <button
+                          class="px-3 py-1 rounded-md focus:outline-none focus:shadow-outline-blue"
+                        >
+                          8
+                        </button>
+                      </li>
+                      <li>
+                        <button
+                          class="px-3 py-1 rounded-md focus:outline-none focus:shadow-outline-blue"
+                        >
+                          9
+                        </button>
+                      </li>
+                      <li>
+                        <button
+                          class="px-3 py-1 rounded-md rounded-r-lg focus:outline-none focus:shadow-outline-blue"
+                          aria-label="Next"
+                        >
+                          <svg
+                            class="w-4 h-4 fill-current"
+                            aria-hidden="true"
+                            viewBox="0 0 20 20"
+                          >
+                            <path
+                              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                              clip-rule="evenodd"
+                              fill-rule="evenodd"
+                            ></path>
+                          </svg>
+                        </button>
+                      </li>
+                    </ul>
+                  </nav>
+                </span>
+              </div>
             </div>
           </div>
+          <footer>
+            <hr />
+            <div class="p-8 text-center">
+              <h1>Copyright © 2023 Vokasi UB. All rights reserved.</h1>
+            </div>
+          </footer>
         </main>
-        <footer>
-          <hr />
-          <div class="p-8 text-center -z-10">
-            <h1>Copyright © 2023 Vokasi UB. All rights reserved.</h1>
-          </div>
-        </footer>
       </div>
     </div>
-
-    <!-- JavaScript -->
-    <script>
-      $(document).ready(function () {
-        var table = $("#example")
-          .DataTable({
-            responsive: true,
-          })
-          .columns.adjust()
-          .responsive.recalc();
-      });
-    </script>
   </body>
 </html>

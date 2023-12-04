@@ -23,23 +23,6 @@
       defer
     ></script>
     <script src="../js/charts-bars.js" defer></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css"
-    />
-    <script
-      type="text/javascript"
-      charset="utf8"
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      charset="utf8"
-      src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"
-    ></script>
   </head>
   <body>
     <div
@@ -58,9 +41,13 @@
         <div class="py-4 text-black">
           <ul class="mt-6">
             <li class="relative px-6 py-3">
+              <span
+                class="absolute inset-y-0 left-0 w-full bg-yellow-500 rounded-tr-lg rounded-br-lg -z-10"
+                aria-hidden="true"
+              ></span>
               <a
-                class="inline-flex items-center w-full text-sm font-semibold text-black hover:text-blue-900 transition-colors duration-150"
-                href="index.html"
+                class="inline-flex items-center w-full text-sm font-semibold text-white hover:text-blue-900 transition-colors duration-150"
+                href="index.php"
               >
                 <svg
                   width="24"
@@ -86,7 +73,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="profil.html"
+                href="profil.php"
               >
                 <svg
                   width="25"
@@ -108,7 +95,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="prestasi.html"
+                href="prestasi.php"
               >
                 <svg
                   width="25"
@@ -126,13 +113,9 @@
               </a>
             </li>
             <li class="relative px-6 py-3">
-              <span
-                class="absolute inset-y-0 left-0 w-full bg-yellow-500 rounded-tr-lg rounded-br-lg -z-10"
-                aria-hidden="true"
-              ></span>
               <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-white hover:text-blue-900"
-                href="verifikasi.html"
+                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
+                href="verifikasi.php"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -152,7 +135,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="riwayat.html"
+                href="riwayat.php"
               >
                 <svg
                   width="24"
@@ -180,7 +163,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="../luaran/signin.html"
+                href="../luaran/signin.php"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -230,9 +213,13 @@
           </a>
           <ul class="mt-6">
             <li class="relative px-6 py-3">
+              <span
+                class="absolute inset-y-0 left-0 w-full bg-yellow-500 rounded-tr-lg rounded-br-lg -z-10"
+                aria-hidden="true"
+              ></span>
               <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="index.html"
+                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-white hover:text-blue-900"
+                href="index.php"
               >
                 <svg
                   width="24"
@@ -258,7 +245,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="profil.html"
+                href="profil.php"
               >
                 <svg
                   width="25"
@@ -280,7 +267,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="prestasi.html"
+                href="prestasi.php"
               >
                 <svg
                   width="25"
@@ -298,13 +285,9 @@
               </a>
             </li>
             <li class="relative px-6 py-3">
-              <span
-                class="absolute inset-y-0 left-0 w-full bg-yellow-500 rounded-tr-lg rounded-br-lg -z-10"
-                aria-hidden="true"
-              ></span>
               <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-white hover:text-blue-900"
-                href="verifikasi.html"
+                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
+                href="verifikasi.php"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -324,7 +307,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="riwayat.html"
+                href="riwayat.php"
               >
                 <svg
                   width="24"
@@ -352,7 +335,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="../luaran/signin.html"
+                href="../luaran/signin.php"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -379,7 +362,7 @@
           >
             <!-- Mobile hamburger -->
             <button
-              class="p-1 mr-5 -ml-1 rounded-md md:hidden focus:outline-none focus:shadow-outline-blue"
+              class="p-1 mr-5 -ml-1 rounded-md md:hidden focus:outline-none focus:shadow-outline-purple"
               @click="toggleSideMenu"
               aria-label="Menu"
             >
@@ -403,7 +386,7 @@
             <ul>
               <li class="relative">
                 <button
-                  class="align-middle rounded-full focus:shadow-outline-blue focus:outline-none items-end"
+                  class="align-middle rounded-full focus:shadow-outline-purple focus:outline-none items-end"
                   @click="toggleProfileMenu"
                   @keydown.escape="closeProfileMenu"
                   aria-label="Account"
@@ -429,7 +412,7 @@
                     <li class="flex">
                       <a
                         class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800"
-                        href="profil.html"
+                        href="profil.php"
                       >
                         <img src="../img/profil.svg" class="w-4 h-4 mr-3" />
 
@@ -440,7 +423,7 @@
                     <li class="flex">
                       <a
                         class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800"
-                        href="../luaran/signin.html"
+                        href="../luaran/signin.php"
                       >
                         <img src="../img/logout.svg" class="w-4 h-4 mr-3" />
 
@@ -453,364 +436,134 @@
             </ul>
           </div>
         </header>
-        <main class="h-full overflow-y-auto mb-10">
+        <main class="h-full overflow-y-auto">
           <div class="container px-6 mx-auto grid">
-            <h2 class="my-6 text-2xl font-semibold text-gray-700">
-              Status Verifikasi
-            </h2>
+            <h2 class="my-6 text-2xl font-semibold text-gray-700">Dashboard</h2>
 
-            <div class="w-full rounded-lg shadow-xs">
-              <div class="w-full">
-                <table class="w-full min-w-full stripe hover" id="example">
-                  <thead>
-                    <tr
-                      class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800"
-                    >
-                      <th class="px-4 py-3 text-center">ID Prestasi</th>
-                      <th class="px-4 py-3 text-center">Nama</th>
-                      <th class="px-4 py-3 text-center">Nama Prestasi</th>
-                      <th class="px-4 py-3 text-center">Tahun Perolehan</th>
-                      <th class="px-4 py-3 text-center">Jenis Prestasi</th>
-                      <th class="px-4 py-3 text-center">Status</th>
-                    </tr>
-                  </thead>
-                  <tbody class="bg-white divide-y">
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">001</td>
-                      <!-- Nama & Prodi -->
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <div>
-                            <p class="font-semibold">Anggi Bieber</p>
-                            <p class="text-xs text-gray-600">
-                              Teknologi Informasi
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <!-- Nama Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        Debat Anak Bangsa
-                      </td>
-                      <!-- Tahun Perolehan -->
-                      <td class="px-4 py-3 text-sm text-center">2022</td>
-                      <!-- Jenis Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        Internasional
-                      </td>
-                      <!-- Status Verifikasi -->
-                      <td class="px-4 py-3 text-xs text-center">
-                        <button
-                          id="verifikasiButton1"
-                          class="text-white bg-green-700 hover:bg-green-300 hover:text-green-700 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-24"
-                        >
-                          Terverifikasi
-                        </button>
+            <!-- Cards -->
+            <div class="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-4">
+              <!-- Card -->
+              <div
+                class="flex items-center p-4 bg-white rounded-lg shadow-xs hover:shadow-xl"
+              >
+                <div class="p-3 mr-4 text-blue-300 bg-blue-950 rounded-full">
+                  <svg
+                    class="w-5 h-5"
+                    fill="#fff
+                  "
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"
+                    ></path>
+                  </svg>
+                </div>
+                <div>
+                  <p class="mb-2 text-sm font-medium text-gray-600">
+                    Mahasiswa Berprestasi
+                  </p>
+                  <p class="text-lg font-semibold text-gray-700">1250</p>
+                </div>
+              </div>
+              <!-- Card -->
+              <div
+                class="flex items-center p-4 bg-white rounded-lg shadow-xs hover:shadow-xl"
+              >
+                <div class="p-3 mr-4 bg-yellow-500 rounded-full">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_285_299)">
+                      <path
+                        d="M8.12506 17.1875C8.0317 17.1875 7.93834 17.2046 7.84928 17.2407C7.34303 17.4463 6.81061 17.5781 6.25006 17.5781C5.68952 17.5781 5.15709 17.4463 4.65045 17.2407C4.56139 17.2046 4.46842 17.1875 4.37506 17.1875C1.95084 17.1875 -0.0128275 19.6523 6.31046e-05 22.6865C0.00553185 23.9688 0.848891 25 1.87506 25H10.6251C11.6512 25 12.4946 23.9688 12.5001 22.6865C12.513 19.6523 10.5493 17.1875 8.12506 17.1875ZM6.25006 15.625C8.32116 15.625 10.0001 13.5264 10.0001 10.9375C10.0001 8.34863 8.32116 6.25 6.25006 6.25C4.17897 6.25 2.50006 8.34863 2.50006 10.9375C2.50006 13.5264 4.17897 15.625 6.25006 15.625ZM23.1251 0H8.12506C7.09108 0 6.25006 1.08643 6.25006 2.42139V4.6875C7.16491 4.6875 8.01178 5.01855 8.75006 5.55664V3.125H22.5001V17.1875H20.0001V14.0625H15.0001V17.1875H12.0219C12.768 18.0024 13.3157 19.0786 13.5723 20.3125H23.1251C24.159 20.3125 25.0001 19.2261 25.0001 17.8911V2.42139C25.0001 1.08643 24.159 0 23.1251 0Z"
+                        class="w-5 h-5"
+                        fill="#fff"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_285_299">
+                        <rect width="25" height="25" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+                <div>
+                  <p class="mb-2 text-sm font-medium text-gray-600">
+                    Dosen Pembimbing
+                  </p>
+                  <p class="text-lg font-semibold text-gray-700">50</p>
+                </div>
+              </div>
+              <!-- Card -->
 
-                        <div
-                          id="verifikasiPopup1"
-                          class="hidden fixed top-0 left-0 w-full h-full bg-black flex bg-opacity-50 items-center justify-center"
-                        >
-                          <div class="bg-white px-24 py-16 rounded-lg">
-                            <p class="text-sm">Berkas telah terverifikasi</p>
-                            <button
-                              id="tutupPopup1"
-                              class="text-white bg-blue-950 hover:bg-blue-500 font-medium rounded-lg text-sm px-5 py-2 text-center mt-4"
-                            >
-                              Tutup
-                            </button>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
+              <!-- Card -->
+              <div
+                class="flex items-center p-4 bg-white rounded-lg shadow-xs hover:shadow-xl"
+              >
+                <div class="p-3 mr-4 text-gray-200 bg-gray-500 rounded-full">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24"
+                    viewBox="0 -960 960 960"
+                    width="24"
+                  >
+                    <path
+                      d="m320-240 160-122 160 122-60-198 160-114H544l-64-208-64 208H220l160 114-60 198ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+                      class="w-5 h-5"
+                      fill="#fff"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <p class="mb-2 text-sm font-medium text-gray-600">Prestasi</p>
+                  <p class="text-lg font-semibold text-gray-700">500</p>
+                </div>
+              </div>
+            </div>
 
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">002</td>
-                      <!-- Nama & Prodi -->
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <div>
-                            <p class="font-semibold">Anggi Bieber</p>
-                            <p class="text-xs text-gray-600">
-                              Teknologi Informasi
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <!-- Nama Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        Debat Anak Bangsa
-                      </td>
-                      <!-- Tahun Perolehan -->
-                      <td class="px-4 py-3 text-sm text-center">2022</td>
-                      <!-- Jenis Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        Internasional
-                      </td>
-                      <!-- Status Verifikasi -->
-                      <td class="px-4 py-3 text-xs text-center">
-                        <button
-                          id="verifikasiButton2"
-                          class="text-white bg-green-700 hover:bg-green-300 hover:text-green-700 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-24"
-                        >
-                          Terverifikasi
-                        </button>
-
-                        <div
-                          id="verifikasiPopup2"
-                          class="hidden fixed top-0 left-0 w-full h-full bg-black flex bg-opacity-50 items-center justify-center"
-                        >
-                          <div class="bg-white px-24 py-16 rounded-lg">
-                            <p class="text-sm">Berkas telah terverifikasi</p>
-                            <button
-                              id="tutupPopup2"
-                              class="text-white bg-blue-950 hover:bg-blue-500 font-medium rounded-lg text-sm px-5 py-2 text-center mt-4"
-                            >
-                              Tutup
-                            </button>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">003</td>
-                      <!-- Nama & Prodi -->
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <div>
-                            <p class="font-semibold">Anggi Bieber</p>
-                            <p class="text-xs text-gray-600">
-                              Teknologi Informasi
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <!-- Nama Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        Debat Anak Bangsa
-                      </td>
-                      <!-- Tahun Perolehan -->
-                      <td class="px-4 py-3 text-sm text-center">2022</td>
-                      <!-- Jenis Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        Internasional
-                      </td>
-                      <!-- Status Verifikasi -->
-                      <td class="px-4 py-3 text-xs text-center">
-                        <button
-                          id="verifikasiButton3"
-                          class="text-white bg-green-700 hover:bg-green-300 hover:text-green-700 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-24"
-                        >
-                          Terverifikasi
-                        </button>
-
-                        <div
-                          id="verifikasiPopup3"
-                          class="hidden fixed top-0 left-0 w-full h-full bg-black flex bg-opacity-50 items-center justify-center"
-                        >
-                          <div class="bg-white px-24 py-16 rounded-lg">
-                            <p class="text-sm">Berkas telah terverifikasi</p>
-                            <button
-                              id="tutupPopup3"
-                              class="text-white bg-blue-950 hover:bg-blue-500 font-medium rounded-lg text-sm px-5 py-2 text-center mt-4"
-                            >
-                              Tutup
-                            </button>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">004</td>
-                      <!-- Nama & Prodi -->
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <div>
-                            <p class="font-semibold">Anggi Bieber</p>
-                            <p class="text-xs text-gray-600">
-                              Teknologi Informasi
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <!-- Nama Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        Debat Anak Bangsa
-                      </td>
-                      <!-- Tahun Perolehan -->
-                      <td class="px-4 py-3 text-sm text-center">2022</td>
-                      <!-- Jenis Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        Internasional
-                      </td>
-                      <!-- Status Verifikasi -->
-                      <td class="px-4 py-3 text-xs text-center">
-                        <button
-                          id="verifikasiButton4"
-                          class="text-white bg-red-600 hover:bg-red-300 hover:text-red-600 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-24"
-                        >
-                          Gagal Terverifikasi
-                        </button>
-
-                        <div
-                          id="verifikasiPopup4"
-                          class="hidden fixed top-0 left-0 w-full h-full bg-black flex bg-opacity-50 items-center justify-center"
-                        >
-                          <div class="bg-white px-24 py-16 rounded-lg">
-                            <p class="text-sm">Sertifikat anda tidak valid</p>
-                            <button
-                              id="tutupPopup4"
-                              class="text-white bg-blue-950 hover:bg-blue-500 font-medium rounded-lg text-sm px-5 py-2 text-center mt-4"
-                            >
-                              Tutup
-                            </button>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">005</td>
-                      <!-- Nama & Prodi -->
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <div>
-                            <p class="font-semibold">Anggi Bieber</p>
-                            <p class="text-xs text-gray-600">
-                              Teknologi Informasi
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <!-- Nama Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        Debat Anak Bangsa
-                      </td>
-                      <!-- Tahun Perolehan -->
-                      <td class="px-4 py-3 text-sm text-center">2022</td>
-                      <!-- Jenis Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        Internasional
-                      </td>
-                      <!-- Status Verifikasi -->
-                      <td class="px-4 py-3 text-xs text-center">
-                        <button
-                          id="verifikasiButton5"
-                          class="text-white bg-yellow-500 hover:bg-yellow-200 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-24"
-                        >
-                          Belum Terverifikasi
-                        </button>
-
-                        <div
-                          id="verifikasiPopup5"
-                          class="hidden fixed top-0 left-0 w-full h-full bg-black flex bg-opacity-50 items-center justify-center"
-                        >
-                          <div class="bg-white px-24 py-16 rounded-lg">
-                            <p class="text-sm">
-                              Berkas anda sedang dalam antrean
-                            </p>
-                            <button
-                              id="tutupPopup5"
-                              class="text-white bg-blue-950 hover:bg-blue-500 font-medium rounded-lg text-sm px-5 py-2 text-center mt-4"
-                            >
-                              Tutup
-                            </button>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+            <!-- Bars chart -->
+            <div class="min-w-0 p-4 bg-white rounded-lg shadow-xs">
+              <h4 class="mb-4 font-semibold text-gray-800">
+                Statistik Prestasi Mahasiswa
+              </h4>
+              <canvas id="bars"></canvas>
+              <div
+                class="flex justify-center mt-4 space-x-3 text-sm text-gray-600"
+              >
+                <!-- Chart legend -->
+                <div class="flex items-center">
+                  <span
+                    class="inline-block w-3 h-3 mr-1 bg-blue-950 rounded-full"
+                  ></span>
+                  <span> Regional</span>
+                </div>
+                <div class="flex items-center">
+                  <span
+                    class="inline-block w-3 h-3 mr-1 bg-yellow-500 rounded-full"
+                  ></span>
+                  <span>Nasional</span>
+                </div>
+                <div class="flex items-center">
+                  <span
+                    class="inline-block w-3 h-3 mr-1 bg-gray-500 rounded-full"
+                  ></span>
+                  <span>Internasional</span>
+                </div>
               </div>
             </div>
           </div>
+          <footer>
+            <hr />
+            <div class="p-8 text-center">
+              <h1>Copyright © 2023 Vokasi UB. All rights reserved.</h1>
+            </div>
+          </footer>
         </main>
-        <footer>
-          <hr />
-          <div class="p-8 text-center -z-10">
-            <h1>Copyright © 2023 Vokasi UB. All rights reserved.</h1>
-          </div>
-        </footer>
       </div>
     </div>
-
-    <!-- JavaScript -->
-    <script>
-      $(document).ready(function () {
-        var table = $("#example")
-          .DataTable({
-            responsive: true,
-          })
-          .columns.adjust()
-          .responsive.recalc();
-      });
-    </script>
-
-    <script>
-      const verifikasiButton1 = document.getElementById("verifikasiButton1");
-      const verifikasiPopup1 = document.getElementById("verifikasiPopup1");
-      const tutupPopup1 = document.getElementById("tutupPopup1");
-
-      verifikasiButton1.addEventListener("click", function () {
-        verifikasiPopup1.classList.remove("hidden");
-      });
-
-      tutupPopup1.addEventListener("click", function () {
-        verifikasiPopup1.classList.add("hidden");
-      });
-
-      const verifikasiButton2 = document.getElementById("verifikasiButton2");
-      const verifikasiPopup2 = document.getElementById("verifikasiPopup2");
-      const tutupPopup2 = document.getElementById("tutupPopup2");
-
-      verifikasiButton2.addEventListener("click", function () {
-        verifikasiPopup2.classList.remove("hidden");
-      });
-
-      tutupPopup2.addEventListener("click", function () {
-        verifikasiPopup2.classList.add("hidden");
-      });
-
-      const verifikasiButton3 = document.getElementById("verifikasiButton3");
-      const verifikasiPopup3 = document.getElementById("verifikasiPopup3");
-      const tutupPopup3 = document.getElementById("tutupPopup3");
-
-      verifikasiButton3.addEventListener("click", function () {
-        verifikasiPopup3.classList.remove("hidden");
-      });
-
-      tutupPopup3.addEventListener("click", function () {
-        verifikasiPopup3.classList.add("hidden");
-      });
-
-      const verifikasiButton4 = document.getElementById("verifikasiButton4");
-      const verifikasiPopup4 = document.getElementById("verifikasiPopup4");
-      const tutupPopup4 = document.getElementById("tutupPopup4");
-
-      verifikasiButton4.addEventListener("click", function () {
-        verifikasiPopup4.classList.remove("hidden");
-      });
-
-      tutupPopup4.addEventListener("click", function () {
-        verifikasiPopup4.classList.add("hidden");
-      });
-
-      const verifikasiButton5 = document.getElementById("verifikasiButton5");
-      const verifikasiPopup5 = document.getElementById("verifikasiPopup5");
-      const tutupPopup5 = document.getElementById("tutupPopup5");
-
-      verifikasiButton5.addEventListener("click", function () {
-        verifikasiPopup5.classList.remove("hidden");
-      });
-
-      tutupPopup5.addEventListener("click", function () {
-        verifikasiPopup5.classList.add("hidden");
-      });
-    </script>
   </body>
 </html>

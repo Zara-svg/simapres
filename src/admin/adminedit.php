@@ -1,3 +1,21 @@
+<?php 
+include('../luaran/koneksi.php');
+session_start();
+if(isset($_SESSION['id_user'])){
+	$id_user = $_SESSION['id_user'];
+  	$sql_d = "select nama, email, password, level, foto from aktor 
+  	where id_user = '$id_user'";
+	$query_d = mysqli_query($koneksi,$sql_d);
+	while($data_d = mysqli_fetch_row($query_d)){
+    		$nama= $data_d[0];
+    		$email= $data_d[1];
+        $password= $data_d[2];
+    		$level= $data_d[3];
+        $foto= $data_d[3];
+       
+	}
+}
+?>
 <!DOCTYPE html>
 <html :class="{ 'theme-dark': dark }" x-data="data()" lang="en">
   <head>
@@ -23,66 +41,6 @@
       defer
     ></script>
     <script src="../js/charts-bars.js" defer></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css"
-    />
-    <script
-      type="text/javascript"
-      charset="utf8"
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      charset="utf8"
-      src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"
-    ></script>
-
-    <!-- CSS -->
-    <style>
-      /* Overrides for Tailwind CSS */
-      .dataTables_wrapper select,
-      .dataTables_wrapper .dataTables_filter input {
-        /* ... (unchanged styles) ... */
-      }
-
-      table.dataTable.hover tbody tr:hover,
-      table.dataTable.display tbody tr:hover {
-        /* ... (unchanged styles) ... */
-      }
-
-      .dataTables_wrapper .dataTables_paginate .paginate_button {
-        /* ... (unchanged styles) ... */
-      }
-
-      .dataTables_wrapper .dataTables_paginate .paginate_button.current {
-        /* ... (unchanged styles) ... */
-      }
-
-      .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
-        /* ... (unchanged styles) ... */
-      }
-
-      table.dataTable.no-footer {
-        /* ... (unchanged styles) ... */
-      }
-
-      table.dataTable.dtr-inline.collapsed > tbody > tr > td:first-child:before,
-      table.dataTable.dtr-inline.collapsed
-        > tbody
-        > tr
-        > th:first-child:before {
-        /* ... (unchanged styles) ... */
-      }
-
-      /* New styles for action buttons */
-      .table-actions button {
-        margin-right: 0.5rem;
-      }
-    </style>
   </head>
   <body>
     <div
@@ -103,7 +61,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold text-black hover:text-blue-900 transition-colors duration-150"
-                href="index.html"
+                href="admindashboard.php"
               >
                 <svg
                   width="24"
@@ -129,7 +87,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="profil.html"
+                href="adminprofil.php"
               >
                 <svg
                   width="25"
@@ -149,13 +107,9 @@
               </a>
             </li>
             <li class="relative px-6 py-3">
-              <span
-                class="absolute inset-y-0 left-0 w-full bg-yellow-500 rounded-tr-lg rounded-br-lg -z-10"
-                aria-hidden="true"
-              ></span>
               <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-white hover:text-blue-900"
-                href="prestasi.html"
+                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
+                href="adminprestasi.php"
               >
                 <svg
                   width="25"
@@ -175,27 +129,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="verifikasi.html"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="24"
-                  viewBox="0 -960 960 960"
-                  width="24"
-                >
-                  <path
-                    d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H160v400Zm278-58L296-440l58-58 84 84 168-168 58 58-226 226Zm-278 58v-480 480Z"
-                    class="w-5 h-5"
-                    fill="currentColor"
-                  />
-                </svg>
-                <span class="ml-4">Status Verifikasi</span>
-              </a>
-            </li>
-            <li class="relative px-6 py-3">
-              <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="riwayat.html"
+                href="adminriwayat.php"
               >
                 <svg
                   width="24"
@@ -219,11 +153,34 @@
                 <span class="ml-4">Riwayat Prestasi</span>
               </a>
             </li>
-
+            <li class="relative px-6 py-3">
+              <span
+                class="absolute inset-y-0 left-0 w-full bg-yellow-500 rounded-tr-lg rounded-br-lg -z-10"
+                aria-hidden="true"
+              ></span>
+              <a
+                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-white hover:text-blue-900"
+                href="adminakses.php"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 -960 960 960"
+                  width="24"
+                >
+                  <path
+                    d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H160v400Zm278-58L296-440l58-58 84 84 168-168 58 58-226 226Zm-278 58v-480 480Z"
+                    class="w-5 h-5"
+                    fill="currentColor"
+                  />
+                </svg>
+                <span class="ml-4">Manajemen Akses</span>
+              </a>
+            </li>
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="../luaran/signin.html"
+                href="../luaran/signin.php"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -275,7 +232,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="index.html"
+                href="admindashboard.php"
               >
                 <svg
                   width="24"
@@ -301,7 +258,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="profil.html"
+                href="adminprofil.php"
               >
                 <svg
                   width="25"
@@ -321,13 +278,9 @@
               </a>
             </li>
             <li class="relative px-6 py-3">
-              <span
-                class="absolute inset-y-0 left-0 w-full bg-yellow-500 rounded-tr-lg rounded-br-lg -z-10"
-                aria-hidden="true"
-              ></span>
               <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-white hover:text-blue-900"
-                href="prestasi.html"
+                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
+                href="adminprestasi.php"
               >
                 <svg
                   width="25"
@@ -347,27 +300,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="verifikasi.html"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="24"
-                  viewBox="0 -960 960 960"
-                  width="24"
-                >
-                  <path
-                    d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H160v400Zm278-58L296-440l58-58 84 84 168-168 58 58-226 226Zm-278 58v-480 480Z"
-                    class="w-5 h-5"
-                    fill="currentColor"
-                  />
-                </svg>
-                <span class="ml-4">Status Verifikasi</span>
-              </a>
-            </li>
-            <li class="relative px-6 py-3">
-              <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="riwayat.html"
+                href="adminriwayat.php"
               >
                 <svg
                   width="24"
@@ -391,11 +324,34 @@
                 <span class="ml-4">Riwayat Prestasi</span>
               </a>
             </li>
-
+            <li class="relative px-6 py-3">
+              <span
+                class="absolute inset-y-0 left-0 w-full bg-yellow-500 rounded-tr-lg rounded-br-lg -z-10"
+                aria-hidden="true"
+              ></span>
+              <a
+                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-white hover:text-blue-900"
+                href="adminakses.php"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 -960 960 960"
+                  width="24"
+                >
+                  <path
+                    d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H160v400Zm278-58L296-440l58-58 84 84 168-168 58 58-226 226Zm-278 58v-480 480Z"
+                    class="w-5 h-5"
+                    fill="currentColor"
+                  />
+                </svg>
+                <span class="ml-4">Manajemen Akses</span>
+              </a>
+            </li>
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="../luaran/signin.html"
+                href="../luaran/signin.php"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -454,7 +410,7 @@
                 >
                   <img
                     class="object-cover w-8 h-8 rounded-full"
-                    src="../img/profil.jpg"
+                    src="../img/profiladmin.png"
                     alt=""
                     aria-hidden="true"
                   />
@@ -472,9 +428,12 @@
                     <li class="flex">
                       <a
                         class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800"
-                        href="profil.html"
+                        href="adminprofil.php"
                       >
-                        <img src="../img/profil.svg" class="w-4 h-4 mr-3" />
+                        <img
+                          src="../img/profiladmin.png"
+                          class="w-4 h-4 mr-3"
+                        />
 
                         <span>Profil</span>
                       </a>
@@ -483,7 +442,7 @@
                     <li class="flex">
                       <a
                         class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800"
-                        href="../luaran/signin.html"
+                        href="../luaran/signin.php"
                       >
                         <img src="../img/logout.svg" class="w-4 h-4 mr-3" />
 
@@ -496,319 +455,124 @@
             </ul>
           </div>
         </header>
-        <main class="h-full overflow-y-auto mb-10">
+        <main class="h-full overflow-y-auto">
           <div class="container px-6 mx-auto grid">
-            <h2 class="mt-6 text-2xl font-semibold text-gray-700">Prestasi</h2>
-
-            <div class="flex justify-end mb-2">
-              <a
-                href="../user/tambahprestasi.html"
-                class="text-white bg-blue-950 hover:bg-blue-500 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40"
+            <h2 class="my-6 text-2xl font-semibold text-gray-700">Edit User</h2>
+          </div>
+          <?php if(!empty($_GET['notif'])){?>
+   <?php if($_GET['notif']=="editkosong"){?>
+      <div class="alert alert-danger" role="alert">
+      Maaf data wajib di isi</div>
+   <?php }?>
+<?php }?>
+          <form class="px-6 mx-auto" method="post" action="konfirmasiadminedit.php" enctype="multipart/form-data">
+            <!-- Foto Profil -->
+            <div class="mb-3">
+              <label
+                for="image_input"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Foto Profil</label
               >
-                Tambah Prestasi
+              <input
+                type="file"
+                id="image_input"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1"
+                placeholder="Foto Profil"
+                required
+              />
+            </div>
+
+            <!-- Nama -->
+            <div class="mb-3">
+              <label
+                for="nama"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Nama</label
+              >
+              <input
+                type="text"
+                name="nama" 
+                value="<?php echo $nama;?>"
+                id="nama" 
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5"
+                placeholder="Nama"
+            
+              />
+            </div>
+            <!-- Email -->
+            <div class="mb-3">
+              <label
+                for="email"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Email</label
+              >
+              <input
+                type="email"
+                name="email"
+                id="email" value="<?php echo $email;?>"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5"
+                placeholder="Email"
+               
+              />
+            </div>
+            <!-- Password -->
+            <div class="mb-3">
+              <label
+                for="password"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Password</label
+              >
+              <input
+                type="password"
+                name="password"
+                id="password" value="<?php echo $password;?>"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5"
+                placeholder="Password"
+             
+              />
+            </div>
+
+            <!-- LEVEL -->
+            <div class="mb-3">
+              <label
+                for="level"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Level</label
+              >
+              <select
+                id="level"
+                name="level"
+                 value="<?php echo $level;?>"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              >
+                <option selected>Level</option>
+                <option value="admin">Administrator</option>
+                <option value="user">User</option>
+              </select>
+            </div>
+
+            <!-- END FORM -->
+
+            <!-- VERIFIKASI -->
+            <div class="flex justify-end mt-10 mb-10">
+            <a href="adminakses.php">
+                <button
+                  type="submit"
+                  class="text-white bg-blue-950 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-8 py-2 text-center mb-16 m-2"
+                > <i class="fas fa-save"></i>
+                  Edit
+                </button>
               </a>
             </div>
-
-            <div class="w-full rounded-lg shadow-xs">
-              <div class="w-full">
-                <table class="w-full min-w-full stripe hover" id="example">
-                  <thead>
-                    <tr
-                      class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800"
-                    >
-                      <th class="px-4 py-3 text-center">ID Prestasi</th>
-                      <th class="px-4 py-3 text-center">Nama</th>
-                      <th class="px-4 py-3 text-center">Nama Prestasi</th>
-                      <th class="px-4 py-3 text-center">Tahun Perolehan</th>
-                      <th class="px-4 py-3 text-center">Juara</th>
-                      <th class="px-4 py-3 text-center">Jenis Prestasi</th>
-                    </tr>
-                  </thead>
-                  <tbody class="bg-white divide-y">
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">001</td>
-                      <!-- Nama & Prodi -->
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <div>
-                            <p class="font-semibold">Nasywa Bieber</p>
-                            <p class="text-xs text-gray-600">
-                              Teknologi Informasi
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <!-- Nama Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        Debat Anak Bangsa
-                      </td>
-                      <!-- Tahun -->
-                      <td class="px-4 py-3 text-sm text-center">2023</td>
-                      <!-- Juara -->
-                      <td class="px-4 py-3 text-sm text-center">Juara 1</td>
-                      <!-- Jenis Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        Internasional
-                      </td>
-                    </tr>
-
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">002</td>
-                      <!-- Nama & Prodi -->
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <div>
-                            <p class="font-semibold">Anggi Gwenchana</p>
-                            <p class="text-xs text-gray-600">
-                              Teknologi Informasi
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <!-- Nama Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        International Conference
-                      </td>
-                      <!-- Tahun -->
-                      <td class="px-4 py-3 text-sm text-center">2023</td>
-                      <!-- Juara -->
-                      <td class="px-4 py-3 text-sm text-center">Juara 1</td>
-                      <!-- Jenis Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        Internasional
-                      </td>
-                    </tr>
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">003</td>
-                      <!-- Nama & Prodi -->
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <div>
-                            <p class="font-semibold">Tya Badrul</p>
-                            <p class="text-xs text-gray-600">
-                              Manajemen Perhotelan
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <!-- Nama Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        Lomba Memasak Cepat
-                      </td>
-                      <!-- Tahun -->
-                      <td class="px-4 py-3 text-sm text-center">2023</td>
-                      <!-- Juara -->
-                      <td class="px-4 py-3 text-sm text-center">Juara 1</td>
-                      <!-- Jenis Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">Nasional</td>
-                    </tr>
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">004</td>
-                      <!-- Nama & Prodi -->
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <div>
-                            <p class="font-semibold">Sidky Subianto</p>
-                            <p class="text-xs text-gray-600">
-                              Administrasi Bisnis
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <!-- Nama Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        Karya Tulis Ilmiah
-                      </td>
-                      <!-- Tahun -->
-                      <td class="px-4 py-3 text-sm text-center">2023</td>
-                      <!-- Juara -->
-                      <td class="px-4 py-3 text-sm text-center">Juara 1</td>
-                      <!-- Jenis Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">Regional</td>
-                    </tr>
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">005</td>
-                      <!-- Nama & Prodi -->
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <div>
-                            <p class="font-semibold">Abid Doremi</p>
-                            <p class="text-xs text-gray-600">Desain Grafis</p>
-                          </div>
-                        </div>
-                      </td>
-                      <!-- Nama Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        Lomba Poster Kemerdekaan
-                      </td>
-                      <!-- Tahun -->
-                      <td class="px-4 py-3 text-sm text-center">2023</td>
-                      <!-- Juara -->
-                      <td class="px-4 py-3 text-sm text-center">Juara 1</td>
-                      <!-- Jenis Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">Nasional</td>
-                    </tr>
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">006</td>
-                      <!-- Nama & Prodi -->
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <div>
-                            <p class="font-semibold">Zahra Prabowo</p>
-                            <p class="text-xs text-gray-600">
-                              Teknologi Informasi
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <!-- Nama Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        International UI/UX
-                      </td>
-                      <!-- Tahun -->
-                      <td class="px-4 py-3 text-sm text-center">2023</td>
-                      <!-- Juara -->
-                      <td class="px-4 py-3 text-sm text-center">Juara 1</td>
-                      <!-- Jenis Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        Internasional
-                      </td>
-                    </tr>
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">007</td>
-                      <!-- Nama & Prodi -->
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <div>
-                            <p class="font-semibold">Karin Widodo</p>
-                            <p class="text-xs text-gray-600">
-                              Keuangan Perbankan
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <!-- Nama Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        National Accounting
-                      </td>
-                      <!-- Tahun -->
-                      <td class="px-4 py-3 text-sm text-center">2023</td>
-                      <!-- Juara -->
-                      <td class="px-4 py-3 text-sm text-center">Juara 1</td>
-                      <!-- Jenis Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">Nasional</td>
-                    </tr>
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">008</td>
-                      <!-- Nama & Prodi -->
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <div>
-                            <p class="font-semibold">Risma Jokowi</p>
-                            <p class="text-xs text-gray-600">
-                              Teknologi Informasi
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <!-- Nama Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        Short Video Competition
-                      </td>
-                      <!-- Tahun -->
-                      <td class="px-4 py-3 text-sm text-center">2023</td>
-                      <!-- Juara -->
-                      <td class="px-4 py-3 text-sm text-center">Juara 1</td>
-                      <!-- Jenis Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        Internasional
-                      </td>
-                    </tr>
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">009</td>
-                      <!-- Nama & Prodi -->
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <div>
-                            <p class="font-semibold">Renita Bambang</p>
-                            <p class="text-xs text-gray-600">
-                              Administrasi Bisnis
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <!-- Nama Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        Lomba Karya Tulis Ilmiah Tingkat Remaja
-                      </td>
-                      <!-- Tahun -->
-                      <td class="px-4 py-3 text-sm text-center">2023</td>
-                      <!-- Juara -->
-                      <td class="px-4 py-3 text-sm text-center">Juara 1</td>
-                      <!-- Jenis Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">Nasional</td>
-                    </tr>
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">010</td>
-                      <!-- Nama & Prodi -->
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <div>
-                            <p class="font-semibold">Haechan Ganteng</p>
-                            <p class="text-xs text-gray-600">
-                              Teknologi Informasi
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <!-- Nama Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        Internaational Dance
-                      </td>
-                      <!-- Tahun -->
-                      <td class="px-4 py-3 text-sm text-center">2023</td>
-                      <!-- Juara -->
-                      <td class="px-4 py-3 text-sm text-center">Juara 1</td>
-                      <!-- Jenis Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        Internasional
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+          </form>
+          <footer>
+            <hr />
+            <div class="p-8 text-center">
+              <h1>Copyright © 2023 Vokasi UB. All rights reserved.</h1>
             </div>
-          </div>
+          </footer>
         </main>
-        <footer>
-          <hr />
-          <div class="p-8 text-center -z-10">
-            <h1>Copyright © 2023 Vokasi UB. All rights reserved.</h1>
-          </div>
-        </footer>
       </div>
     </div>
-
-    <!-- JavaScript -->
-    <script>
-      $(document).ready(function () {
-        var table = $("#example")
-          .DataTable({
-            responsive: true,
-          })
-          .columns.adjust()
-          .responsive.recalc();
-      });
-    </script>
   </body>
 </html>

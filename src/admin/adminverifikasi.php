@@ -34,7 +34,7 @@
         class="z-20 hidden w-64 overflow-y-auto bg-gray-200 md:block flex-shrink-0"
       >
         <div class="py-5 bg-blue-950">
-          <a class="ml-6 text-lg font-medium text-white bg-blue-950" href="#">
+          <a class="ml-6 text-lg font-bold text-white bg-blue-950" href="#">
             SIMAPRES
           </a>
         </div>
@@ -43,7 +43,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold text-black hover:text-blue-900 transition-colors duration-150"
-                href="admindashboard.html"
+                href="admindashboard.php"
               >
                 <svg
                   width="24"
@@ -67,13 +67,9 @@
           </ul>
           <ul>
             <li class="relative px-6 py-3">
-              <span
-                class="absolute inset-y-0 left-0 w-full bg-yellow-500 rounded-tr-lg rounded-br-lg -z-10"
-                aria-hidden="true"
-              ></span>
               <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-white hover:text-blue-900"
-                href="adminprofil.html"
+                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
+                href="adminprofil.php"
               >
                 <svg
                   width="25"
@@ -93,9 +89,13 @@
               </a>
             </li>
             <li class="relative px-6 py-3">
+              <span
+                class="absolute inset-y-0 left-0 w-full bg-yellow-500 rounded-tr-lg rounded-br-lg -z-10"
+                aria-hidden="true"
+              ></span>
               <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="adminprestasi.html"
+                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-white hover:text-blue-900"
+                href="adminprestasi.php"
               >
                 <svg
                   width="25"
@@ -115,7 +115,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="adminriwayat.html"
+                href="adminriwayat.php"
               >
                 <svg
                   width="24"
@@ -142,19 +142,17 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="adminakses.html"
+                href="adminakses.php"
               >
                 <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
                   xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 -960 960 960"
+                  width="24"
                 >
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M22 8.293C22 11.769 19.17 14.587 15.68 14.587C15.044 14.587 13.594 14.441 12.889 13.855L12.007 14.733C11.488 15.25 11.628 15.402 11.859 15.652C11.955 15.757 12.067 15.878 12.154 16.051C12.154 16.051 12.889 17.075 12.154 18.1C11.713 18.685 10.478 19.504 9.06796 18.1L8.77396 18.392C8.77396 18.392 9.65496 19.417 8.92096 20.442C8.47996 21.027 7.30396 21.612 6.27496 20.588L5.24696 21.612C4.54096 22.315 3.67896 21.905 3.33696 21.612L2.45396 20.734C1.63096 19.914 2.11096 19.026 2.45396 18.684L10.096 11.074C10.096 11.074 9.36096 9.904 9.36096 8.294C9.36096 4.818 12.191 2 15.681 2C19.171 2 22 4.818 22 8.293ZM15.681 10.489C16.2643 10.4901 16.8241 10.2594 17.2374 9.84782C17.6507 9.4362 17.8836 8.8773 17.885 8.294C17.8844 8.00509 17.827 7.71912 17.716 7.4524C17.6049 7.18568 17.4424 6.94345 17.2378 6.73954C17.0331 6.53562 16.7903 6.37401 16.5232 6.26393C16.256 6.15386 15.9699 6.09747 15.681 6.098C15.392 6.09747 15.1059 6.15386 14.8387 6.26393C14.5716 6.37401 14.3288 6.53562 14.1241 6.73954C13.9195 6.94345 13.757 7.18568 13.646 7.4524C13.5349 7.71912 13.4775 8.00509 13.477 8.294C13.4783 8.8773 13.7112 9.4362 14.1245 9.84782C14.5378 10.2594 15.0977 10.4901 15.681 10.489Z"
+                    d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H160v400Zm278-58L296-440l58-58 84 84 168-168 58 58-226 226Zm-278 58v-480 480Z"
+                    class="w-5 h-5"
                     fill="currentColor"
                   />
                 </svg>
@@ -164,7 +162,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="../luaran/signin.html"
+                href="../luaran/firstscreen.php"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -209,14 +207,14 @@
         @keydown.escape="closeSideMenu"
       >
         <div class="py-4 text-gray-500">
-          <a class="ml-6 text-lg font-medium text-gray-800" href="#">
+          <a class="ml-6 text-lg font-bold text-gray-800" href="#">
             SIMAPRES
           </a>
           <ul class="mt-6">
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="admindashboard.html"
+                href="admindashboard.php"
               >
                 <svg
                   width="24"
@@ -240,13 +238,9 @@
           </ul>
           <ul>
             <li class="relative px-6 py-3">
-              <span
-                class="absolute inset-y-0 left-0 w-full bg-yellow-500 rounded-tr-lg rounded-br-lg -z-10"
-                aria-hidden="true"
-              ></span>
               <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-white hover:text-blue-900"
-                href="adminprofil.html"
+                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
+                href="adminprofil.php"
               >
                 <svg
                   width="25"
@@ -266,9 +260,13 @@
               </a>
             </li>
             <li class="relative px-6 py-3">
+              <span
+                class="absolute inset-y-0 left-0 w-full bg-yellow-500 rounded-tr-lg rounded-br-lg -z-10"
+                aria-hidden="true"
+              ></span>
               <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="adminprestasi.html"
+                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-white hover:text-blue-900"
+                href="adminprestasi.php"
               >
                 <svg
                   width="25"
@@ -288,7 +286,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="adminriwayat.html"
+                href="adminriwayat.php"
               >
                 <svg
                   width="24"
@@ -315,19 +313,17 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="adminakses.html"
+                href="adminakses.php"
               >
                 <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
                   xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 -960 960 960"
+                  width="24"
                 >
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M22 8.293C22 11.769 19.17 14.587 15.68 14.587C15.044 14.587 13.594 14.441 12.889 13.855L12.007 14.733C11.488 15.25 11.628 15.402 11.859 15.652C11.955 15.757 12.067 15.878 12.154 16.051C12.154 16.051 12.889 17.075 12.154 18.1C11.713 18.685 10.478 19.504 9.06796 18.1L8.77396 18.392C8.77396 18.392 9.65496 19.417 8.92096 20.442C8.47996 21.027 7.30396 21.612 6.27496 20.588L5.24696 21.612C4.54096 22.315 3.67896 21.905 3.33696 21.612L2.45396 20.734C1.63096 19.914 2.11096 19.026 2.45396 18.684L10.096 11.074C10.096 11.074 9.36096 9.904 9.36096 8.294C9.36096 4.818 12.191 2 15.681 2C19.171 2 22 4.818 22 8.293ZM15.681 10.489C16.2643 10.4901 16.8241 10.2594 17.2374 9.84782C17.6507 9.4362 17.8836 8.8773 17.885 8.294C17.8844 8.00509 17.827 7.71912 17.716 7.4524C17.6049 7.18568 17.4424 6.94345 17.2378 6.73954C17.0331 6.53562 16.7903 6.37401 16.5232 6.26393C16.256 6.15386 15.9699 6.09747 15.681 6.098C15.392 6.09747 15.1059 6.15386 14.8387 6.26393C14.5716 6.37401 14.3288 6.53562 14.1241 6.73954C13.9195 6.94345 13.757 7.18568 13.646 7.4524C13.5349 7.71912 13.4775 8.00509 13.477 8.294C13.4783 8.8773 13.7112 9.4362 14.1245 9.84782C14.5378 10.2594 15.0977 10.4901 15.681 10.489Z"
+                    d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H160v400Zm278-58L296-440l58-58 84 84 168-168 58 58-226 226Zm-278 58v-480 480Z"
+                    class="w-5 h-5"
                     fill="currentColor"
                   />
                 </svg>
@@ -337,7 +333,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="../luaran/signin.html"
+                href="../luaran/firstscreen.php"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -414,9 +410,12 @@
                     <li class="flex">
                       <a
                         class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800"
-                        href="adminprofil.html"
+                        href="adminprofil.php"
                       >
-                        <img src="../img/profil.svg" class="w-4 h-4 mr-3" />
+                        <img
+                          src="../img/profiladmin.png"
+                          class="w-4 h-4 mr-3"
+                        />
 
                         <span>Profil</span>
                       </a>
@@ -425,7 +424,7 @@
                     <li class="flex">
                       <a
                         class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800"
-                        href="../luaran/signin.html"
+                        href="../luaran/firstscreen.php"
                       >
                         <img src="../img/logout.svg" class="w-4 h-4 mr-3" />
 
@@ -440,78 +439,478 @@
         </header>
         <main class="h-full overflow-y-auto">
           <div class="container px-6 mx-auto grid">
-            <h2 class="my-6 text-2xl font-medium text-gray-700">Edit Profil</h2>
+            <h2 class="my-6 text-2xl font-semibold text-gray-700">
+              Tambah Prestasi
+            </h2>
           </div>
-          <div class="max-w-md mx-auto p-6 bg-white shadow-lg rounded-lg">
-            <form>
-              <!-- Nama -->
-              <div class="mb-4">
-                <label for="nama" class="block text-gray-600 font-medium mb-2"
-                  >Nama</label
-                >
-                <input
-                  type="text"
-                  id="nama"
-                  name="nama"
-                  placeholder="Masukkan nama"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2"
-                />
-              </div>
-              <!-- Email -->
-              <div class="mb-4">
-                <label for="email" class="block text-gray-600 font-medium mb-2"
-                  >Email</label
-                >
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Masukkan email"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2"
-                />
-              </div>
-              <!-- Foto Profil -->
-              <div class="mb-4">
-                <label for="foto" class="block text-gray-600 font-medium mb-2"
-                  >Foto Profil</label
-                >
-                <input
-                  type="file"
-                  id="foto"
-                  name="foto"
-                  accept="image/*"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1"
-                />
-                <p class="text-sm text-gray-500 mt-2">
-                  Pilih foto profil (format: JPEG, PNG, atau GIF)
-                </p>
-              </div>
-              <!-- Tombol Simpan -->
-              <div class="flex justify-end">
-                <div class="justify-end">
-                  <a
-                    href="adminprofil.html"
-                    class="block mx-auto max-w-full sm:w-auto"
+
+          <form class="px-6 mx-auto">
+            <!-- Bidang -->
+            <div class="mb-6">
+              <label
+                for="bidang"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Bidang</label
+              >
+              <select
+                id="bidang"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                disabled
+              >
+                <option selected>Penalaran dan Kreativitas</option>
+                <option value="PK">Penalaran dan Kreativitas</option>
+                <option value="SMB">Seni, Minat dan Bakat</option>
+                <option value="KWU">Kewirausahaan</option>
+              </select>
+            </div>
+
+            <!-- Jenis Prestasi -->
+            <div class="mb-6">
+              <label
+                for="jenis_prestasi"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Jenis Prestasi</label
+              >
+              <select
+                id="jenis_prestasi"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                disabled
+              >
+                <option selected>Nasional</option>
+                <option value="RE">Regional</option>
+                <option value="NA">Nasional</option>
+                <option value="INT">Internasional</option>
+              </select>
+            </div>
+
+            <!-- Nama Perlombaan -->
+            <div class="mb-6">
+              <label
+                for="nama_perlombaan"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Nama Perlombaan</label
+              >
+              <input
+                type="text"
+                id="nama_perlombaan"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5"
+                placeholder="Lomba Debat Nasional"
+                required
+                readonly
+              />
+            </div>
+
+            <!-- Kategori / Kelas Perlombaan -->
+            <div class="mb-6">
+              <label
+                for="kategori_perlombaan"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Kategori / Kelas Perlombaan</label
+              >
+              <input
+                type="text"
+                id="kategori_perlombaan"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5"
+                placeholder="Kelas Internasional"
+                required
+                readonly
+              />
+            </div>
+
+            <!-- Judul Karya -->
+            <div class="mb-6">
+              <label
+                for="judul_karya"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Judul Karya</label
+              >
+              <input
+                type="text"
+                id="judul_karya"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5"
+                placeholder="Indonesia Maju"
+                required
+                readonly
+              />
+            </div>
+            <!-- Tanggal Pelaksanaan -->
+            <!-- Link Informasi Lomba -->
+            <div class="mb-6">
+              <label
+                for="link_lomba"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Link Informasi Lomba</label
+              >
+              <input
+                type="text"
+                id="link_lomba"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5"
+                placeholder="https//:debatnasional.com"
+                required
+                readonly
+              />
+            </div>
+            <!-- Lokasi -->
+            <div class="mb-6">
+              <label
+                for="lokasi"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Lokasi</label
+              >
+              <input
+                type="text"
+                id="lokasi"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5"
+                placeholder="Indonesia"
+                required
+                readonly
+              />
+            </div>
+            <!-- Tahun Penyelenggaraan -->
+            <div class="mb-6">
+              <label
+                for="tahun_penyelenggaraan"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Tahun Penyelenggaraan</label
+              >
+              <select
+                id="tahun_penyelenggaraan"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                disabled
+              >
+                <option selected>2023</option>
+                <option value="RE">2023</option>
+                <option value="NA">2022</option>
+              </select>
+            </div>
+            <!-- Jumlah Anggota -->
+            <div class="mb-6">
+              <label
+                for="jumlah_anggota"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Jumlah Anggota</label
+              >
+              <input
+                type="number"
+                id="jumlah_anggota"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5"
+                placeholder="4"
+                required
+                readonly
+              />
+            </div>
+
+            <!-- Nama Lembaga Ormawa -->
+            <div class="mb-6">
+              <label
+                for="ormawa"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Nama Lembaga Ormawa</label
+              >
+              <input
+                type="text"
+                id="ormawa"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5"
+                placeholder="BEM Vokasi UB"
+                required
+                readonly
+              />
+            </div>
+
+            <!-- Program -->
+            <div class="mb-6">
+              <label
+                for="program"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Program</label
+              >
+              <select
+                id="program"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                disabled
+              >
+                <option selected>Dikti</option>
+                <option value="DI">Dikti</option>
+                <option value="ND">Non Dikti</option>
+              </select>
+            </div>
+            <!-- Tingkat -->
+            <div class="mb-6">
+              <label
+                for="tingkat"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Tingkat</label
+              >
+              <select
+                id="tingkat"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                disabled
+              >
+                <option selected>Nasional</option>
+                <option value="INT">Internasional</option>
+                <option value="NA">Nasional</option>
+                <option value="WIL">Wilayah</option>
+                <option value="PRO">Provinsi</option>
+                <option value="LO">Lokal</option>
+              </select>
+            </div>
+
+            <!-- Jenis Kepesertaan -->
+            <div class="mb-6">
+              <label
+                for="jenis_kepesertaan"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Jenis Kepesertaan</label
+              >
+              <select
+                id="jenis_kepesertaan"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                disabled
+              >
+                <option selected>Kelompok</option>
+                <option value="1">Individu</option>
+                <option value="2">Kelompok</option>
+              </select>
+            </div>
+            <!-- Capaian -->
+            <div class="mb-6">
+              <label
+                for="capaian"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Capaian</label
+              >
+              <select
+                id="capaian"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                disabled
+              >
+                <option selected>Juara 1</option>
+                <option value="1">Juara 1</option>
+                <option value="2">Juara 2</option>
+                <option value="3">Juara 3</option>
+                <option value="4">Finalis</option>
+              </select>
+            </div>
+            <!-- Jumlah Peserta -->
+            <div class="mb-6">
+              <label
+                for="jumlah_peserta"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Jumlah Peserta</label
+              >
+              <input
+                type="text"
+                id="jumlah_peserta"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5"
+                placeholder="4"
+                required
+                readonly
+              />
+            </div>
+            <!-- Jumlah PT -->
+            <div class="mb-6">
+              <label
+                for="jumlah_pt"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Jumlah PT</label
+              >
+              <select
+                id="jumlah_pt"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                disabled
+              >
+                <option selected>10 - 20</option>
+                <option value="1">Kurang dari 10</option>
+                <option value="2">10 - 20</option>
+                <option value="3">Lebih dari 20</option>
+              </select>
+            </div>
+            <!-- Jumlah Propinsi -->
+            <div class="mb-6">
+              <label
+                for="jumlah_propinsi"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Jumlah Propinsi</label
+              >
+              <select
+                id="jumlah_propinsi"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                disabled
+              >
+                <option selected>Lebih dari 4</option>
+                <option value="1">1 Propinsi</option>
+                <option value="2">2-4 Propinsi</option>
+                <option value="3">Lebih dari 4</option>
+              </select>
+            </div>
+            <!-- Jumlah Negara -->
+            <div class="mb-6">
+              <label
+                for="jumlah_negara"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Jumlah Negara</label
+              >
+              <select
+                id="jumlah_negara"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                disabled
+              >
+                <option selected>1 Negara</option>
+                <option value="1">1 Negara</option>
+                <option value="2">2-5 Negara</option>
+                <option value="3">6-10 Negara</option>
+                <option value="4">Lebih dari 10</option>
+              </select>
+            </div>
+            <!-- Nama Dosen Pembimbing -->
+            <div class="mb-6">
+              <label
+                for="nama_dosbim"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Nama Dosen Pembimbing</label
+              >
+              <input
+                type="text"
+                id="nama_dosbim"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5"
+                placeholder="Haechan "
+                required
+                readonly
+              />
+            </div>
+            <!-- No WA Mahasiswa -->
+            <div class="mb-6">
+              <label
+                for="no_wa"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >No WA Mahasiswa</label
+              >
+              <input
+                type="text"
+                id="no_wa"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5"
+                placeholder="08999999990"
+                required
+                readonly
+              />
+            </div>
+
+            <div class="mb-6">
+              <label
+                for="file_input1"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Surat Tugas Pembimbing</label
+              >
+              <input
+                type="file"
+                id="file_input1"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1"
+                src="../img/pooo.pdf"
+                required
+                disabled
+              />
+            </div>
+
+            <div class="mb-6">
+              <label
+                for="file_input2"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Bukti Prestasi</label
+              >
+              <input
+                type="file"
+                id="file_input2"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1"
+                required
+                disabled
+              />
+              <a
+                id="view_file_link"
+                href="#"
+                class="text-blue-500 text-sm mt-2"
+                style="display: none"
+                target="_blank"
+                >Lihat File</a
+              >
+            </div>
+
+            <!-- VERIFIKASI -->
+            <div class="flex justify-end">
+              <div
+                id="rejectionPopup"
+                class="hidden fixed top-0 left-0 w-full h-full bg-black flex bg-opacity-50 items-center justify-center"
+              >
+                <div class="bg-white px-24 py-16 rounded-lg">
+                  <p>Masukkan alasan penolakan:</p>
+                  <textarea
+                    id="reasonInput"
+                    rows="4"
+                    cols="50"
+                    placeholder="Alasan penolakan..."
+                  ></textarea>
+                  <button
+                    id="submitRejection"
+                    class="text-white bg-red-600 hover:bg-red-300 hover:text-red-600 font-medium rounded-lg text-sm px-5 py-2 text-center mt-4"
                   >
-                    <button
-                      type="button"
-                      class="text-white bg-blue-950 hover:bg-blue-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-8 py-2 text-center"
-                    >
-                      Simpan
-                    </button>
-                  </a>
+                    Tolak
+                  </button>
+                  <button
+                    id="cancelRejection"
+                    class="text-white bg-blue-950 hover:bg-blue-500 font-medium rounded-lg text-sm px-5 py-2 text-center mt-4"
+                  >
+                    Batal
+                  </button>
                 </div>
               </div>
-            </form>
-          </div>
+
+              <button
+                id="rejectButton"
+                type="submit"
+                class="text-white bg-red-600 hover:bg-red-300 hover:text-red-600 font-medium rounded-lg text-sm w-full sm:w-auto px-8 py-2 text-center mb-16 m-2"
+              >
+                Tolak
+              </button>
+
+              <button
+                type="submit"
+                class="text-white bg-blue-950 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-8 py-2 text-center mb-16 m-2"
+              >
+                <a href="../admin/adminriwayat.php">Verifikasi</a>
+              </button>
+            </div>
+          </form>
+          <footer>
+            <hr />
+            <div class="p-8 text-center">
+              <h1>Copyright © 2023 Vokasi UB. All rights reserved.</h1>
+            </div>
+          </footer>
         </main>
-        <footer>
-          <hr />
-          <div class="p-8 text-center">
-            <h1>Copyright © 2023 Vokasi UB. All rights reserved.</h1>
-          </div>
-        </footer>
       </div>
     </div>
+
+    <!-- SCRIPT -->
+    <script>
+      const tolakButton = document.getElementById("rejectButton");
+      const rejectionPopup = document.getElementById("rejectionPopup");
+      const cancelRejectionButton = document.getElementById("cancelRejection");
+      const submitRejectionButton = document.getElementById("submitRejection");
+      const reasonInput = document.getElementById("reasonInput");
+
+      tolakButton.addEventListener("click", function (event) {
+        event.preventDefault(); // Mencegah pengiriman formulir default
+        rejectionPopup.classList.remove("hidden");
+      });
+
+      cancelRejectionButton.addEventListener("click", function () {
+        rejectionPopup.classList.add("hidden");
+      });
+
+      submitRejectionButton.addEventListener("click", function () {
+        const rejectionReason = reasonInput.value.trim();
+
+        rejectionPopup.classList.add("hidden");
+      });
+    </script>
   </body>
 </html>

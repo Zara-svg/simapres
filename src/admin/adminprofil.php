@@ -1,3 +1,19 @@
+<?php 
+session_start();
+include('../luaran/koneksi.php');
+$id_user = $_SESSION['id_user'];
+//get profil
+$sql = "select nama, email,foto, level from aktor
+ where id_user='$id_user'";
+ //echo $sql;
+$query = mysqli_query($koneksi, $sql);
+while($data = mysqli_fetch_row($query)){
+	$nama = $data[0];
+	$email = $data[1];
+	$nama_file = $data[2];
+  $level = $data[3];
+}
+?>
 <!DOCTYPE html>
 <html :class="{ 'theme-dark': dark }" x-data="data()" lang="en">
   <head>
@@ -34,20 +50,17 @@
         class="z-20 hidden w-64 overflow-y-auto bg-gray-200 md:block flex-shrink-0"
       >
         <div class="py-5 bg-blue-950">
-          <a class="ml-6 text-lg font-bold text-white bg-blue-950" href="#">
+          <a class="ml-6 text-lg font-medium text-white bg-blue-950" href="#">
             SIMAPRES
           </a>
         </div>
         <div class="py-4 text-black">
           <ul class="mt-6">
             <li class="relative px-6 py-3">
-              <span
-                class="absolute inset-y-0 left-0 w-full bg-yellow-500 rounded-tr-lg rounded-br-lg -z-10"
-                aria-hidden="true"
-              ></span>
               <a
-                class="inline-flex items-center w-full text-sm font-semibold text-white hover:text-blue-900 transition-colors duration-150"
-                href="admindashboard.html"
+                class="inline-flex items-center w-full text-sm font-semibold text-black hover:text-blue-900 transition-colors duration-150"
+                href="admindashboard.php
+                "
               >
                 <svg
                   width="24"
@@ -71,9 +84,13 @@
           </ul>
           <ul>
             <li class="relative px-6 py-3">
+              <span
+                class="absolute inset-y-0 left-0 w-full bg-yellow-500 rounded-tr-lg rounded-br-lg -z-10"
+                aria-hidden="true"
+              ></span>
               <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="adminprofil.html"
+                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-white hover:text-blue-900"
+                href="adminprofil.php"
               >
                 <svg
                   width="25"
@@ -95,7 +112,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="adminprestasi.html"
+                href="adminprestasi.php"
               >
                 <svg
                   width="25"
@@ -115,7 +132,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="adminriwayat.html"
+                href="adminriwayat.php"
               >
                 <svg
                   width="24"
@@ -142,7 +159,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="adminakses.html"
+                href="adminakses.php"
               >
                 <svg
                   width="24"
@@ -158,14 +175,13 @@
                     fill="currentColor"
                   />
                 </svg>
-
                 <span class="ml-4">Manajemen Akses</span>
               </a>
             </li>
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="../luaran/signin.html"
+                href="../luaran/signin.php"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -210,18 +226,14 @@
         @keydown.escape="closeSideMenu"
       >
         <div class="py-4 text-gray-500">
-          <a class="ml-6 text-lg font-bold text-gray-800" href="#">
+          <a class="ml-6 text-lg font-medium text-gray-800" href="#">
             SIMAPRES
           </a>
           <ul class="mt-6">
             <li class="relative px-6 py-3">
-              <span
-                class="absolute inset-y-0 left-0 w-full bg-yellow-500 rounded-tr-lg rounded-br-lg -z-10"
-                aria-hidden="true"
-              ></span>
               <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-white hover:text-blue-900"
-                href="admindashboard.html"
+                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
+                href="admindashboard.php"
               >
                 <svg
                   width="24"
@@ -245,9 +257,13 @@
           </ul>
           <ul>
             <li class="relative px-6 py-3">
+              <span
+                class="absolute inset-y-0 left-0 w-full bg-yellow-500 rounded-tr-lg rounded-br-lg -z-10"
+                aria-hidden="true"
+              ></span>
               <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="adminprofil.html"
+                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-white hover:text-blue-900"
+                href="adminprofil.php"
               >
                 <svg
                   width="25"
@@ -269,7 +285,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="adminprestasi.html"
+                href="adminprestasi.php"
               >
                 <svg
                   width="25"
@@ -289,7 +305,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="adminriwayat.html"
+                href="adminriwayat.php"
               >
                 <svg
                   width="24"
@@ -316,7 +332,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="adminakses.html"
+                href="adminakses.php"
               >
                 <svg
                   width="24"
@@ -338,7 +354,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="../luaran/signin.html"
+                href="../luaran/signin.php"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -415,12 +431,9 @@
                     <li class="flex">
                       <a
                         class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800"
-                        href="adminprofil.html"
+                        href="adminprofil.php"
                       >
-                        <img
-                          src="../img/profiladmin.png"
-                          class="w-4 h-4 mr-3"
-                        />
+                        <img src="../img/profil.svg" class="w-4 h-4 mr-3" />
 
                         <span>Profil</span>
                       </a>
@@ -429,7 +442,7 @@
                     <li class="flex">
                       <a
                         class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800"
-                        href="../luaran/signin.html"
+                        href="../luaran/signin.php"
                       >
                         <img src="../img/logout.svg" class="w-4 h-4 mr-3" />
 
@@ -444,131 +457,87 @@
         </header>
         <main class="h-full overflow-y-auto">
           <div class="container px-6 mx-auto grid">
-            <h2 class="my-6 text-2xl font-semibold text-gray-700">Dashboard</h2>
-
-            <!-- Cards -->
-            <div class="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-4">
-              <!-- Card -->
-              <div
-                class="flex items-center p-4 bg-white rounded-lg shadow-xs hover:shadow-xl"
-              >
-                <div class="p-3 mr-4 text-blue-300 bg-blue-950 rounded-full">
-                  <svg
-                    class="w-5 h-5"
-                    fill="#fff
-                  "
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"
-                    ></path>
-                  </svg>
-                </div>
-                <div>
-                  <p class="mb-2 text-sm font-medium text-gray-600">
-                    Mahasiswa Berprestasi
-                  </p>
-                  <p class="text-lg font-semibold text-gray-700">1250</p>
-                </div>
-              </div>
-              <!-- Card -->
-              <div
-                class="flex items-center p-4 bg-white rounded-lg shadow-xs hover:shadow-xl"
-              >
-                <div class="p-3 mr-4 bg-yellow-500 rounded-full">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g clip-path="url(#clip0_285_299)">
-                      <path
-                        d="M8.12506 17.1875C8.0317 17.1875 7.93834 17.2046 7.84928 17.2407C7.34303 17.4463 6.81061 17.5781 6.25006 17.5781C5.68952 17.5781 5.15709 17.4463 4.65045 17.2407C4.56139 17.2046 4.46842 17.1875 4.37506 17.1875C1.95084 17.1875 -0.0128275 19.6523 6.31046e-05 22.6865C0.00553185 23.9688 0.848891 25 1.87506 25H10.6251C11.6512 25 12.4946 23.9688 12.5001 22.6865C12.513 19.6523 10.5493 17.1875 8.12506 17.1875ZM6.25006 15.625C8.32116 15.625 10.0001 13.5264 10.0001 10.9375C10.0001 8.34863 8.32116 6.25 6.25006 6.25C4.17897 6.25 2.50006 8.34863 2.50006 10.9375C2.50006 13.5264 4.17897 15.625 6.25006 15.625ZM23.1251 0H8.12506C7.09108 0 6.25006 1.08643 6.25006 2.42139V4.6875C7.16491 4.6875 8.01178 5.01855 8.75006 5.55664V3.125H22.5001V17.1875H20.0001V14.0625H15.0001V17.1875H12.0219C12.768 18.0024 13.3157 19.0786 13.5723 20.3125H23.1251C24.159 20.3125 25.0001 19.2261 25.0001 17.8911V2.42139C25.0001 1.08643 24.159 0 23.1251 0Z"
-                        class="w-5 h-5"
-                        fill="#fff"
-                      />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_285_299">
-                        <rect width="25" height="25" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </div>
-                <div>
-                  <p class="mb-2 text-sm font-medium text-gray-600">
-                    Dosen Pembimbing
-                  </p>
-                  <p class="text-lg font-semibold text-gray-700">50</p>
-                </div>
-              </div>
-              <!-- Card -->
-
-              <!-- Card -->
-              <div
-                class="flex items-center p-4 bg-white rounded-lg shadow-xs hover:shadow-xl"
-              >
-                <div class="p-3 mr-4 text-gray-200 bg-gray-500 rounded-full">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="24"
-                    viewBox="0 -960 960 960"
-                    width="24"
-                  >
-                    <path
-                      d="m320-240 160-122 160 122-60-198 160-114H544l-64-208-64 208H220l160 114-60 198ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
-                      class="w-5 h-5"
-                      fill="#fff"
-                    />
-                  </svg>
-                </div>
-                <div>
-                  <p class="mb-2 text-sm font-medium text-gray-600">Prestasi</p>
-                  <p class="text-lg font-semibold text-gray-700">500</p>
-                </div>
-              </div>
+            <h2 class="my-6 text-2xl font-semibold text-gray-700">Profil</h2>
+          </div>
+          <div class="px-10 flex">
+            <div class="hover:scale-125">
+              <img src="../img/profiladmin.png" alt="foto" class="rounded-lg" />
             </div>
-
-            <!-- Bars chart -->
-            <div class="min-w-0 p-4 bg-white rounded-lg shadow-xs">
-              <h4 class="mb-4 font-semibold text-gray-800">
-                Statistik Prestasi Mahasiswa
-              </h4>
-              <canvas id="bars"></canvas>
-              <div
-                class="flex justify-center mt-4 space-x-3 text-sm text-gray-600"
-              >
-                <!-- Chart legend -->
-                <div class="flex items-center">
-                  <span
-                    class="inline-block w-3 h-3 mr-1 bg-blue-950 rounded-full"
-                  ></span>
-                  <span> Regional</span>
-                </div>
-                <div class="flex items-center">
-                  <span
-                    class="inline-block w-3 h-3 mr-1 bg-yellow-500 rounded-full"
-                  ></span>
-                  <span>Nasional</span>
-                </div>
-                <div class="flex items-center">
-                  <span
-                    class="inline-block w-3 h-3 mr-1 bg-gray-500 rounded-full"
-                  ></span>
-                  <span>Internasional</span>
-                </div>
+            <!-- edit profil -->
+            <div class="flex justify-end px-10 py-10">
+              <div class="justify-end">
+                <a
+                  href="editprofiladmin.php"
+                  class="block mx-auto max-w-full sm:w-auto"
+                >
+                  <button
+                    type="button"
+                    class="text-white bg-blue-950 hover:bg-blue-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-8 py-2 text-center"
+                  >
+                    Edit Profil
+                  </button>
+                </a>
               </div>
             </div>
           </div>
-          <footer>
-            <hr />
-            <div class="p-8 text-center">
-              <h1>Copyright © 2023 Vokasi UB. All rights reserved.</h1>
+
+          <!-- form -->
+          <div>
+            <div class="max-w-md mx-auto p-6 bg-white shadow-lg rounded-lg">
+              <form>
+                <div class="mb-2">
+                  <label for="nama" class="block text-gray-600 font-medium mb-2"
+                    >Nama</label
+                  >
+                  <input
+                    type="text"
+                    id="nama"
+                    name="nama"
+                    value="<?php echo $nama;?>"
+                    class="w-full py-2 px-4 bg-gray-200 border border-gray-300 rounded pointer-events-none text-gray-500"
+                    readonly
+                  />
+                </div>
+                <div class="mb-2">
+                  <label
+                    for="email"
+                    class="block text-gray-600 font-medium mb-2"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value="<?php echo $email;?>"
+                    class="w-full py-2 px-4 bg-gray-200 border border-gray-300 rounded pointer-events-none text-gray-500"
+                    readonly
+                  />
+                </div>
+                <div class="mb-2">
+                  <label
+                    for="level"
+                    class="block text-gray-600 font-medium mb-2"
+                    >Level</label
+                  >
+                  <input
+                    type="text"
+                    id="level"
+                    name="level"
+                    value="<?php echo $level;?>"
+                    class="w-full py-2 px-4 bg-gray-200 border border-gray-300 rounded pointer-events-none text-gray-500"
+                    readonly
+                  />
+                </div>
+              </form>
             </div>
-          </footer>
+          </div>
         </main>
+        <footer>
+          <hr />
+          <div class="p-8 text-center">
+            <h1>Copyright © 2023 Vokasi UB. All rights reserved.</h1>
+          </div>
+        </footer>
       </div>
     </div>
   </body>
