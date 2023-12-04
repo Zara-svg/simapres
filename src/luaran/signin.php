@@ -50,29 +50,58 @@
               <div class="flex justify-center items-center">
                 <img src="../img/logo vokasi.png" />
               </div>
-
+              <?php if(!empty($_GET['gagal'])){?>
+        <?php if($_GET['gagal']=="emailKosong"){?>
+            <span class="text-primary text-gradient font-weight-bold">
+            Maaf Email Tidak Boleh Kosong
+            </span>
+          <?php } else if($_GET['gagal']=="passKosong"){?>
+            <span class="text-primary text-gradient font-weight-bold">
+            Maaf Password Tidak Boleh Kosong
+            </span>
+          <?php } else {?>
+            <span class="text-primary text-gradient font-weight-bold">
+            Maaf Email dan Password Anda Salah
+            </span>
+          <?php }?>
+      <?php }?>
+      <form action="konfirmasisignin.php" method="post">
+                <!-- /.col -->
               <label class="block text-sm">
                 <span class="text-gray-700 dark:text-gray-400">Email</span>
                 <input
                   class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-blue-950 focus:outline-none focus:shadow-outline-blue form-input"
-                  placeholder="Email"
+                  placeholder=" Email " name="email"
+                  type="text"
                 />
+                <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-user"></span>
+            </div>
+          </div>
               </label>
               <label class="block mt-4 text-sm">
                 <span class="text-gray-700 dark:text-gray-400">Password</span>
                 <input
                   class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-blue-950 focus:outline-none focus:shadow-outline-blue form-input"
-                  placeholder="Password"
+                  placeholder="Password" name="password"
                   type="password"
                 />
+                <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-lock"></span>
+            </div>
+          </div>
               </label>
-              <a
+
+
+              <div
+            
                 class="block w-full px-4 py-2 mt-4 text-sm font-medium leading-5 text-center text-white transition-colors duration-150 bg-blue-950 border border-transparent rounded-lg active:bg-blue-950 hover:bg-blue-600 focus:outline-none focus:shadow-outline-purple"
-                href="../user/index.html"
-              >
-                Sign In
-              </a>
-              <a href="tatacara.html">
+                ><button type="submit" class="btn btn-primary btn-block" name="login" >Sign In</button>
+              
+              </div>
+              <a href="tatacara.php">
                 <h1 class="text-black text-sm p-2 mt-2 text-center">
                   Lihat tata cara pengajuan prestasi
                 </h1>

@@ -1,3 +1,18 @@
+<?php 
+include('../luaran/koneksi.php');
+session_start();
+if(isset($_SESSION['id_user'])){
+	$id_user = $_SESSION['id_user'];
+  	$sql_d = "select `nama`, `email`, `foto` from `aktor` 
+  	where `id_user` = '$id_user'";
+	$query_d = mysqli_query($koneksi,$sql_d);
+	while($data_d = mysqli_fetch_row($query_d)){
+    		$nama= $data_d[0];
+    		$email= $data_d[1];
+        $nama_file= $data_d[2];
+	}
+}
+?>
 <!DOCTYPE html>
 <html :class="{ 'theme-dark': dark }" x-data="data()" lang="en">
   <head>
@@ -43,7 +58,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-medium text-black hover:text-blue-900 transition-colors duration-150"
-                href="index.html"
+                href="index.php"
               >
                 <svg
                   width="24"
@@ -73,7 +88,7 @@
               ></span>
               <a
                 class="inline-flex items-center w-full text-sm font-medium transition-colors duration-150 text-white hover:text-blue-900"
-                href="profil.html"
+                href="profil.php"
               >
                 <svg
                   width="25"
@@ -96,7 +111,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-medium transition-colors duration-150 text-black hover:text-blue-900"
-                href="prestasi.html"
+                href="prestasi.php"
               >
                 <svg
                   width="25"
@@ -116,27 +131,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-medium transition-colors duration-150 text-black hover:text-blue-900"
-                href="verifikasi.html"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="24"
-                  viewBox="0 -960 960 960"
-                  width="24"
-                >
-                  <path
-                    d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H160v400Zm278-58L296-440l58-58 84 84 168-168 58 58-226 226Zm-278 58v-480 480Z"
-                    class="w-5 h-5"
-                    fill="currentColor"
-                  />
-                </svg>
-                <span class="ml-4">Status Verifikasi</span>
-              </a>
-            </li>
-            <li class="relative px-6 py-3">
-              <a
-                class="inline-flex items-center w-full text-sm font-medium transition-colors duration-150 text-black hover:text-blue-900"
-                href="riwayat.html"
+                href="riwayat.php"
               >
                 <svg
                   width="24"
@@ -161,11 +156,30 @@
                 <span class="ml-4">Riwayat Prestasi</span>
               </a>
             </li>
-
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-medium transition-colors duration-150 text-black hover:text-blue-900"
-                href="../luaran/signin.html"
+                href="verifikasi.php"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 -960 960 960"
+                  width="24"
+                >
+                  <path
+                    d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H160v400Zm278-58L296-440l58-58 84 84 168-168 58 58-226 226Zm-278 58v-480 480Z"
+                    class="w-5 h-5"
+                    fill="currentColor"
+                  />
+                </svg>
+                <span class="ml-4">Status Verifikasi</span>
+              </a>
+            </li>
+            <li class="relative px-6 py-3">
+              <a
+                class="inline-flex items-center w-full text-sm font-medium transition-colors duration-150 text-black hover:text-blue-900"
+                href="../luaran/firstscreen.php"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -217,7 +231,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-medium transition-colors duration-150 text-black hover:text-blue-900"
-                href="index.html"
+                href="index.php"
               >
                 <svg
                   width="24"
@@ -247,7 +261,7 @@
               ></span>
               <a
                 class="inline-flex items-center w-full text-sm font-medium transition-colors duration-150 text-white hover:text-blue-900"
-                href="profil.html"
+                href="profil.php"
               >
                 <svg
                   width="25"
@@ -270,7 +284,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-medium transition-colors duration-150 text-black hover:text-blue-900"
-                href="prestasi.html"
+                href="prestasi.php"
               >
                 <svg
                   width="25"
@@ -291,27 +305,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-medium transition-colors duration-150 text-black hover:text-blue-900"
-                href="verifikasi.html"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="24"
-                  viewBox="0 -960 960 960"
-                  width="24"
-                >
-                  <path
-                    d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H160v400Zm278-58L296-440l58-58 84 84 168-168 58 58-226 226Zm-278 58v-480 480Z"
-                    class="w-5 h-5"
-                    fill="currentColor"
-                  />
-                </svg>
-                <span class="ml-4">Status Verifikasi</span>
-              </a>
-            </li>
-            <li class="relative px-6 py-3">
-              <a
-                class="inline-flex items-center w-full text-sm font-medium transition-colors duration-150 text-black hover:text-blue-900"
-                href="riwayat.html"
+                href="riwayat.php"
               >
                 <svg
                   width="24"
@@ -336,11 +330,30 @@
                 <span class="ml-4">Riwayat Prestasi</span>
               </a>
             </li>
-
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-medium transition-colors duration-150 text-black hover:text-blue-900"
-                href="../luaran/signin.html"
+                href="verifikasi.php"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 -960 960 960"
+                  width="24"
+                >
+                  <path
+                    d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H160v400Zm278-58L296-440l58-58 84 84 168-168 58 58-226 226Zm-278 58v-480 480Z"
+                    class="w-5 h-5"
+                    fill="currentColor"
+                  />
+                </svg>
+                <span class="ml-4">Status Verifikasi</span>
+              </a>
+            </li>
+            <li class="relative px-6 py-3">
+              <a
+                class="inline-flex items-center w-full text-sm font-medium transition-colors duration-150 text-black hover:text-blue-900"
+                href="../luaran/firstscreen.php"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -417,7 +430,7 @@
                     <li class="flex">
                       <a
                         class="inline-flex items-center w-full px-2 py-1 text-sm font-medium transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800"
-                        href="profil.html"
+                        href="profil.php"
                       >
                         <img src="../img/profil.svg" class="w-4 h-4 mr-3" />
 
@@ -428,7 +441,7 @@
                     <li class="flex">
                       <a
                         class="inline-flex items-center w-full px-2 py-1 text-sm font-medium transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800"
-                        href="../luaran/signin.html"
+                        href="../luaran/firstscreen.html"
                       >
                         <img src="../img/logout.svg" class="w-4 h-4 mr-3" />
 
@@ -446,7 +459,15 @@
             <h2 class="my-6 text-2xl font-medium text-gray-700">Edit Profil</h2>
           </div>
           <div class="max-w-md mx-auto p-6 bg-white shadow-lg rounded-lg">
-            <form>
+            
+
+            <?php if((!empty($_GET['notif']))&&(!empty($_GET['jenis']))){?>
+      <?php if($_GET['notif']=="editkosong"){?>
+          <div class="alert alert-danger" role="alert">Maaf data 
+          <?php echo $_GET['jenis'];?> wajib di isi</div>
+      <?php }?>
+   <?php }?>
+   <form class="form-horizontal" method="post" action="konfirmasieditprofil.php" enctype="multipart/form-data">
               <!-- Nama -->
               <div class="mb-4">
                 <label for="nama" class="block text-gray-600 font-medium mb-2"
@@ -454,8 +475,8 @@
                 >
                 <input
                   type="text"
-                  id="nama"
                   name="nama"
+                  id="nama" value="<?php echo $nama;?>"
                   placeholder="Masukkan nama"
                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2"
                 />
@@ -467,8 +488,8 @@
                 >
                 <input
                   type="email"
-                  id="email"
                   name="email"
+                  id="email" value="<?php echo $email;?>"
                   placeholder="Masukkan email"
                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2"
                 />
@@ -480,11 +501,12 @@
                 >
                 <input
                   type="file"
-                  id="foto"
+                  id="customFile" value="<?php echo $foto;?>"
                   name="foto"
-                  accept="image/*"
+
+                  accept="image/*" 
                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1"
-                />
+                  />
                 <p class="text-sm text-gray-500 mt-2">
                   Pilih foto profil (format: JPEG, PNG, atau GIF)
                 </p>
@@ -493,13 +515,13 @@
               <div class="flex justify-end">
                 <div class="justify-end">
                   <a
-                    href="profil.html"
+                    href="profil.php"
                     class="block mx-auto max-w-full sm:w-auto"
                   >
                     <button
-                      type="button"
+                      type="submit" 
                       class="text-white bg-blue-950 hover:bg-blue-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-8 py-2 text-center"
-                    >
+                    > <i class="fas fa-save"></i>
                       Simpan
                     </button>
                   </a>

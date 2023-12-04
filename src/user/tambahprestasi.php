@@ -34,7 +34,7 @@
         class="z-20 hidden w-64 overflow-y-auto bg-gray-200 md:block flex-shrink-0"
       >
         <div class="py-5 bg-blue-950">
-          <a class="ml-6 text-lg font-medium text-white bg-blue-950" href="#">
+          <a class="ml-6 text-lg font-bold text-white bg-blue-950" href="#">
             SIMAPRES
           </a>
         </div>
@@ -43,7 +43,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold text-black hover:text-blue-900 transition-colors duration-150"
-                href="admindashboard.html"
+                href="index.php"
               >
                 <svg
                   width="24"
@@ -67,13 +67,9 @@
           </ul>
           <ul>
             <li class="relative px-6 py-3">
-              <span
-                class="absolute inset-y-0 left-0 w-full bg-yellow-500 rounded-tr-lg rounded-br-lg -z-10"
-                aria-hidden="true"
-              ></span>
               <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-white hover:text-blue-900"
-                href="adminprofil.html"
+                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
+                href="profil.php"
               >
                 <svg
                   width="25"
@@ -93,9 +89,13 @@
               </a>
             </li>
             <li class="relative px-6 py-3">
+              <span
+                class="absolute inset-y-0 left-0 w-full bg-yellow-500 rounded-tr-lg rounded-br-lg -z-10"
+                aria-hidden="true"
+              ></span>
               <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="adminprestasi.html"
+                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-white hover:text-blue-900"
+                href="prestasi.php"
               >
                 <svg
                   width="25"
@@ -115,7 +115,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="adminriwayat.html"
+                href="riwayat.php"
               >
                 <svg
                   width="24"
@@ -142,29 +142,27 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="adminakses.html"
+                href="verifikasi.php"
               >
                 <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
                   xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 -960 960 960"
+                  width="24"
                 >
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M22 8.293C22 11.769 19.17 14.587 15.68 14.587C15.044 14.587 13.594 14.441 12.889 13.855L12.007 14.733C11.488 15.25 11.628 15.402 11.859 15.652C11.955 15.757 12.067 15.878 12.154 16.051C12.154 16.051 12.889 17.075 12.154 18.1C11.713 18.685 10.478 19.504 9.06796 18.1L8.77396 18.392C8.77396 18.392 9.65496 19.417 8.92096 20.442C8.47996 21.027 7.30396 21.612 6.27496 20.588L5.24696 21.612C4.54096 22.315 3.67896 21.905 3.33696 21.612L2.45396 20.734C1.63096 19.914 2.11096 19.026 2.45396 18.684L10.096 11.074C10.096 11.074 9.36096 9.904 9.36096 8.294C9.36096 4.818 12.191 2 15.681 2C19.171 2 22 4.818 22 8.293ZM15.681 10.489C16.2643 10.4901 16.8241 10.2594 17.2374 9.84782C17.6507 9.4362 17.8836 8.8773 17.885 8.294C17.8844 8.00509 17.827 7.71912 17.716 7.4524C17.6049 7.18568 17.4424 6.94345 17.2378 6.73954C17.0331 6.53562 16.7903 6.37401 16.5232 6.26393C16.256 6.15386 15.9699 6.09747 15.681 6.098C15.392 6.09747 15.1059 6.15386 14.8387 6.26393C14.5716 6.37401 14.3288 6.53562 14.1241 6.73954C13.9195 6.94345 13.757 7.18568 13.646 7.4524C13.5349 7.71912 13.4775 8.00509 13.477 8.294C13.4783 8.8773 13.7112 9.4362 14.1245 9.84782C14.5378 10.2594 15.0977 10.4901 15.681 10.489Z"
+                    d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H160v400Zm278-58L296-440l58-58 84 84 168-168 58 58-226 226Zm-278 58v-480 480Z"
+                    class="w-5 h-5"
                     fill="currentColor"
                   />
                 </svg>
-                <span class="ml-4">Manajemen Akses</span>
+                <span class="ml-4">Status Verifikasi</span>
               </a>
             </li>
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="../luaran/signin.html"
+                href="../luaran/firstscreen.php"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -209,14 +207,14 @@
         @keydown.escape="closeSideMenu"
       >
         <div class="py-4 text-gray-500">
-          <a class="ml-6 text-lg font-medium text-gray-800" href="#">
+          <a class="ml-6 text-lg font-bold text-gray-800" href="#">
             SIMAPRES
           </a>
           <ul class="mt-6">
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="admindashboard.html"
+                href="index.php"
               >
                 <svg
                   width="24"
@@ -240,13 +238,9 @@
           </ul>
           <ul>
             <li class="relative px-6 py-3">
-              <span
-                class="absolute inset-y-0 left-0 w-full bg-yellow-500 rounded-tr-lg rounded-br-lg -z-10"
-                aria-hidden="true"
-              ></span>
               <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-white hover:text-blue-900"
-                href="adminprofil.html"
+                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
+                href="profil.php"
               >
                 <svg
                   width="25"
@@ -267,8 +261,8 @@
             </li>
             <li class="relative px-6 py-3">
               <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="adminprestasi.html"
+                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-white hover:text-blue-900"
+                href="prestasi.php"
               >
                 <svg
                   width="25"
@@ -288,7 +282,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="adminriwayat.html"
+                href="riwayat.php"
               >
                 <svg
                   width="24"
@@ -315,29 +309,27 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="adminakses.html"
+                href="verifikasi.php"
               >
                 <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
                   xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 -960 960 960"
+                  width="24"
                 >
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M22 8.293C22 11.769 19.17 14.587 15.68 14.587C15.044 14.587 13.594 14.441 12.889 13.855L12.007 14.733C11.488 15.25 11.628 15.402 11.859 15.652C11.955 15.757 12.067 15.878 12.154 16.051C12.154 16.051 12.889 17.075 12.154 18.1C11.713 18.685 10.478 19.504 9.06796 18.1L8.77396 18.392C8.77396 18.392 9.65496 19.417 8.92096 20.442C8.47996 21.027 7.30396 21.612 6.27496 20.588L5.24696 21.612C4.54096 22.315 3.67896 21.905 3.33696 21.612L2.45396 20.734C1.63096 19.914 2.11096 19.026 2.45396 18.684L10.096 11.074C10.096 11.074 9.36096 9.904 9.36096 8.294C9.36096 4.818 12.191 2 15.681 2C19.171 2 22 4.818 22 8.293ZM15.681 10.489C16.2643 10.4901 16.8241 10.2594 17.2374 9.84782C17.6507 9.4362 17.8836 8.8773 17.885 8.294C17.8844 8.00509 17.827 7.71912 17.716 7.4524C17.6049 7.18568 17.4424 6.94345 17.2378 6.73954C17.0331 6.53562 16.7903 6.37401 16.5232 6.26393C16.256 6.15386 15.9699 6.09747 15.681 6.098C15.392 6.09747 15.1059 6.15386 14.8387 6.26393C14.5716 6.37401 14.3288 6.53562 14.1241 6.73954C13.9195 6.94345 13.757 7.18568 13.646 7.4524C13.5349 7.71912 13.4775 8.00509 13.477 8.294C13.4783 8.8773 13.7112 9.4362 14.1245 9.84782C14.5378 10.2594 15.0977 10.4901 15.681 10.489Z"
+                    d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H160v400Zm278-58L296-440l58-58 84 84 168-168 58 58-226 226Zm-278 58v-480 480Z"
+                    class="w-5 h-5"
                     fill="currentColor"
                   />
                 </svg>
-                <span class="ml-4">Manajemen Akses</span>
+                <span class="ml-4">Status Verifikasi</span>
               </a>
             </li>
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="../luaran/signin.html"
+                href="../luaran/firstscreen.php"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -396,7 +388,7 @@
                 >
                   <img
                     class="object-cover w-8 h-8 rounded-full"
-                    src="../img/profiladmin.png"
+                    src="../img/profil.jpg"
                     alt=""
                     aria-hidden="true"
                   />
@@ -414,7 +406,7 @@
                     <li class="flex">
                       <a
                         class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800"
-                        href="adminprofil.html"
+                        href="profil.php"
                       >
                         <img src="../img/profil.svg" class="w-4 h-4 mr-3" />
 
@@ -425,7 +417,7 @@
                     <li class="flex">
                       <a
                         class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800"
-                        href="../luaran/signin.html"
+                        href="../luaran/firstscreen.php"
                       >
                         <img src="../img/logout.svg" class="w-4 h-4 mr-3" />
 
@@ -440,88 +432,467 @@
         </header>
         <main class="h-full overflow-y-auto">
           <div class="container px-6 mx-auto grid">
-            <h2 class="my-6 text-2xl font-semibold text-gray-700">Profil</h2>
+            <h2 class="my-6 text-2xl font-semibold text-gray-700">
+              Tambah Prestasi
+            </h2>
           </div>
-          <div class="px-10 flex">
-            <div class="hover:scale-125">
-              <img src="../img/profiladmin.png" alt="foto" class="rounded-lg" />
+
+          <form class="px-6 mx-auto" action="konfirmasitambahprestasi.php" method="POST">
+            <!-- Nama -->
+            <div class="mb-6">
+              <label
+                for="nama"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Nama</label
+              >
+              <input
+                type="text"
+                id="nama"
+                name="nama"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5"
+                placeholder="nama"
+                required
+              />
             </div>
-            <!-- edit profil -->
-            <div class="flex justify-end px-10 py-10">
-              <div class="justify-end">
-                <a
-                  href="editprofiladmin.html"
-                  class="block mx-auto max-w-full sm:w-auto"
-                >
-                  <button
-                    type="button"
-                    class="text-white bg-blue-950 hover:bg-blue-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-8 py-2 text-center"
-                  >
-                    Edit Profil
-                  </button>
-                </a>
-              </div>
+            <!-- Bidang -->
+            
+            <div class="mb-6">
+              <label
+                for="bidang"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Bidang</label
+              >
+              <select
+                id="bidang"
+                name="bidang"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              >
+                <option selected>Pilih Bidang</option>
+                <option value="Penalaran dan kreativitas">Penalaran dan Kreativitas</option>
+                <option value="Seni, minat dan bakat">Seni, Minat dan Bakat</option>
+                <option value="Kewirausahaan">Kewirausahaan</option>
+              </select>
+            </div>
+            <!-- Jenis Prestasi -->
+            <div class="mb-6">
+              <label
+                for="jenis_prestasi"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Jenis Prestasi</label
+              >
+              <select
+                id="jenis_prestasi"
+                name="jenis_prestasi"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              >
+                <option selected>Pilih Jenis Prestasi</option>
+                <option value="RE">Regional</option>
+                <option value="NA">Nasional</option>
+                <option value="INT">Internasional</option>
+              </select>
+            </div>
+
+            <!-- Nama Perlombaan -->
+            <div class="mb-6">
+              <label
+                for="nama_perlombaan"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Nama Perlombaan</label
+              >
+              <input
+                type="text"
+                id="nama_perlombaan"
+                name="nama_perlombaan"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5"
+                placeholder="Nama Perlombaan"
+                required
+              />
+            </div>
+
+            <!-- Kategori / Kelas Perlombaan -->
+            <div class="mb-6">
+              <label
+                for="kategori_perlombaan"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Kategori / Kelas Perlombaan</label
+              >
+              <input
+                type="text"
+                id="kategori_perlombaan"
+                name="kategori"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5"
+                placeholder="Kategori / Kelas Perlombaan"
+                required
+              />
+            </div>
+
+            <!-- Judul Karya -->
+            <div class="mb-6">
+              <label
+                for="judul_karya"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Judul Karya</label
+              >
+              <input
+                type="text"
+                id="judul_karya"
+                name="judul_karya"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5"
+                placeholder="Judul Karya"
+                required
+              />
+            </div>
+            <!-- Tanggal Pelaksanaan -->
+
+            <!-- Link Informasi Lomba -->
+            <div class="mb-6">
+              <label
+                for="link_lomba"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Link Informasi Lomba</label
+              >
+              <input
+                type="text"
+                id="link_lomba"
+                name="link_informasi"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5"
+                placeholder="Link Informasi Lomba"
+                required
+              />
+            </div>
+            <!-- Lokasi -->
+            <div class="mb-6">
+              <label
+                for="lokasi"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Lokasi</label
+              >
+              <input
+                type="text"
+                id="lokasi"
+                name="lokasi"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5"
+                placeholder="Lokasi"
+                required
+              />
+            </div>
+            <!-- Tahun Penyelenggaraan -->
+            <div class="mb-6">
+              <label
+                for="tahun_penyelenggaraan"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Tahun Penyelenggaraan</label
+              >
+              <select
+                id="tahun_penyelenggaraan"
+                name="tahun"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              >
+                <option selected>Pilih tahun</option>
+                <option value="2023">2023</option>
+                <option value="2022">2022</option>
+              </select>
+            </div>
+            <!-- Jumlah Anggota -->
+            <div class="mb-6">
+              <label
+                for="jumlah_anggota"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Jumlah Anggota</label
+              >
+              <input
+                type="number"
+                id="jumlah_anggota"
+                name="jumlah_anggota"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5"
+                placeholder="Jumlah Anggota"
+                required
+              />
+            </div>
+
+            <!-- Nama Lembaga Ormawa -->
+            <div class="mb-6">
+              <label
+                for="ormawa"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Nama Lembaga Ormawa</label
+              >
+              <input
+                type="text"
+                id="ormawa"
+                name="nama_lembaga_ormawa"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5"
+                placeholder="Nama Lembaga Ormawa"
+                required
+              />
+            </div>
+
+            <!-- Program -->
+            <div class="mb-6">
+              <label
+                for="program"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Program</label
+              >
+              <select
+                id="program"
+                name="program"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              >
+                <option selected>Pilih program</option>
+                <option value="DI">Dikti</option>
+                <option value="ND">Non Dikti</option>
+              </select>
+            </div>
+            <!-- Tingkat -->
+            <div class="mb-6">
+              <label
+                for="tingkat"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Tingkat</label
+              >
+              <select
+                id="tingkat"
+                name="tingkat"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              >
+                <option selected>Pilih Tingkat</option>
+                <option value="INT">Internasional</option>
+                <option value="NA">Nasional</option>
+                <option value="WIL">Wilayah</option>
+                <option value="PRO">Provinsi</option>
+                <option value="LO">Lokal</option>
+              </select>
+            </div>
+
+            <!-- Jenis Kepesertaan -->
+            <div class="mb-6">
+              <label
+                for="jenis_kepesertaan"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Jenis Kepesertaan</label
+              >
+              <select
+                id="jenis_kepesertaan"
+                name="jenis_kepesertaan"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              >
+                <option selected>Pilih Jenis Kepesertaan</option>
+                <option value="1">Individu</option>
+                <option value="2">Kelompok</option>
+              </select>
+            </div>
+            <!-- Capaian -->
+            <div class="mb-6">
+              <label
+                for="capaian"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Capaian</label
+              >
+              <select
+                id="capaian"
+                name="capaian"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              >
+                <option selected>Pilih Capaian</option>
+                <option value="1">Juara 1</option>
+                <option value="2">Juara 2</option>
+                <option value="3">Juara 3</option>
+                <option value="4">Finalis</option>
+              </select>
+            </div>
+            <!-- Jumlah Peserta -->
+            <div class="mb-6">
+              <label
+                for="jumlah_peserta"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Jumlah Peserta</label
+              >
+              <input
+                type="text"
+                id="jumlah_peserta"
+                name="jumlah_peserta"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5"
+                placeholder="Jumlah Peserta"
+                required
+              />
+            </div>
+            <!-- Jumlah PT -->
+            <div class="mb-6">
+              <label
+                for="jumlah_pt"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Jumlah PT</label
+              >
+              <select
+                id="jumlah_pt"
+                name="jumlah_pt"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              >
+                <option selected>Pilih Jumlah PT</option>
+                <option value="1">Kurang dari 10</option>
+                <option value="2">10 - 20</option>
+                <option value="3">Lebih dari 20</option>
+              </select>
+            </div>
+            <!-- Jumlah Propinsi -->
+            <div class="mb-6">
+              <label
+                for="jumlah_propinsi"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Jumlah Propinsi</label
+              >
+              <select
+                id="jumlah_propinsi"
+                name="jumlah_provinsi"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              >
+                <option selected>Pilih Jumlah Propinsi</option>
+                <option value="1">1 Propinsi</option>
+                <option value="2">2-4 Propinsi</option>
+                <option value="3">Lebih dari 4</option>
+              </select>
+            </div>
+            <!-- Jumlah Negara -->
+            <div class="mb-6">
+              <label
+                for="jumlah_negara"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Jumlah Negara</label
+              >
+              <select
+                id="jumlah_negara"
+                name="jumlah_negara"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              >
+                <option selected>Pilih Jumlah Negara</option>
+                <option value="1">1 Negara</option>
+                <option value="2">2-5 Negara</option>
+                <option value="3">6-10 Negara</option>
+                <option value="4">Lebih dari 10</option>
+              </select>
+            </div>
+            <!-- Nama Dosen Pembimbing -->
+            <div class="mb-6">
+              <label
+                for="nama_dosbim"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Nama Dosen Pembimbing</label
+              >
+              <input
+                type="text"
+                id="nama_dosbim"
+                name="nama_dosen_pembimbing"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5"
+                placeholder="Nama Dosen Pembimbing "
+                required
+              />
+            </div>
+            <!-- No WA Mahasiswa -->
+            <div class="mb-6">
+              <label
+                for="no_wa"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >No WA Mahasiswa</label
+              >
+              <input
+                type="text"
+                id="no_wa"
+                name="no_wa_mahasiswa"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5"
+                placeholder="No WA Mahasiswa"
+                required
+              />
+            </div>
+
+            <div class="mb-6">
+              <label
+                for="file_input"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Surat Tugas Pembimbing</label
+              >
+              <input
+                type="file"
+                id="file_input"
+                name="surat_dosen"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1"
+                placeholder="Nama Prestasi"
+                required
+              />
+            </div>
+            <div class="mb-6">
+              <label
+                for="file_input"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Bukti Prestasi</label
+              >
+              <input
+                type="file"
+                id="file_input"
+                name="bukti_prestasi"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1"
+                placeholder="Bukti Prestasi"
+                required
+              />
+            </div>
+            <!-- SUBMIT -->
+            <div class="flex justify-end">
+              <input
+                type="submit"
+                name="submit"
+                onclick="openModal()"
+                class="text-white bg-blue-950 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-8 py-2 text-center mb-16"
+              />
+            </div>
+          </form>
+
+          <!-- Modal -->
+          <div
+            id="successModal"
+            class="fixed hidden items-center justify-center m-10"
+          >
+            <div
+              class="bg-white p-8 rounded-lg shadow-lg text-center fixed top-1/4 left-1/3 right-1/3 bottom-1/3 transform"
+            >
+              <!-- Konten modal -->
+              <img
+                src="../img/checklist.png"
+                alt="Checkmark"
+                class="mx-auto mb-4 mt-10"
+                style="width: 50px"
+              />
+              <p class="text-sm font-medium text-gray-900 mb-4">
+                Dokumen berhasil dikirimkan! <br />
+                Tunggu proses verifikasi.
+              </p>
+              <button
+                onclick="closeModal()"
+                class="text-white bg-blue-950 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2"
+              >
+                Close
+              </button>
             </div>
           </div>
 
-          <!-- form -->
-          <div>
-            <div class="max-w-md mx-auto p-6 bg-white shadow-lg rounded-lg">
-              <form>
-                <div class="mb-2">
-                  <label for="nama" class="block text-gray-600 font-medium mb-2"
-                    >Nama</label
-                  >
-                  <input
-                    type="text"
-                    id="nama"
-                    name="nama"
-                    value="Anggi Bieber"
-                    class="w-full py-2 px-4 bg-gray-200 border border-gray-300 rounded pointer-events-none text-gray-500"
-                    readonly
-                  />
-                </div>
-                <div class="mb-2">
-                  <label
-                    for="email"
-                    class="block text-gray-600 font-medium mb-2"
-                    >Email</label
-                  >
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value="anggibieber@gmail.com"
-                    class="w-full py-2 px-4 bg-gray-200 border border-gray-300 rounded pointer-events-none text-gray-500"
-                    readonly
-                  />
-                </div>
-                <div class="mb-2">
-                  <label
-                    for="level"
-                    class="block text-gray-600 font-medium mb-2"
-                    >Level</label
-                  >
-                  <input
-                    type="text"
-                    id="level"
-                    name="level"
-                    value="Administrator"
-                    class="w-full py-2 px-4 bg-gray-200 border border-gray-300 rounded pointer-events-none text-gray-500"
-                    readonly
-                  />
-                </div>
-              </form>
+          <footer>
+            <hr />
+            <div class="p-8 text-center">
+              <h1>Copyright © 2023 Vokasi UB. All rights reserved.</h1>
             </div>
-          </div>
+          </footer>
         </main>
-        <footer>
-          <hr />
-          <div class="p-8 text-center">
-            <h1>Copyright © 2023 Vokasi UB. All rights reserved.</h1>
-          </div>
-        </footer>
       </div>
     </div>
+
+    <!-- Script -->
+    <script>
+      function openModal() {
+        document.getElementById("successModal").classList.remove("hidden");
+      }
+
+      function closeModal() {
+        document.getElementById("successModal").classList.add("hidden");
+      }
+    </script>
   </body>
 </html>

@@ -1,3 +1,27 @@
+<?php 
+include('../luaran/koneksi.php');
+if((isset($_GET['aksi']))&&(isset($_GET['data']))){
+	if($_GET['aksi']=='hapus'){
+		$id_user = $_GET['data'];
+		//hapus kategori blog
+		$sql_dh = "delete from aktor
+		where id_user = '$id_user'";
+		mysqli_query($koneksi,$sql_dh);
+	}
+}
+?>
+ <?php if(!empty($_GET['notif'])){?>
+     <?php if($_GET['notif']=="tambahberhasil"){?>
+           <div class="alert alert-success" role="alert">
+           Data Berhasil Ditambahkan</div>
+     <?php } else if($_GET['notif']=="editberhasil"){?>
+           <div class="alert alert-success" role="alert">
+           Data Berhasil Diubah</div>
+     <?php } else if($_GET['notif']=="hapusberhasil"){?>
+           <div class="alert alert-danger" role="alert">
+           Data Berhasil Dihapus</div>
+     <?php }?>
+      <?php }?>
 <!DOCTYPE html>
 <html :class="{ 'theme-dark': dark }" x-data="data()" lang="en">
   <head>
@@ -103,7 +127,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold text-black hover:text-blue-900 transition-colors duration-150"
-                href="admindashboard.html"
+                href="admindashboard.php"
               >
                 <svg
                   width="24"
@@ -129,7 +153,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="adminprofil.html"
+                href="adminprofil.php"
               >
                 <svg
                   width="25"
@@ -151,7 +175,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="adminprestasi.html"
+                href="adminprestasi.php"
               >
                 <svg
                   width="25"
@@ -171,7 +195,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="adminriwayat.html"
+                href="adminriwayat.php"
               >
                 <svg
                   width="24"
@@ -202,7 +226,7 @@
               ></span>
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-white hover:text-blue-900"
-                href="adminakses.html"
+                href="adminakses.php"
               >
                 <svg
                   width="24"
@@ -224,7 +248,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="../luaran/signin.html"
+                href="../luaran/signin.php"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -276,7 +300,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="admindashboard.html"
+                href="admindashboard.php"
               >
                 <svg
                   width="24"
@@ -302,7 +326,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="adminprofil.html"
+                href="adminprofil.php"
               >
                 <svg
                   width="25"
@@ -324,7 +348,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="adminprestasi.html"
+                href="adminprestasi.php"
               >
                 <svg
                   width="25"
@@ -344,7 +368,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="adminriwayat.html"
+                href="adminriwayat.php"
               >
                 <svg
                   width="24"
@@ -375,7 +399,7 @@
               ></span>
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-white hover:text-blue-900"
-                href="adminakses.html"
+                href="adminakses.php"
               >
                 <svg
                   width="24"
@@ -397,7 +421,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="../luaran/signin.html"
+                href="../luaran/signin.php"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -474,7 +498,7 @@
                     <li class="flex">
                       <a
                         class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800"
-                        href="adminprofil.html"
+                        href="adminprofil.php"
                       >
                         <img
                           src="../img/profiladmin.png"
@@ -488,7 +512,7 @@
                     <li class="flex">
                       <a
                         class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800"
-                        href="../luaran/signin.html"
+                        href="../luaran/signin.php"
                       >
                         <img src="../img/logout.svg" class="w-4 h-4 mr-3" />
 
@@ -509,14 +533,15 @@
 
             <div class="flex justify-end mb-5">
               <a
-                href="tambahadmin.html"
+                href="tambahadmin.php"
                 class="text-white bg-blue-950 hover:bg-blue-500 font-medium rounded-lg text-sm px-3 py-2 text-center mb-2 items-center w-40"
               >
                 Tambah Admin
               </a>
             </div>
+           
 
-            <div class="w-full rounded-lg shadow-xs">
+            <div class="w-full rounded-lg shadow-xs" >
               <div class="w-full">
                 <table class="w-full min-w-full stripe hover" id="example">
                   <thead>
@@ -530,35 +555,47 @@
                       <th class="px-4 py-3 text-center">Aksi</th>
                     </tr>
                   </thead>
+                  <?php 
+                      $sql_k = "SELECT id_user, nama, email,password, level FROM aktor ORDER BY id_user";
+                      $query_k = mysqli_query($koneksi, $sql_k);
+                      $no = 1;
+                      while ($data_k = mysqli_fetch_row($query_k)) {
+                      $id_user = $data_k[0];
+                      $nama = $data_k[1];
+                      $email = $data_k[2];
+                      $password = $data_k[3];
+                      $level = $data_k[4];
+                      ?>
+                      <tr>
                   <tbody class="bg-white divide-y">
-                    <tr class="text-gray-700 dark:text-gray-400">
+                    <tr class="text-gray-700 dark:text-gray-400" id="myTable">
                       <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">001</td>
+                      <td class="px-4 py-3 text-sm text-center"><?php echo $no; ?></td>
                       <!-- Nama & Prodi -->
                       <td class="px-4 py-3">
                         <div class="flex items-center text-sm">
                           <div>
-                            <p class="font-semibold text-center">
-                              Nasywa Bieber
+                            <p class="font-semibold text-center"><?php echo $nama; ?></td>
+                              
                             </p>
                           </div>
                         </div>
                       </td>
                       <!-- Email -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        nasywabieber@gmail.com
+                      <td class="px-4 py-3 text-sm text-center"><?php echo $email; ?></td>
+                        
                       </td>
                       <!-- Level -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        Administrator
+                      <td class="px-4 py-3 text-sm text-center"><?php echo $level; ?></td>
+                      
                       </td>
                       <!-- Aksi -->
                       <td class="px-4 py-3 text-xs text-center">
                         <a
-                          href="javascript:void(0);"
+                        href="adminedit.php"
                           onclick="editFunction()"
                           class="text-white bg-blue-950 hover:bg-blue-500 hover:text-blue-950 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40 m-2"
-                        >
+                        ><i class="fas fa-edit"></i>
                           edit
                         </a>
 
@@ -567,371 +604,11 @@
                           onclick="hapusFunction()"
                           class="text-white bg-red-600 hover:bg-red-300 hover:text-red-600 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40 m-2"
                         >
-                          hapus
+                          hapus 
                         </a>
                       </td>
                     </tr>
-
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">002</td>
-                      <!-- Nama & Prodi -->
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <div>
-                            <p class="font-semibold text-center">
-                              Nasywa Bieber
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <!-- Email -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        nasywabieber@gmail.com
-                      </td>
-                      <!-- Level -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        Administrator
-                      </td>
-                      <!-- Aksi -->
-                      <td class="px-4 py-3 text-xs text-center">
-                        <a
-                          href="javascript:void(0);"
-                          onclick="editFunction()"
-                          class="text-white bg-blue-950 hover:bg-blue-500 hover:text-blue-950 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40 m-2"
-                        >
-                          edit
-                        </a>
-
-                        <a
-                          href="javascript:void(0);"
-                          onclick="hapusFunction()"
-                          class="text-white bg-red-600 hover:bg-red-300 hover:text-red-600 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40 m-2"
-                        >
-                          hapus
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">003</td>
-                      <!-- Nama & Prodi -->
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <div>
-                            <p class="font-semibold text-center">
-                              Nasywa Bieber
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <!-- Email -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        nasywabieber@gmail.com
-                      </td>
-                      <!-- Level -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        Administrator
-                      </td>
-                      <!-- Aksi -->
-                      <td class="px-4 py-3 text-xs text-center">
-                        <a
-                          href="javascript:void(0);"
-                          onclick="editFunction()"
-                          class="text-white bg-blue-950 hover:bg-blue-500 hover:text-blue-950 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40 m-2"
-                        >
-                          edit
-                        </a>
-
-                        <a
-                          href="javascript:void(0);"
-                          onclick="hapusFunction()"
-                          class="text-white bg-red-600 hover:bg-red-300 hover:text-red-600 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40 m-2"
-                        >
-                          hapus
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">004</td>
-                      <!-- Nama & Prodi -->
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <div>
-                            <p class="font-semibold text-center">
-                              Nasywa Bieber
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <!-- Email -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        nasywabieber@gmail.com
-                      </td>
-                      <!-- Level -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        Administrator
-                      </td>
-                      <!-- Aksi -->
-                      <td class="px-4 py-3 text-xs text-center">
-                        <a
-                          href="javascript:void(0);"
-                          onclick="editFunction()"
-                          class="text-white bg-blue-950 hover:bg-blue-500 hover:text-blue-950 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40 m-2"
-                        >
-                          edit
-                        </a>
-
-                        <a
-                          href="javascript:void(0);"
-                          onclick="hapusFunction()"
-                          class="text-white bg-red-600 hover:bg-red-300 hover:text-red-600 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40 m-2"
-                        >
-                          hapus
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">005</td>
-                      <!-- Nama & Prodi -->
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <div>
-                            <p class="font-semibold text-center">
-                              Nasywa Bieber
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <!-- Email -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        nasywabieber@gmail.com
-                      </td>
-                      <!-- Level -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        Administrator
-                      </td>
-                      <!-- Aksi -->
-                      <td class="px-4 py-3 text-xs text-center">
-                        <a
-                          href="javascript:void(0);"
-                          onclick="editFunction()"
-                          class="text-white bg-blue-950 hover:bg-blue-500 hover:text-blue-950 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40 m-2"
-                        >
-                          edit
-                        </a>
-
-                        <a
-                          href="javascript:void(0);"
-                          onclick="hapusFunction()"
-                          class="text-white bg-red-600 hover:bg-red-300 hover:text-red-600 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40 m-2"
-                        >
-                          hapus
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">006</td>
-                      <!-- Nama & Prodi -->
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <div>
-                            <p class="font-semibold text-center">
-                              Nasywa Bieber
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <!-- Email -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        nasywabieber@gmail.com
-                      </td>
-                      <!-- Level -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        Administrator
-                      </td>
-                      <!-- Aksi -->
-                      <td class="px-4 py-3 text-xs text-center">
-                        <a
-                          href="javascript:void(0);"
-                          onclick="editFunction()"
-                          class="text-white bg-blue-950 hover:bg-blue-500 hover:text-blue-950 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40 m-2"
-                        >
-                          edit
-                        </a>
-
-                        <a
-                          href="javascript:void(0);"
-                          onclick="hapusFunction()"
-                          class="text-white bg-red-600 hover:bg-red-300 hover:text-red-600 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40 m-2"
-                        >
-                          hapus
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">007</td>
-                      <!-- Nama & Prodi -->
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <div>
-                            <p class="font-semibold text-center">
-                              Nasywa Bieber
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <!-- Email -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        nasywabieber@gmail.com
-                      </td>
-                      <!-- Level -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        Administrator
-                      </td>
-                      <!-- Aksi -->
-                      <td class="px-4 py-3 text-xs text-center">
-                        <a
-                          href="javascript:void(0);"
-                          onclick="editFunction()"
-                          class="text-white bg-blue-950 hover:bg-blue-500 hover:text-blue-950 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40 m-2"
-                        >
-                          edit
-                        </a>
-
-                        <a
-                          href="javascript:void(0);"
-                          onclick="hapusFunction()"
-                          class="text-white bg-red-600 hover:bg-red-300 hover:text-red-600 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40 m-2"
-                        >
-                          hapus
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">008</td>
-                      <!-- Nama & Prodi -->
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <div>
-                            <p class="font-semibold text-center">
-                              Nasywa Bieber
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <!-- Email -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        nasywabieber@gmail.com
-                      </td>
-                      <!-- Level -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        Administrator
-                      </td>
-                      <!-- Aksi -->
-                      <td class="px-4 py-3 text-xs text-center">
-                        <a
-                          href="javascript:void(0);"
-                          onclick="editFunction()"
-                          class="text-white bg-blue-950 hover:bg-blue-500 hover:text-blue-950 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40 m-2"
-                        >
-                          edit
-                        </a>
-
-                        <a
-                          href="javascript:void(0);"
-                          onclick="hapusFunction()"
-                          class="text-white bg-red-600 hover:bg-red-300 hover:text-red-600 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40 m-2"
-                        >
-                          hapus
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">009</td>
-                      <!-- Nama & Prodi -->
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <div>
-                            <p class="font-semibold text-center">
-                              Nasywa Bieber
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <!-- Email -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        nasywabieber@gmail.com
-                      </td>
-                      <!-- Level -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        Administrator
-                      </td>
-                      <!-- Aksi -->
-                      <td class="px-4 py-3 text-xs text-center">
-                        <a
-                          href="javascript:void(0);"
-                          onclick="editFunction()"
-                          class="text-white bg-blue-950 hover:bg-blue-500 hover:text-blue-950 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40 m-2"
-                        >
-                          edit
-                        </a>
-
-                        <a
-                          href="javascript:void(0);"
-                          onclick="hapusFunction()"
-                          class="text-white bg-red-600 hover:bg-red-300 hover:text-red-600 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40 m-2"
-                        >
-                          hapus
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">010</td>
-                      <!-- Nama & Prodi -->
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <div>
-                            <p class="font-semibold text-center">
-                              Nasywa Bieber
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <!-- Email -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        nasywabieber@gmail.com
-                      </td>
-                      <!-- Level -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        Administrator
-                      </td>
-                      <!-- Aksi -->
-                      <td class="px-4 py-3 text-xs text-center">
-                        <a
-                          href="javascript:void(0);"
-                          onclick="editFunction()"
-                          class="text-white bg-blue-950 hover:bg-blue-500 hover:text-blue-950 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40 m-2"
-                        >
-                          edit
-                        </a>
-
-                        <a
-                          href="javascript:void(0);"
-                          onclick="hapusFunction()"
-                          class="text-white bg-red-600 hover:bg-red-300 hover:text-red-600 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40 m-2"
-                        >
-                          hapus
-                        </a>
-                      </td>
-                    </tr>
+                    <?php $no++;}?>
                   </tbody>
                 </table>
               </div>
@@ -951,8 +628,9 @@
     <script>
       function editFunction() {
         console.log("Tombol Edit Diklik");
-        //edit
-        window.location.href = "adminedit.html";
+        //editata=<?php echo $id_user; ?>"
+        window.location.href = "adminedit.php";
+        
       }
 
       function hapusFunction() {
@@ -961,9 +639,12 @@
         var confirmDelete = confirm("Apakah Anda yakin ingin menghapus?");
         if (confirmDelete) {
           // Hapus baris tabel saat konfirmasi diterima
+          window.location.href = "hapus.php";
           var row = document.getElementById("myTable").deleteRow(-1);
           console.log("Data dihapus dari tabel.");
+         
         }
+     
       }
     </script>
     <script>
