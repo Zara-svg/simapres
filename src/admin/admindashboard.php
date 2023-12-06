@@ -47,7 +47,8 @@
               ></span>
               <a
                 class="inline-flex items-center w-full text-sm font-semibold text-white hover:text-blue-900 transition-colors duration-150"
-                href="admindashboard.php"
+                href="admindashboard.php
+                "
               >
                 <svg
                   width="24"
@@ -73,7 +74,8 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="adminprofil.php"
+                href="adminprofil.php
+                "
               >
                 <svg
                   width="25"
@@ -463,12 +465,17 @@
                       d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"
                     ></path>
                   </svg>
-                </div>
+                </div> 
+                <?php 
+                      include('../luaran/koneksi.php'); 
+                      $data_prestasi = mysqli_query($koneksi,"SELECT * FROM prestasi");
+                      $jumlah_data = mysqli_num_rows($data_prestasi);
+?> 
                 <div>
                   <p class="mb-2 text-sm font-medium text-gray-600">
                     Mahasiswa Berprestasi
                   </p>
-                  <p class="text-lg font-semibold text-gray-700">1250</p>
+                  <p class="text-lg font-semibold text-gray-700"><?php echo $jumlah_data; ?></p>
                 </div>
               </div>
               <!-- Card -->
@@ -497,11 +504,16 @@
                     </defs>
                   </svg>
                 </div>
+                <?php 
+                      include('../luaran/koneksi.php'); 
+                      $data_prestasi = mysqli_query($koneksi,"SELECT nama_dosen_pembimbing FROM prestasi");
+                      $jumlah_data = mysqli_num_rows($data_prestasi);
+                ?> 
                 <div>
                   <p class="mb-2 text-sm font-medium text-gray-600">
                     Dosen Pembimbing
                   </p>
-                  <p class="text-lg font-semibold text-gray-700">50</p>
+                  <p class="text-lg font-semibold text-gray-700"><?php echo $jumlah_data; ?></p>
                 </div>
               </div>
               <!-- Card -->
@@ -524,9 +536,14 @@
                     />
                   </svg>
                 </div>
+                <?php 
+                      include('../luaran/koneksi.php'); 
+                      $data_prestasi = mysqli_query($koneksi,"SELECT capaian FROM prestasi");
+                      $jumlah_data = mysqli_num_rows($data_prestasi);
+                ?> 
                 <div>
                   <p class="mb-2 text-sm font-medium text-gray-600">Prestasi</p>
-                  <p class="text-lg font-semibold text-gray-700">500</p>
+                  <p class="text-lg font-semibold text-gray-700"><?php echo $jumlah_data; ?></p>
                 </div>
               </div>
             </div>
@@ -540,7 +557,10 @@
               <div
                 class="flex justify-center mt-4 space-x-3 text-sm text-gray-600"
               >
+          
+
                 <!-- Chart legend -->
+           
                 <div class="flex items-center">
                   <span
                     class="inline-block w-3 h-3 mr-1 bg-blue-950 rounded-full"

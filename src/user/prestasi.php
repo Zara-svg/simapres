@@ -1,3 +1,11 @@
+<?php 
+require('konfirmasiprestasi.php');
+$prestasi = read(" SELECT * FROM prestasi");
+if (isset($_POST["edit"])) {
+  update($_POST['id_prestasi'], $_POST['nama'], $_POST['nama_perlombaan'], $_POST['tahun']);
+  }
+?>
+
 <!DOCTYPE html>
 <html :class="{ 'theme-dark': dark }" x-data="data()" lang="en">
   <head>
@@ -103,8 +111,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold text-black hover:text-blue-900 transition-colors duration-150"
-                href="index.php
-                "
+                href="admindashboard.php"
               >
                 <svg
                   width="24"
@@ -130,8 +137,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="profil.php
-                "
+                href="adminprofil.php"
               >
                 <svg
                   width="25"
@@ -157,7 +163,7 @@
               ></span>
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-white hover:text-blue-900"
-                href="prestasi.php"
+                href="adminprestasi.php"
               >
                 <svg
                   width="25"
@@ -177,27 +183,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="verifikasi.php"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="24"
-                  viewBox="0 -960 960 960"
-                  width="24"
-                >
-                  <path
-                    d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H160v400Zm278-58L296-440l58-58 84 84 168-168 58 58-226 226Zm-278 58v-480 480Z"
-                    class="w-5 h-5"
-                    fill="currentColor"
-                  />
-                </svg>
-                <span class="ml-4">Status Verifikasi</span>
-              </a>
-            </li>
-            <li class="relative px-6 py-3">
-              <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="riwayat.php"
+                href="adminriwayat.php"
               >
                 <svg
                   width="24"
@@ -221,7 +207,28 @@
                 <span class="ml-4">Riwayat Prestasi</span>
               </a>
             </li>
-
+            <li class="relative px-6 py-3">
+              <a
+                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
+                href="adminakses.php"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M22 8.293C22 11.769 19.17 14.587 15.68 14.587C15.044 14.587 13.594 14.441 12.889 13.855L12.007 14.733C11.488 15.25 11.628 15.402 11.859 15.652C11.955 15.757 12.067 15.878 12.154 16.051C12.154 16.051 12.889 17.075 12.154 18.1C11.713 18.685 10.478 19.504 9.06796 18.1L8.77396 18.392C8.77396 18.392 9.65496 19.417 8.92096 20.442C8.47996 21.027 7.30396 21.612 6.27496 20.588L5.24696 21.612C4.54096 22.315 3.67896 21.905 3.33696 21.612L2.45396 20.734C1.63096 19.914 2.11096 19.026 2.45396 18.684L10.096 11.074C10.096 11.074 9.36096 9.904 9.36096 8.294C9.36096 4.818 12.191 2 15.681 2C19.171 2 22 4.818 22 8.293ZM15.681 10.489C16.2643 10.4901 16.8241 10.2594 17.2374 9.84782C17.6507 9.4362 17.8836 8.8773 17.885 8.294C17.8844 8.00509 17.827 7.71912 17.716 7.4524C17.6049 7.18568 17.4424 6.94345 17.2378 6.73954C17.0331 6.53562 16.7903 6.37401 16.5232 6.26393C16.256 6.15386 15.9699 6.09747 15.681 6.098C15.392 6.09747 15.1059 6.15386 14.8387 6.26393C14.5716 6.37401 14.3288 6.53562 14.1241 6.73954C13.9195 6.94345 13.757 7.18568 13.646 7.4524C13.5349 7.71912 13.4775 8.00509 13.477 8.294C13.4783 8.8773 13.7112 9.4362 14.1245 9.84782C14.5378 10.2594 15.0977 10.4901 15.681 10.489Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <span class="ml-4">Manajemen Akses</span>
+              </a>
+            </li>
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
@@ -277,7 +284,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="index.php"
+                href="admindashboard.php"
               >
                 <svg
                   width="24"
@@ -303,7 +310,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="profil.php"
+                href="adminprofil.php"
               >
                 <svg
                   width="25"
@@ -329,7 +336,7 @@
               ></span>
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-white hover:text-blue-900"
-                href="prestasi.php"
+                href="adminprestasi.php"
               >
                 <svg
                   width="25"
@@ -349,27 +356,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="verifikasi.php"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="24"
-                  viewBox="0 -960 960 960"
-                  width="24"
-                >
-                  <path
-                    d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H160v400Zm278-58L296-440l58-58 84 84 168-168 58 58-226 226Zm-278 58v-480 480Z"
-                    class="w-5 h-5"
-                    fill="currentColor"
-                  />
-                </svg>
-                <span class="ml-4">Status Verifikasi</span>
-              </a>
-            </li>
-            <li class="relative px-6 py-3">
-              <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="riwayat.php"
+                href="adminriwayat.php"
               >
                 <svg
                   width="24"
@@ -393,7 +380,28 @@
                 <span class="ml-4">Riwayat Prestasi</span>
               </a>
             </li>
-
+            <li class="relative px-6 py-3">
+              <a
+                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
+                href="adminakses.php"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M22 8.293C22 11.769 19.17 14.587 15.68 14.587C15.044 14.587 13.594 14.441 12.889 13.855L12.007 14.733C11.488 15.25 11.628 15.402 11.859 15.652C11.955 15.757 12.067 15.878 12.154 16.051C12.154 16.051 12.889 17.075 12.154 18.1C11.713 18.685 10.478 19.504 9.06796 18.1L8.77396 18.392C8.77396 18.392 9.65496 19.417 8.92096 20.442C8.47996 21.027 7.30396 21.612 6.27496 20.588L5.24696 21.612C4.54096 22.315 3.67896 21.905 3.33696 21.612L2.45396 20.734C1.63096 19.914 2.11096 19.026 2.45396 18.684L10.096 11.074C10.096 11.074 9.36096 9.904 9.36096 8.294C9.36096 4.818 12.191 2 15.681 2C19.171 2 22 4.818 22 8.293ZM15.681 10.489C16.2643 10.4901 16.8241 10.2594 17.2374 9.84782C17.6507 9.4362 17.8836 8.8773 17.885 8.294C17.8844 8.00509 17.827 7.71912 17.716 7.4524C17.6049 7.18568 17.4424 6.94345 17.2378 6.73954C17.0331 6.53562 16.7903 6.37401 16.5232 6.26393C16.256 6.15386 15.9699 6.09747 15.681 6.098C15.392 6.09747 15.1059 6.15386 14.8387 6.26393C14.5716 6.37401 14.3288 6.53562 14.1241 6.73954C13.9195 6.94345 13.757 7.18568 13.646 7.4524C13.5349 7.71912 13.4775 8.00509 13.477 8.294C13.4783 8.8773 13.7112 9.4362 14.1245 9.84782C14.5378 10.2594 15.0977 10.4901 15.681 10.489Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <span class="ml-4">Manajemen Akses</span>
+              </a>
+            </li>
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
@@ -456,7 +464,7 @@
                 >
                   <img
                     class="object-cover w-8 h-8 rounded-full"
-                    src="../img/profil.jpg"
+                    src="../img/profiladmin.png"
                     alt=""
                     aria-hidden="true"
                   />
@@ -474,9 +482,12 @@
                     <li class="flex">
                       <a
                         class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800"
-                        href="profil.php"
+                        href="adminprofil.php"
                       >
-                        <img src="../img/profil.svg" class="w-4 h-4 mr-3" />
+                        <img
+                          src="../img/profiladmin.png"
+                          class="w-4 h-4 mr-3"
+                        />
 
                         <span>Profil</span>
                       </a>
@@ -500,16 +511,9 @@
         </header>
         <main class="h-full overflow-y-auto mb-10">
           <div class="container px-6 mx-auto grid">
-            <h2 class="mt-6 text-2xl font-semibold text-gray-700">Prestasi</h2>
-
-            <div class="flex justify-end mb-2">
-              <a
-                href="../user/tambahprestasi.php"
-                class="text-white bg-blue-950 hover:bg-blue-500 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40"
-              >
-                Tambah Prestasi
-              </a>
-            </div>
+            <h2 class="my-6 text-2xl font-semibold text-gray-700">
+              Verifikasi Prestasi
+            </h2>
 
             <div class="w-full rounded-lg shadow-xs">
               <div class="w-full">
@@ -522,76 +526,62 @@
                       <th class="px-4 py-3 text-center">Nama</th>
                       <th class="px-4 py-3 text-center">Nama Prestasi</th>
                       <th class="px-4 py-3 text-center">Tahun Perolehan</th>
-                      <th class="px-4 py-3 text-center">Juara</th>
-                      <th class="px-4 py-3 text-center">Jenis Prestasi</th>
+                      <th class="px-4 py-3 text-center">Aksi</th>
                     </tr>
                   </thead>
-                  <?php 
+                  
+                  <?php $i = 1; ?>
+                            <?php if ($prestasi == null) { ?>
+                            
+                            
                       
-                      include('../luaran/koneksi.php');
-                       
-                       $sql_k = "SELECT  nama, nama_perlombaan, tahun, capaian, jenis_prestasi FROM prestasi Order By nama";
-                       $query_k = mysqli_query($koneksi, $sql_k);
-                       $no = 1;
-                       ?>
-                       <tr>
-                       <tbody class="bg-white divide-y">  <?php
-                       while ($data_k = mysqli_fetch_row($query_k)) {
-                        $nama = $data_k[0];
-                       $nama_perlombaan = $data_k[1];
-                       $tahun = $data_k[2];
-                       $capaian = $data_k[3];
-                       $jenis_prestasi = $data_k[4];
-                       
-                       }
-                       
-                       ?>
-                       
-                       <?php 
-                       include('../luaran/koneksi.php');
-                       
-                       $sql_k = "SELECT id_user, jurusan, level FROM aktor WHERE level='user'";
-                       $query_k = mysqli_query($koneksi, $sql_k);
-                       ?>
-                       
-                       <tr>
-                       <tbody class="bg-white divide-y">
-                     <?php
-                      while ($data_k = mysqli_fetch_row($query_k)) {
-
-                        $jurusan = $data_k[1];
-                        ?>
+                      
+                            <?php } else ?>
+                            <?php foreach ($prestasi as $value) : ?>
+                              
+                         
                      
-                    
+                       
+                  
                     <tr class="text-gray-700 dark:text-gray-400">
                       <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center"><?php echo $no; ?></td>
+                      <td class="px-4 py-3 text-sm text-center"><?php echo $value["id_prestasi"]; ?></td>
                       <!-- Nama & Prodi -->
                       <td class="px-4 py-3">
                         <div class="flex items-center text-sm">
                           <div>
-                            <p class="font-semibold"><?php echo $nama; ?>
-                            <p class="text-xs text-gray-600"><?php echo $jurusan; ?></td>
+                            <p class="font-semibold"><?php echo $value["nama"]; ?>
+                            <p class="text-xs text-gray-600"></td>
+                              
                             </p>
                           </div>
                         </div>
-                        
+                      </td>
                       <!-- Nama Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center"><?php echo $nama_perlombaan; ?></td>
-                      
+                      <td class="px-4 py-3 text-sm text-center"><?php echo $value["nama_perlombaan"]; ?></td>
+                       
                       </td>
                       <!-- Tahun -->
-                      <td class="px-4 py-3 text-sm text-center"><?php echo $tahun; ?></td>
-                      <!-- Juara -->
-                      <td class="px-4 py-3 text-sm text-center"><?php echo $capaian; ?></td>
-                      <!-- Jenis Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center"><?php echo $jenis_prestasi; ?></td>
+                      <td class="px-4 py-3 text-sm text-center"><?php echo $value["tahun"]; ?></td>
+                      <!-- Aksi -->
+                      <td class="px-4 py-3 text-xs text-center">
+                        <a
+                        href="adminverifikasi.php?id=<?= $value["id_prestasi"] ?>"
+                          class="text-white bg-green-700 hover:bg-green-300 hover:text-green-700 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40 m-2"
+                        ><i class="fas fa-edit"></i>
+                          Verifikasi
+                        </a>
+                        <button
+                          class="text-white bg-yellow-500 hover:bg-yellow-200 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-24"
+                          onclick="printDocument()"
+                        >
+                          Print
+                        </button>
                       </td>
-                    </tr><?php $no++;} ?>
-                  <tbody class="bg-white divide-y">
-                    <tr class="text-gray-700 dark:text-gray-400">
-                     
-                    </tr>
+                      </tr><?php endforeach ?>
+                      <?php $i++ ?> 
+
+                    
                   </tbody>
                 </table>
               </div>
@@ -608,6 +598,11 @@
     </div>
 
     <!-- JavaScript -->
+    <script>
+      function printDocument() {
+        window.location.href = "print.php";
+      }
+    </script>
     <script>
       $(document).ready(function () {
         var table = $("#example")

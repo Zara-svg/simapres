@@ -25,11 +25,11 @@ if(isset($_SESSION['id_user'])){
 
 	}else{
 		if (($extension = 'jpg' || $extension=='png' || $extension=='jpeg') && ($type=='image/jpg' || $type=='image/png' || $type=='image/jpeg') && $size <= $max_size) {
-			$location = 'gambar/';
+			$location = '../img/';
 			if (move_uploaded_file($tmp_name, $location.$foto)){
                   }
 		   $sql = "update aktor set nama='$nama', 
-                  email='$email', foto='$nama_file' 
+                  email='$email', foto='$foto' 
                   where id_user='$id_user'";
                   //echo $sql;
 		   mysqli_query($koneksi,$sql);
