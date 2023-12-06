@@ -3,8 +3,8 @@ session_start();
 include('../luaran/koneksi.php');
 $id_user = $_SESSION['id_user'];
 //get profil
-$sql = "select `nama`, `email`,`foto`, `level` from `aktor`
- where `id_user`='$id_user'";
+$sql = "select nama, email,foto, level from aktor
+ where id_user='$id_user'";
  //echo $sql;
 $query = mysqli_query($koneksi, $sql);
 while($data = mysqli_fetch_row($query)){
@@ -159,7 +159,7 @@ while($data = mysqli_fetch_row($query)){
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="verifikasi.html"
+                href="verifikasi.php"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -179,7 +179,7 @@ while($data = mysqli_fetch_row($query)){
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="../luaran/firstscreen.html"
+                href="../luaran/firstscreen.php"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -456,8 +456,12 @@ while($data = mysqli_fetch_row($query)){
             <h2 class="my-6 text-2xl font-semibold text-gray-700">Profil</h2>
           </div>
           <div class="px-10 flex">
-            <div class="hover:scale-125">
-              <img src="../img/<?php echo $foto; ?>" alt="foto" class="rounded-lg" />
+            <div>
+              <img
+                src="../img/<?php echo $foto; ?>"
+                alt="foto"
+                class="rounded-lg w-56 h-56"
+              />
             </div>
             <!-- edit profil -->
             <div class="flex justify-end px-10 py-10">
@@ -478,10 +482,11 @@ while($data = mysqli_fetch_row($query)){
           </div>
           <?php if(!empty($_GET['notif'])){
         if($_GET['notif']=="editberhasil"){?>
-             <div class="alert alert-success" role="alert">
-             Data Berhasil Diubah</div>
-        <?php }?>
-    <?php }?>
+          <div class="alert alert-success" role="alert">
+            Data Berhasil Diubah
+          </div>
+          <?php }?>
+          <?php }?>
           <!-- form -->
           <div>
             <div class="max-w-md mx-auto p-6 bg-white shadow-lg rounded-lg">
@@ -492,25 +497,27 @@ while($data = mysqli_fetch_row($query)){
                   >
                   <input
                     type="text"
-                    id="nama" value="<?php echo $nama;?>"
+                    id="nama"
+                    value="<?php echo $nama;?>"
                     name="nama"
                     class="w-full py-2 px-4 bg-gray-200 border border-gray-300 rounded pointer-events-none text-gray-500"
-                    readonly 
-                  /> 
+                    readonly
+                  />
                 </div>
                 <div class="mb-2">
                   <label
                     for="email"
                     class="block text-gray-600 font-medium mb-2"
-                    >Email</label 
+                    >Email</label
                   >
                   <input
                     type="email"
-                    id="email" value="<?php echo $email;?>"
+                    id="email"
+                    value="<?php echo $email;?>"
                     name="email"
                     class="w-full py-2 px-4 bg-gray-200 border border-gray-300 rounded pointer-events-none text-gray-500"
-                    readonly 
-                  /> 
+                    readonly
+                  />
                 </div>
                 <div class="mb-2">
                   <label
@@ -520,12 +527,12 @@ while($data = mysqli_fetch_row($query)){
                   >
                   <input
                     type="text"
-                    id="level" value="<?php echo $level;?>"
+                    id="level"
+                    value="<?php echo $level;?>"
                     name="level"
                     class="w-full py-2 px-4 bg-gray-200 border border-gray-300 rounded pointer-events-none text-gray-500"
                     readonly
                   />
-                  
                 </div>
               </form>
             </div>
