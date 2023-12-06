@@ -10,7 +10,7 @@ $query = mysqli_query($koneksi, $sql);
 while($data = mysqli_fetch_row($query)){
 	$nama = $data[0];
 	$email = $data[1];
-	$nama_file = $data[2];
+	$foto = $data[2];
   $level = $data[3];
 }
 ?>
@@ -457,7 +457,7 @@ while($data = mysqli_fetch_row($query)){
           </div>
           <div class="px-10 flex">
             <div class="hover:scale-125">
-              <img src="../img/" alt="foto" class="rounded-lg" />
+              <img src="../img/<?php echo $foto; ?>" alt="foto" class="rounded-lg" />
             </div>
             <!-- edit profil -->
             <div class="flex justify-end px-10 py-10">
