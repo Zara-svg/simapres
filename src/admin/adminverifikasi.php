@@ -445,6 +445,38 @@
           </div>
 
           <form class="px-6 mx-auto">
+             <!-- Nama -->
+             <div class="mb-6">
+              <label
+                for="nama"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Nama</label
+              >
+              <input
+                type="text"
+                id="nama"
+                name="nama"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5"
+                placeholder="Risma"
+                disabled
+              />
+            </div>
+             <!-- Program Studi -->
+             <div class="mb-6">
+              <label
+                for="prodi"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Program Studi</label
+              >
+              <input
+                type="text"
+                id="prodi"
+                name="prodi"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5"
+                placeholder="Teknologi Informasi"
+                required
+              />
+            </div>
             <!-- Bidang -->
             <div class="mb-6">
               <label
