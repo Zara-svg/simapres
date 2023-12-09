@@ -445,12 +445,11 @@
           </div>
 
           <form class="px-6 mx-auto">
-<<<<<<< HEAD
+
             <div class="mb-6">
-=======
+
              <!-- Nama -->
              <div class="mb-6">
->>>>>>> 5b438709c1205cabf407ebb60ba5e44473e598c4
               <label
                 for="nama"
                 class="block mb-2 text-sm font-medium text-gray-900"
@@ -459,12 +458,12 @@
               <input
                 type="text"
                 id="nama"
-<<<<<<< HEAD
+
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5"
                 placeholder="Nama"
                 required
                 readonly
-=======
+
                 name="nama"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5"
                 placeholder="Risma"
@@ -485,7 +484,7 @@
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5"
                 placeholder="Teknologi Informasi"
                 required
->>>>>>> 5b438709c1205cabf407ebb60ba5e44473e598c4
+
               />
             </div>
             <!-- Bidang -->
@@ -839,20 +838,23 @@
             </div>
 
             <div class="mb-6">
-              <label
-                for="file_input1"
-                class="block mb-2 text-sm font-medium text-gray-900"
-                >Surat Tugas Pembimbing</label
-              >
-              <input
-                type="file"
-                id="file_input1"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1"
-                src="../img/pooo.pdf"
-                required
-                disabled
-              />
-            </div>
+    <label for="file_input1" class="block mb-2 text-sm font-medium text-gray-900">
+        Surat Tugas Pembimbing
+    </label>
+    <?php
+    $file_path = "../img/hp.png"; // Replace with the actual path of your file
+
+    if (file_exists($file_path)) {
+        // If the file exists, display the file name and make the input disabled
+        echo '<p class="text-gray-700">' . basename($file_path) . '</p>';
+        echo '<input type="file" id="file_input1" class="hidden" />';
+    } else {
+        // If the file doesn't exist, show the file input for uploading
+        echo '<input type="file" id="file_input1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1" required disabled />';
+    }
+    ?>
+</div>
+
 
             <div class="mb-6">
               <label

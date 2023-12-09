@@ -39,6 +39,8 @@ while($data = mysqli_fetch_row($query)){
       src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
       defer
     ></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
     <script src="../js/charts-bars.js" defer></script>
   </head>
   <body>
@@ -480,13 +482,23 @@ while($data = mysqli_fetch_row($query)){
               </div>
             </div>
           </div>
-          <?php if(!empty($_GET['notif'])){
-        if($_GET['notif']=="editberhasil"){?>
-          <div class="alert alert-success" role="alert">
-            Data Berhasil Diubah
-          </div>
-          <?php }?>
-          <?php }?>
+          <?php if (!empty($_GET['notif']) && $_GET['notif'] == "editberhasil") : ?>
+            <!-- Popup -->
+            <div id="successPopup" class="fixed items-center justify-center m-10 hidden">
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center fixed top-1/4 left-1/3 right-1/3 bottom-1/3 transform">
+                    <!-- Popup Content -->
+                    <img src="../img/checklist.png" alt="Checkmark" class="mx-auto mb-4 mt-10" style="width: 50px" />
+                    <p class="text-sm font-medium text-gray-900 mb-4">
+                        Data Berhasil Diubah
+                    </p>
+                    <button onclick="closePopup()" class="text-white bg-blue-950 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2">
+                        Close
+                    </button>
+                </div>
+            </div>
+  
+        <?php endif; ?>
+  
           <!-- form -->
           <div>
             <div class="max-w-md mx-auto p-6 bg-white shadow-lg rounded-lg">
@@ -546,5 +558,21 @@ while($data = mysqli_fetch_row($query)){
         </footer>
       </div>
     </div>
+
+
+    
+    <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    showPopup();
+                });
+
+                function showPopup() {
+                    document.getElementById("successPopup").classList.remove("hidden");
+                }
+
+                function closePopup() {
+                    document.getElementById("successPopup").classList.add("hidden");
+                }
+            </script>
   </body>
 </html>

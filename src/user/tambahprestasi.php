@@ -595,19 +595,18 @@
             <!-- Tahun Penyelenggaraan -->
             <div class="mb-6">
               <label
-                for="tahun_penyelenggaraan"
+                for="tahun"
                 class="block mb-2 text-sm font-medium text-gray-900"
                 >Tahun Penyelenggaraan</label
               >
-              <select
-                id="tahun_penyelenggaraan"
+              <input
+                type="text"
+                id="tahun"
                 name="tahun"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-              >
-                <option selected>Pilih tahun</option>
-                <option value="2023">2023</option>
-                <option value="2022">2022</option>
-              </select>
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5"
+                placeholder="Tahun"
+                required
+              />
             </div>
             <!-- Jumlah Anggota -->
             <div class="mb-6">
