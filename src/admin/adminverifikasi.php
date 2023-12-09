@@ -445,7 +445,12 @@
           </div>
 
           <form class="px-6 mx-auto">
+<<<<<<< HEAD
             <div class="mb-6">
+=======
+             <!-- Nama -->
+             <div class="mb-6">
+>>>>>>> 5b438709c1205cabf407ebb60ba5e44473e598c4
               <label
                 for="nama"
                 class="block mb-2 text-sm font-medium text-gray-900"
@@ -454,10 +459,33 @@
               <input
                 type="text"
                 id="nama"
+<<<<<<< HEAD
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5"
                 placeholder="Nama"
                 required
                 readonly
+=======
+                name="nama"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5"
+                placeholder="Risma"
+                disabled
+              />
+            </div>
+             <!-- Program Studi -->
+             <div class="mb-6">
+              <label
+                for="prodi"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Program Studi</label
+              >
+              <input
+                type="text"
+                id="prodi"
+                name="prodi"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5"
+                placeholder="Teknologi Informasi"
+                required
+>>>>>>> 5b438709c1205cabf407ebb60ba5e44473e598c4
               />
             </div>
             <!-- Bidang -->
