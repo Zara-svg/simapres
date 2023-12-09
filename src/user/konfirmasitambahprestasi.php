@@ -1,7 +1,9 @@
 <?php 
 include('../luaran/koneksi.php');
+session_start();
 if (isset($_POST['submit'])){
-$id = '';
+$id_prestasi = '';
+$id_user = $_SESSION['id_user'];
 $nama = $_POST['nama'];
 $bidang = $_POST['bidang'];
 $jenis_prestasi = $_POST['jenis_prestasi'];
@@ -21,16 +23,16 @@ $capaian= $_POST['capaian'];
 $jumlah_peserta = $_POST['jumlah_peserta'];
 $jumlah_pt = $_POST['jumlah_pt'];
 $jumlah_provinsi = $_POST['jumlah_provinsi'];
-$jenis_negara = $_POST['jumlah_negara'];
+$jumlah_negara = $_POST['jumlah_negara'];
 $nama_dosen_pembimbing= $_POST['nama_dosen_pembimbing'];
 $no_wa_mahasiswa= $_POST['no_wa_mahasiswa'];
 $surat_dosen = $_POST['surat_dosen'];
 $bukti_prestasi = $_POST['bukti_prestasi'];
-$sql = "insert into prestasi values ('$id', '$nama', '$bidang', '$jenis_prestasi', '$nama_perlombaan', '$kategori','$judul_karya',
+$sql = "insert into prestasi values ('$id_prestasi', '$id_user','$nama', '$bidang', '$jenis_prestasi', '$nama_perlombaan', '$kategori','$judul_karya',
       '$tanggal', '$link_informasi',
       '$lokasi', '$tahun', '$jumlah_anggota', '$nama_lembaga_ormawa', '$program', '$tingkat',
       '$jenis_kepesertaan', '$capaian', '$jumlah_peserta', '$jumlah_pt', '$jumlah_provinsi',
-      '$jenis_negara', '$nama_dosen_pembimbing', '$no_wa_mahasiswa', '$surat_dosen', '$bukti_prestasi')";
+      '$jumlah_negara', '$nama_dosen_pembimbing', '$no_wa_mahasiswa', '$surat_dosen', '$bukti_prestasi')";
       
       mysqli_query($koneksi, $sql);
 header("Location:prestasi.php?notif=tambahberhasil");	

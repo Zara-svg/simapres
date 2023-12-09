@@ -174,7 +174,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="../luaran/firstscreen.php"
+                href="../luaran/signin.php"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -346,7 +346,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-blue-900"
-                href="../luaran/firstscreen.html"
+                href="../luaran/signin.php"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -434,7 +434,7 @@
                     <li class="flex">
                       <a
                         class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800"
-                        href="../luaran/firstscreen.html"
+                        href="../luaran/signin.php"
                       >
                         <img src="../img/logout.svg" class="w-4 h-4 mr-3" />
 
@@ -501,33 +501,34 @@
                   <?php 
                       include('../luaran/koneksi.php');
                        
-                       $sql_k = "SELECT `id_prestasi`, `nama_perlombaan`, `tahun`, `capaian`, `jenis_prestasi` FROM `prestasi` ORDER BY `id_prestasi`";
-                       $query_k = mysqli_query($koneksi, $sql_k);
-                       $no = 1;
-                       while ($data_k = mysqli_fetch_row($query_k)) {
-                       $no = $data_k[0];
-                       $nama_perlombaan = $data_k[1];
-                       $tahun = $data_k[2];
-                       $capaian = $data_k[3];
-                       $jenis_prestasi = $data_k[4];
-
-                       }
-                       ?>
-                       <?php 
-                       include('../luaran/koneksi.php');
-                       
-                       $sql_k = "SELECT `id_user`, `nama`, `jurusan`, `level` FROM `aktor` WHERE `level`='user'";
-                       $query_k = mysqli_query($koneksi, $sql_k);
-                       ?>
-                       
-                       
-                       <tr>
-                  <tbody class="bg-white divide-y">  <?php
+                      $sql_k = "SELECT id_prestasi, nama_perlombaan, tahun, capaian, jenis_prestasi FROM prestasi ORDER BY id_prestasi";
+                      $query_k = mysqli_query($koneksi, $sql_k);
+                      $no = 1;
                       while ($data_k = mysqli_fetch_row($query_k)) {
-                       
-                        $nama = $data_k[1];
-                        $jurusan = $data_k[2];
-                        ?>
+                      $no = $data_k[0];
+                      $nama_perlombaan = $data_k[1];
+                      $tahun = $data_k[2];
+                      $capaian = $data_k[3];
+                      $jenis_prestasi = $data_k[4];
+
+                      }
+                      ?>
+                      <?php 
+                      include('../luaran/koneksi.php');
+                      
+                      $sql_k = "SELECT id_user, nama, jurusan, level FROM aktor WHERE level='user'";
+                      $query_k = mysqli_query($koneksi, $sql_k);
+                      ?>
+                      
+                      
+                      <tr>
+                 <tbody class="bg-white divide-y">  <?php
+                     while ($data_k = mysqli_fetch_row($query_k)) {
+                      
+                       $nama = $data_k[1];
+                       $jurusan = $data_k[2];
+                       ?>
+                    
                     
                     <tr class="text-gray-700 dark:text-gray-400">
                       <!-- Nomer -->
@@ -538,8 +539,6 @@
                           <div>
                             <p class="font-semibold"><?php echo $nama; ?>
                             <p class="text-xs text-gray-600"><?php echo $jurusan; ?></td>
-                            
-                      
                             </p>
                           </div>
                         </div>
@@ -554,9 +553,9 @@
                       <td class="px-4 py-3 text-sm text-center"><?php echo $capaian; ?></td>
                       <!-- Jenis Prestasi -->
                       <td class="px-4 py-3 text-sm text-center"><?php echo $jenis_prestasi; ?></td>
-                    </tr><?php $no++;} ?>
+                   </tr><?php $no++;} ?>
 
-                                     </tbody>
+                  </tbody>
                 </table>
               </div>
             </div>

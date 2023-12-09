@@ -1,3 +1,10 @@
+<?php 
+require('konfirmasiverifikasi.php');
+$prestasi = read(" SELECT * FROM aktor INNER JOIN prestasi on aktor.id_user=prestasi.id_prestasi where id_prestasi=id_prestasi");
+if (isset($_POST["edit"])) {
+  update($_POST['id_prestasi'], $_POST['nama'], $_POST['nama_perlombaan'], $_POST['tahun']);
+  }
+?>
 <!DOCTYPE html>
 <html :class="{ 'theme-dark': dark }" x-data="data()" lang="en">
   <head>
@@ -478,31 +485,34 @@
                       <th class="px-4 py-3 text-center">Aksi</th>
                     </tr>
                   </thead>
-                  <tbody class="bg-white divide-y">
+                  <?php $i = 1; ?>
+                            <?php if ($prestasi == null) { ?>
+                            <?php } else ?>
+                            <?php foreach ($prestasi as $value) : ?>
+                  
                     <tr class="text-gray-700 dark:text-gray-400">
                       <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">001</td>
+                      <td class="px-4 py-3 text-sm text-center"><?php echo $value["id_prestasi"]; ?></td>
                       <!-- Nama & Prodi -->
                       <td class="px-4 py-3">
                         <div class="flex items-center text-sm">
                           <div>
-                            <p class="font-semibold">Nasywa Bieber</p>
-                            <p class="text-xs text-gray-600">
-                              Teknologi Informasi
+                            <p class="font-semibold"><?php echo $value["nama"]; ?>
+                            <p class="text-xs text-gray-600"><?php echo $value["jurusan"]; ?></td>
                             </p>
                           </div>
                         </div>
                       </td>
                       <!-- Nama Prestasi -->
                       <td class="px-4 py-3 text-sm text-center">
-                        Debat Anak Bangsa
+                      <?php echo $value["nama_perlombaan"]; ?>
                       </td>
                       <!-- Tahun -->
-                      <td class="px-4 py-3 text-sm text-center">2023</td>
+                      <td class="px-4 py-3 text-sm text-center"><?php echo $value["tahun"]; ?></td>
                       <!-- Aksi -->
                       <td class="px-4 py-3 text-xs text-center">
                         <a
-                          href="adminverifikasi.php"
+                          href="adminverifikasi.php?id=<?= $value["id_prestasi"] ?>"
                           class="text-white bg-green-700 hover:bg-green-300 hover:text-green-700 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40 m-2"
                         >
                           Verifikasi
@@ -515,329 +525,8 @@
                         </button>
                       </td>
                     </tr>
-
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">002</td>
-                      <!-- Nama & Prodi -->
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <div>
-                            <p class="font-semibold">Anggi Gwenchana</p>
-                            <p class="text-xs text-gray-600">
-                              Teknologi Informasi
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <!-- Nama Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        International Conference
-                      </td>
-                      <!-- Tahun -->
-                      <td class="px-4 py-3 text-sm text-center">2023</td>
-                      <!-- Aksi -->
-                      <td class="px-4 py-3 text-xs text-center">
-                        <a
-                          href="adminverifikasi.php"
-                          class="text-white bg-green-700 hover:bg-green-300 hover:text-green-700 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40 m-2"
-                        >
-                          Verifikasi
-                        </a>
-                        <button
-                          class="text-white bg-yellow-500 hover:bg-yellow-200 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-24"
-                          onclick="printDocument()"
-                        >
-                          Print
-                        </button>
-                      </td>
-                    </tr>
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">003</td>
-                      <!-- Nama & Prodi -->
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <div>
-                            <p class="font-semibold">Tya Badrul</p>
-                            <p class="text-xs text-gray-600">
-                              Manajemen Perhotelan
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <!-- Nama Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        Lomba Memasak Cepat
-                      </td>
-                      <!-- Tahun -->
-                      <td class="px-4 py-3 text-sm text-center">2023</td>
-                      <!-- Aksi -->
-                      <td class="px-4 py-3 text-xs text-center">
-                        <a
-                          href="adminverifikasi.php"
-                          class="text-white bg-green-700 hover:bg-green-300 hover:text-green-700 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40 m-2"
-                        >
-                          Verifikasi
-                        </a>
-                        <button
-                          class="text-white bg-yellow-500 hover:bg-yellow-200 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-24"
-                          onclick="printDocument()"
-                        >
-                          Print
-                        </button>
-                      </td>
-                    </tr>
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">004</td>
-                      <!-- Nama & Prodi -->
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <div>
-                            <p class="font-semibold">Sidky Subianto</p>
-                            <p class="text-xs text-gray-600">
-                              Administrasi Bisnis
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <!-- Nama Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        Karya Tulis Ilmiah
-                      </td>
-                      <!-- Tahun -->
-                      <td class="px-4 py-3 text-sm text-center">2023</td>
-                      <!-- Aksi -->
-                      <td class="px-4 py-3 text-xs text-center">
-                        <a
-                          href="adminverifikasi.php"
-                          class="text-white bg-green-700 hover:bg-green-300 hover:text-green-700 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40 m-2"
-                        >
-                          Verifikasi
-                        </a>
-                        <button
-                          class="text-white bg-yellow-500 hover:bg-yellow-200 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-24"
-                          onclick="printDocument()"
-                        >
-                          Print
-                        </button>
-                      </td>
-                    </tr>
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">005</td>
-                      <!-- Nama & Prodi -->
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <div>
-                            <p class="font-semibold">Abid Doremi</p>
-                            <p class="text-xs text-gray-600">Desain Grafis</p>
-                          </div>
-                        </div>
-                      </td>
-                      <!-- Nama Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        Lomba Poster Kemerdekaan
-                      </td>
-                      <!-- Tahun -->
-                      <td class="px-4 py-3 text-sm text-center">2023</td>
-                      <!-- Aksi -->
-                      <td class="px-4 py-3 text-xs text-center">
-                        <a
-                          href="adminverifikasi.php"
-                          class="text-white bg-green-700 hover:bg-green-300 hover:text-green-700 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40 m-2"
-                        >
-                          Verifikasi
-                        </a>
-                        <button
-                          class="text-white bg-yellow-500 hover:bg-yellow-200 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-24"
-                          onclick="printDocument()"
-                        >
-                          Print
-                        </button>
-                      </td>
-                    </tr>
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">006</td>
-                      <!-- Nama & Prodi -->
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <div>
-                            <p class="font-semibold">Zahra Prabowo</p>
-                            <p class="text-xs text-gray-600">
-                              Teknologi Informasi
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <!-- Nama Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        International UI/UX
-                      </td>
-                      <!-- Tahun -->
-                      <td class="px-4 py-3 text-sm text-center">2023</td>
-                      <!-- Aksi -->
-                      <td class="px-4 py-3 text-xs text-center">
-                        <a
-                          href="adminverifikasi.php"
-                          class="text-white bg-green-700 hover:bg-green-300 hover:text-green-700 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40 m-2"
-                        >
-                          Verifikasi
-                        </a>
-                        <button
-                          class="text-white bg-yellow-500 hover:bg-yellow-200 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-24"
-                          onclick="printDocument()"
-                        >
-                          Print
-                        </button>
-                      </td>
-                    </tr>
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">007</td>
-                      <!-- Nama & Prodi -->
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <div>
-                            <p class="font-semibold">Karin Widodo</p>
-                            <p class="text-xs text-gray-600">
-                              Keuangan Perbankan
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <!-- Nama Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        National Accounting
-                      </td>
-                      <!-- Tahun -->
-                      <td class="px-4 py-3 text-sm text-center">2023</td>
-                      <!-- Aksi -->
-                      <td class="px-4 py-3 text-xs text-center">
-                        <a
-                          href="adminverifikasi.php"
-                          class="text-white bg-green-700 hover:bg-green-300 hover:text-green-700 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40 m-2"
-                        >
-                          Verifikasi
-                        </a>
-                        <button
-                          class="text-white bg-yellow-500 hover:bg-yellow-200 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-24"
-                          onclick="printDocument()"
-                        >
-                          Print
-                        </button>
-                      </td>
-                    </tr>
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">008</td>
-                      <!-- Nama & Prodi -->
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <div>
-                            <p class="font-semibold">Risma Jokowi</p>
-                            <p class="text-xs text-gray-600">
-                              Teknologi Informasi
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <!-- Nama Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        Short Video Competition
-                      </td>
-                      <!-- Tahun -->
-                      <td class="px-4 py-3 text-sm text-center">2023</td>
-                      <!-- Aksi -->
-                      <td class="px-4 py-3 text-xs text-center">
-                        <a
-                          href="adminverifikasi.php"
-                          class="text-white bg-green-700 hover:bg-green-300 hover:text-green-700 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40 m-2"
-                        >
-                          Verifikasi
-                        </a>
-                        <button
-                          class="text-white bg-yellow-500 hover:bg-yellow-200 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-24"
-                          onclick="printDocument()"
-                        >
-                          Print
-                        </button>
-                      </td>
-                    </tr>
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">009</td>
-                      <!-- Nama & Prodi -->
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <div>
-                            <p class="font-semibold">Renita Bambang</p>
-                            <p class="text-xs text-gray-600">
-                              Administrasi Bisnis
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <!-- Nama Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        Lomba Karya Tulis Ilmiah Tingkat Remaja
-                      </td>
-                      <!-- Tahun -->
-                      <td class="px-4 py-3 text-sm text-center">2023</td>
-                      <!-- Aksi -->
-                      <td class="px-4 py-3 text-xs text-center">
-                        <a
-                          href="adminverifikasi.php"
-                          class="text-white bg-green-700 hover:bg-green-300 hover:text-green-700 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40 m-2"
-                        >
-                          Verifikasi
-                        </a>
-                        <button
-                          class="text-white bg-yellow-500 hover:bg-yellow-200 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-24"
-                          onclick="printDocument()"
-                        >
-                          Print
-                        </button>
-                      </td>
-                    </tr>
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <!-- Nomer -->
-                      <td class="px-4 py-3 text-sm text-center">010</td>
-                      <!-- Nama & Prodi -->
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <div>
-                            <p class="font-semibold">Haechan Ganteng</p>
-                            <p class="text-xs text-gray-600">
-                              Teknologi Informasi
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <!-- Nama Prestasi -->
-                      <td class="px-4 py-3 text-sm text-center">
-                        Internaational Dance
-                      </td>
-                      <!-- Tahun -->
-                      <td class="px-4 py-3 text-sm text-center">2023</td>
-                      <!-- Aksi -->
-                      <td class="px-4 py-3 text-xs text-center">
-                        <a
-                          href="adminverifikasi.php"
-                          class="text-white bg-green-700 hover:bg-green-300 hover:text-green-700 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-40 m-2"
-                        >
-                          Verifikasi
-                        </a>
-                        <button
-                          class="text-white bg-yellow-500 hover:bg-yellow-200 font-medium rounded-lg text-sm px-5 py-2 text-center mb-2 items-center w-24"
-                          onclick="printDocument()"
-                        >
-                          Print
-                        </button>
-                      </td>
-                    </tr>
+                    <?php endforeach ?>
+                    <?php $i++ ?>
                   </tbody>
                 </table>
               </div>
