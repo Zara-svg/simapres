@@ -52,16 +52,16 @@
               </div>
               <?php if(!empty($_GET['gagal'])){?>
         <?php if($_GET['gagal']=="emailKosong"){?>
-            <span class="text-primary text-gradient font-weight-bold">
-            Maaf Email Tidak Boleh Kosong
+            <span class="text-primary text-gradient font-weight-bold text-red-600">
+            Maaf email tidak boleh kosong
             </span>
           <?php } else if($_GET['gagal']=="passKosong"){?>
-            <span class="text-primary text-gradient font-weight-bold">
-            Maaf Password Tidak Boleh Kosong
+            <span class="text-primary text-gradient font-weight-bold text-red-600">
+            Maaf password tidak boleh kosong
             </span>
           <?php } else {?>
-            <span class="text-primary text-gradient font-weight-bold">
-            Maaf Email dan Password Anda Salah
+            <span class="text-primary text-gradient font-weight-bold text-red-600">
+            Maaf email dan password anda salah
             </span>
           <?php }?>
       <?php }?>
